@@ -2,7 +2,7 @@
 
 Bağımlılık: 02, 03 ve 04 bitmiş olmalı. Bu task paralel aşamadan önce tek başına yapılır. Klasör yapısı ve kurallar `docs/mimari.md` içinde.
 
-Durum: tamamlandı. MuMu'da beş sekme gezildi, analyze ve 15 test temiz. Git kurulumu ve ilk commit kullanıcıda. Arayüz imzaları kodda (`lib/domain/`, `lib/data/`), task 07-14 bunları değiştirmez.
+Durum: tamamlandı. MuMu'da beş sekme gezildi, analyze ve 15 test temiz, repo GitHub'da public, CI yeşil. Arayüz imzaları kodda (`lib/domain/`, `lib/data/`), task 07-14 bunları değiştirmez.
 
 ## Amaç
 

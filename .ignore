@@ -1,0 +1,7 @@
+# Search ignore (ripgrep). Generated files are not edited by hand.
+*.g.dart
+*.freezed.dart
+lib/l10n/gen/
+lib/l10n/app_tr.arb
+.tooling/
+build/

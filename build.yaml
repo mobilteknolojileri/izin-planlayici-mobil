@@ -1,0 +1,20 @@
+# Each builder runs only on its own folder so that one task's codegen never
+# rewrites another task's files. See docs/mimari.md "Kod üretimi".
+targets:
+  $default:
+    builders:
+      freezed:
+        generate_for:
+          - lib/domain/models/**.dart
+      json_serializable:
+        generate_for:
+          - lib/domain/models/**.dart
+        options:
+          explicit_to_json: true
+          include_if_null: false
+      drift_dev:
+        generate_for:
+          - lib/data/database/**.dart
+      drift_dev:preparing_builder:
+        generate_for:
+          - lib/data/database/**.dart

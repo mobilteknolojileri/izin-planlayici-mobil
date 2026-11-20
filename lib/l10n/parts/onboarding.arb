@@ -1,0 +1,6 @@
+{
+  "onboardingTitle": "Kurulum",
+  "@onboardingTitle": {
+    "description": "App bar title of the onboarding screen."
+  }
+}

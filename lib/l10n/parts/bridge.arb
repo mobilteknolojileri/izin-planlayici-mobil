@@ -1,0 +1,6 @@
+{
+  "bridgeTitle": "Köprü",
+  "@bridgeTitle": {
+    "description": "App bar title of the bridge screen."
+  }
+}

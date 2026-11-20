@@ -1,0 +1,6 @@
+{
+  "homeTitle": "Ana Sayfa",
+  "@homeTitle": {
+    "description": "App bar title of the home screen."
+  }
+}

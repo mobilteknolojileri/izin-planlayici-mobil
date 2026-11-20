@@ -1,0 +1,6 @@
+{
+  "statsTitle": "İstatistik",
+  "@statsTitle": {
+    "description": "App bar title of the stats screen."
+  }
+}

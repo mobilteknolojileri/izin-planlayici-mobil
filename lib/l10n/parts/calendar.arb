@@ -1,0 +1,6 @@
+{
+  "calendarTitle": "Takvim",
+  "@calendarTitle": {
+    "description": "App bar title of the calendar screen."
+  }
+}

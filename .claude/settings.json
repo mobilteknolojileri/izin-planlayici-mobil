@@ -1,0 +1,40 @@
+{
+  "enabledPlugins": {
+    "dart-and-flutter@anthropic-plugin-directory": true,
+    "flutter-skills-zakariaf@anthropic-plugin-directory": true,
+    "design@anthropic-plugin-directory": true,
+    "uxkin@anthropic-plugin-directory": true,
+    "playcut-brush@anthropic-plugin-directory": true,
+    "mobile-release-check-play-and-app-store-readiness@anthropic-plugin-directory": true,
+    "app-preview-craft@anthropic-plugin-directory": true
+  },
+  "deniedMcpServers": [
+    {
+      "serverUrl": "https://mcp.slack.com/*"
+    },
+    {
+      "serverUrl": "https://mcp.figma.com/*"
+    },
+    {
+      "serverUrl": "https://mcp.linear.app/*"
+    },
+    {
+      "serverUrl": "https://mcp.asana.com/*"
+    },
+    {
+      "serverUrl": "https://mcp.atlassian.com/*"
+    },
+    {
+      "serverUrl": "https://mcp.notion.com/*"
+    },
+    {
+      "serverUrl": "https://mcp.intercom.com/*"
+    },
+    {
+      "serverName": "plugin:design:gmail"
+    },
+    {
+      "serverName": "plugin:design:google calendar"
+    }
+  ]
+}

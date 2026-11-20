@@ -1,0 +1,14 @@
+{
+  "appTitle": "İzin Planla",
+  "@appTitle": {
+    "description": "App name shown by the system."
+  },
+  "navHome": "Ana Sayfa",
+  "navLeaves": "İzinlerim",
+  "navCalendar": "Takvim",
+  "navBridge": "Köprü",
+  "navSettings": "Ayarlar",
+  "@navSettings": {
+    "description": "Bottom navigation labels."
+  }
+}

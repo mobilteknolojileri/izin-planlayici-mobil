@@ -1,0 +1,12 @@
+# LF everywhere so shell scripts and hooks also run on Linux CI and Windows
+# Git Bash. Windows batch files need CRLF.
+* text=auto eol=lf
+*.bat text eol=crlf
+*.cmd text eol=crlf
+
+*.png binary
+*.jpg binary
+*.webp binary
+*.jar binary
+*.ttf binary
+*.otf binary

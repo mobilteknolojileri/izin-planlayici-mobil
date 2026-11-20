@@ -1,0 +1,31 @@
+/// Immutable domain models shared by all layers.
+library;
+
+export 'app_settings.dart';
+export 'app_theme_mode.dart';
+export 'applied_rule.dart';
+export 'bridge_suggestion.dart';
+export 'date_only_converter.dart';
+export 'date_range.dart';
+export 'day_breakdown.dart';
+export 'day_count.dart';
+export 'day_reason.dart';
+export 'employment_type.dart';
+export 'entitlement.dart';
+export 'entitlement_period.dart';
+export 'half_day_deduction.dart';
+export 'holiday.dart';
+export 'holiday_type.dart';
+export 'leave_balance.dart';
+export 'leave_record.dart';
+export 'leave_type.dart';
+export 'leave_unit.dart';
+export 'leave_warning.dart';
+export 'leave_warning_type.dart';
+export 'next_accrual.dart';
+export 'notification_preferences.dart';
+export 'overtime_record.dart';
+export 'profile.dart';
+export 'service_duration.dart';
+export 'work_schedule.dart';
+export 'year_summary.dart';

@@ -1,0 +1,6 @@
+{
+  "guideTitle": "Mevzuat Rehberi",
+  "@guideTitle": {
+    "description": "App bar title of the guide screen."
+  }
+}

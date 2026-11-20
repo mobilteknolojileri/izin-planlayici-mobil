@@ -1,0 +1,6 @@
+{
+  "peopleTitle": "Kişiler",
+  "@peopleTitle": {
+    "description": "App bar title of the people screen."
+  }
+}

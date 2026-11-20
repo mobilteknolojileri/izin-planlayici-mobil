@@ -1,0 +1,6 @@
+{
+  "leaveFormTitle": "İzin Ekle",
+  "@leaveFormTitle": {
+    "description": "App bar title of the leave_form screen."
+  }
+}

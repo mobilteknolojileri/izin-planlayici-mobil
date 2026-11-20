@@ -1,0 +1,6 @@
+{
+  "aboutTitle": "Hakkında",
+  "@aboutTitle": {
+    "description": "App bar title of the about screen."
+  }
+}

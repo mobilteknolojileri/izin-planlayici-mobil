@@ -1,0 +1,63 @@
+{
+  "@@locale": "tr",
+  "aboutTitle": "Hakkında",
+  "@aboutTitle": {
+    "description": "App bar title of the about screen."
+  },
+  "bridgeTitle": "Köprü",
+  "@bridgeTitle": {
+    "description": "App bar title of the bridge screen."
+  },
+  "calendarTitle": "Takvim",
+  "@calendarTitle": {
+    "description": "App bar title of the calendar screen."
+  },
+  "appTitle": "İzin Planla",
+  "@appTitle": {
+    "description": "App name shown by the system."
+  },
+  "navHome": "Ana Sayfa",
+  "navLeaves": "İzinlerim",
+  "navCalendar": "Takvim",
+  "navBridge": "Köprü",
+  "navSettings": "Ayarlar",
+  "@navSettings": {
+    "description": "Bottom navigation labels."
+  },
+  "explainTitle": "Nasıl Hesaplandı?",
+  "@explainTitle": {
+    "description": "App bar title of the explain screen."
+  },
+  "guideTitle": "Mevzuat Rehberi",
+  "@guideTitle": {
+    "description": "App bar title of the guide screen."
+  },
+  "homeTitle": "Ana Sayfa",
+  "@homeTitle": {
+    "description": "App bar title of the home screen."
+  },
+  "leaveFormTitle": "İzin Ekle",
+  "@leaveFormTitle": {
+    "description": "App bar title of the leave_form screen."
+  },
+  "leavesTitle": "İzinlerim",
+  "@leavesTitle": {
+    "description": "App bar title of the leaves screen."
+  },
+  "onboardingTitle": "Kurulum",
+  "@onboardingTitle": {
+    "description": "App bar title of the onboarding screen."
+  },
+  "peopleTitle": "Kişiler",
+  "@peopleTitle": {
+    "description": "App bar title of the people screen."
+  },
+  "settingsTitle": "Ayarlar",
+  "@settingsTitle": {
+    "description": "App bar title of the settings screen."
+  },
+  "statsTitle": "İstatistik",
+  "@statsTitle": {
+    "description": "App bar title of the stats screen."
+  }
+}

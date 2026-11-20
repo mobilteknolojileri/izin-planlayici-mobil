@@ -1,0 +1,6 @@
+{
+  "settingsTitle": "Ayarlar",
+  "@settingsTitle": {
+    "description": "App bar title of the settings screen."
+  }
+}

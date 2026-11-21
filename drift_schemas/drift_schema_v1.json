@@ -1,0 +1,801 @@
+{
+  "_meta": {
+    "description": "This file contains a serialized version of schema entities for drift.",
+    "version": "1.3.0"
+  },
+  "options": {
+    "store_date_time_values_as_text": false
+  },
+  "entities": [
+    {
+      "id": 0,
+      "references": [],
+      "type": "table",
+      "data": {
+        "name": "profiles",
+        "was_declared_in_moor": false,
+        "columns": [
+          {
+            "name": "id",
+            "getter_name": "id",
+            "moor_type": "string",
+            "nullable": false,
+            "customConstraints": null,
+            "default_dart": null,
+            "default_client_dart": null,
+            "dsl_features": []
+          },
+          {
+            "name": "name",
+            "getter_name": "name",
+            "moor_type": "string",
+            "nullable": false,
+            "customConstraints": null,
+            "default_dart": null,
+            "default_client_dart": null,
+            "dsl_features": []
+          },
+          {
+            "name": "employment_type",
+            "getter_name": "employmentType",
+            "moor_type": "string",
+            "nullable": false,
+            "customConstraints": null,
+            "default_dart": null,
+            "default_client_dart": null,
+            "dsl_features": [],
+            "type_converter": {
+              "dart_expr": "const EnumNameConverter<EmploymentType>(EmploymentType.values)",
+              "dart_type_name": "EmploymentType"
+            }
+          },
+          {
+            "name": "employment_start_date",
+            "getter_name": "employmentStartDate",
+            "moor_type": "string",
+            "nullable": false,
+            "customConstraints": null,
+            "default_dart": null,
+            "default_client_dart": null,
+            "dsl_features": [],
+            "type_converter": {
+              "dart_expr": "const DayConverter()",
+              "dart_type_name": "DateTime"
+            }
+          },
+          {
+            "name": "birth_date",
+            "getter_name": "birthDate",
+            "moor_type": "string",
+            "nullable": true,
+            "customConstraints": null,
+            "default_dart": null,
+            "default_client_dart": null,
+            "dsl_features": [],
+            "type_converter": {
+              "dart_expr": "const DayConverter()",
+              "dart_type_name": "DateTime"
+            }
+          },
+          {
+            "name": "work_days",
+            "getter_name": "workDays",
+            "moor_type": "string",
+            "nullable": false,
+            "customConstraints": null,
+            "default_dart": null,
+            "default_client_dart": null,
+            "dsl_features": [],
+            "type_converter": {
+              "dart_expr": "const IntListConverter()",
+              "dart_type_name": "List<int>"
+            }
+          },
+          {
+            "name": "weekly_rest_day",
+            "getter_name": "weeklyRestDay",
+            "moor_type": "int",
+            "nullable": false,
+            "customConstraints": null,
+            "default_dart": null,
+            "default_client_dart": null,
+            "dsl_features": []
+          },
+          {
+            "name": "saturday_counts_as_leave",
+            "getter_name": "saturdayCountsAsLeave",
+            "moor_type": "bool",
+            "nullable": false,
+            "customConstraints": null,
+            "defaultConstraints": "CHECK (\"saturday_counts_as_leave\" IN (0, 1))",
+            "dialectAwareDefaultConstraints": {
+              "sqlite": "CHECK (\"saturday_counts_as_leave\" IN (0, 1))"
+            },
+            "default_dart": null,
+            "default_client_dart": null,
+            "dsl_features": []
+          },
+          {
+            "name": "half_day_deduction",
+            "getter_name": "halfDayDeduction",
+            "moor_type": "string",
+            "nullable": false,
+            "customConstraints": null,
+            "default_dart": null,
+            "default_client_dart": null,
+            "dsl_features": [],
+            "type_converter": {
+              "dart_expr": "const EnumNameConverter<HalfDayDeduction>(HalfDayDeduction.values)",
+              "dart_type_name": "HalfDayDeduction"
+            }
+          },
+          {
+            "name": "daily_working_hours",
+            "getter_name": "dailyWorkingHours",
+            "moor_type": "double",
+            "nullable": false,
+            "customConstraints": null,
+            "default_dart": null,
+            "default_client_dart": null,
+            "dsl_features": []
+          },
+          {
+            "name": "prior_service_years",
+            "getter_name": "priorServiceYears",
+            "moor_type": "int",
+            "nullable": false,
+            "customConstraints": null,
+            "default_dart": null,
+            "default_client_dart": null,
+            "dsl_features": []
+          },
+          {
+            "name": "prior_service_months",
+            "getter_name": "priorServiceMonths",
+            "moor_type": "int",
+            "nullable": false,
+            "customConstraints": null,
+            "default_dart": null,
+            "default_client_dart": null,
+            "dsl_features": []
+          },
+          {
+            "name": "prior_service_days",
+            "getter_name": "priorServiceDays",
+            "moor_type": "int",
+            "nullable": false,
+            "customConstraints": null,
+            "default_dart": null,
+            "default_client_dart": null,
+            "dsl_features": []
+          },
+          {
+            "name": "is_underground",
+            "getter_name": "isUnderground",
+            "moor_type": "bool",
+            "nullable": false,
+            "customConstraints": null,
+            "defaultConstraints": "CHECK (\"is_underground\" IN (0, 1))",
+            "dialectAwareDefaultConstraints": {
+              "sqlite": "CHECK (\"is_underground\" IN (0, 1))"
+            },
+            "default_dart": null,
+            "default_client_dart": null,
+            "dsl_features": []
+          },
+          {
+            "name": "contract_extra_days",
+            "getter_name": "contractExtraDays",
+            "moor_type": "int",
+            "nullable": false,
+            "customConstraints": null,
+            "default_dart": null,
+            "default_client_dart": null,
+            "dsl_features": []
+          },
+          {
+            "name": "leave_used_before_tracking",
+            "getter_name": "leaveUsedBeforeTracking",
+            "moor_type": "double",
+            "nullable": false,
+            "customConstraints": null,
+            "default_dart": null,
+            "default_client_dart": null,
+            "dsl_features": []
+          },
+          {
+            "name": "is_teacher",
+            "getter_name": "isTeacher",
+            "moor_type": "bool",
+            "nullable": false,
+            "customConstraints": null,
+            "defaultConstraints": "CHECK (\"is_teacher\" IN (0, 1))",
+            "dialectAwareDefaultConstraints": {
+              "sqlite": "CHECK (\"is_teacher\" IN (0, 1))"
+            },
+            "default_dart": null,
+            "default_client_dart": null,
+            "dsl_features": []
+          },
+          {
+            "name": "administrative_leave_days",
+            "getter_name": "administrativeLeaveDays",
+            "moor_type": "string",
+            "nullable": false,
+            "customConstraints": null,
+            "default_dart": null,
+            "default_client_dart": null,
+            "dsl_features": [],
+            "type_converter": {
+              "dart_expr": "const DayListConverter()",
+              "dart_type_name": "List<DateTime>"
+            }
+          },
+          {
+            "name": "absence_periods",
+            "getter_name": "absencePeriods",
+            "moor_type": "string",
+            "nullable": false,
+            "customConstraints": null,
+            "default_dart": null,
+            "default_client_dart": null,
+            "dsl_features": [],
+            "type_converter": {
+              "dart_expr": "const DateRangeListConverter()",
+              "dart_type_name": "List<DateRange>"
+            }
+          }
+        ],
+        "is_virtual": false,
+        "without_rowid": false,
+        "constraints": [
+          "CHECK (length(id) > 0)",
+          "CHECK (employment_type IN ('laborLaw', 'civilServant'))",
+          "CHECK (date(employment_start_date) IS employment_start_date)",
+          "CHECK (date(birth_date) IS birth_date)",
+          "CHECK (json_type(work_days) = 'array')",
+          "CHECK (weekly_rest_day BETWEEN 1 AND 7)",
+          "CHECK (half_day_deduction IN ('zero', 'half', 'full'))",
+          "CHECK (daily_working_hours > 0)",
+          "CHECK (prior_service_years >= 0)",
+          "CHECK (prior_service_months >= 0)",
+          "CHECK (prior_service_days >= 0)",
+          "CHECK (contract_extra_days >= 0)",
+          "CHECK (leave_used_before_tracking >= 0)",
+          "CHECK (json_type(administrative_leave_days) = 'array')",
+          "CHECK (json_type(absence_periods) = 'array')"
+        ],
+        "strict": true,
+        "explicit_pk": [
+          "id"
+        ]
+      }
+    },
+    {
+      "id": 1,
+      "references": [
+        0
+      ],
+      "type": "table",
+      "data": {
+        "name": "leave_records",
+        "was_declared_in_moor": false,
+        "columns": [
+          {
+            "name": "id",
+            "getter_name": "id",
+            "moor_type": "string",
+            "nullable": false,
+            "customConstraints": null,
+            "default_dart": null,
+            "default_client_dart": null,
+            "dsl_features": []
+          },
+          {
+            "name": "profile_id",
+            "getter_name": "profileId",
+            "moor_type": "string",
+            "nullable": false,
+            "customConstraints": null,
+            "defaultConstraints": "REFERENCES profiles (id) ON DELETE CASCADE",
+            "dialectAwareDefaultConstraints": {
+              "sqlite": "REFERENCES profiles (id) ON DELETE CASCADE"
+            },
+            "default_dart": null,
+            "default_client_dart": null,
+            "dsl_features": [
+              {
+                "foreign_key": {
+                  "to": {
+                    "table": "profiles",
+                    "column": "id"
+                  },
+                  "initially_deferred": false,
+                  "on_update": null,
+                  "on_delete": "cascade"
+                }
+              }
+            ]
+          },
+          {
+            "name": "type",
+            "getter_name": "type",
+            "moor_type": "string",
+            "nullable": false,
+            "customConstraints": null,
+            "default_dart": null,
+            "default_client_dart": null,
+            "dsl_features": [],
+            "type_converter": {
+              "dart_expr": "const EnumNameConverter<LeaveType>(LeaveType.values)",
+              "dart_type_name": "LeaveType"
+            }
+          },
+          {
+            "name": "start_date",
+            "getter_name": "startDate",
+            "moor_type": "string",
+            "nullable": false,
+            "customConstraints": null,
+            "default_dart": null,
+            "default_client_dart": null,
+            "dsl_features": [],
+            "type_converter": {
+              "dart_expr": "const DayConverter()",
+              "dart_type_name": "DateTime"
+            }
+          },
+          {
+            "name": "end_date",
+            "getter_name": "endDate",
+            "moor_type": "string",
+            "nullable": false,
+            "customConstraints": null,
+            "default_dart": null,
+            "default_client_dart": null,
+            "dsl_features": [],
+            "type_converter": {
+              "dart_expr": "const DayConverter()",
+              "dart_type_name": "DateTime"
+            }
+          },
+          {
+            "name": "unit",
+            "getter_name": "unit",
+            "moor_type": "string",
+            "nullable": false,
+            "customConstraints": null,
+            "default_dart": null,
+            "default_client_dart": null,
+            "dsl_features": [],
+            "type_converter": {
+              "dart_expr": "const EnumNameConverter<LeaveUnit>(LeaveUnit.values)",
+              "dart_type_name": "LeaveUnit"
+            }
+          },
+          {
+            "name": "hours",
+            "getter_name": "hours",
+            "moor_type": "double",
+            "nullable": true,
+            "customConstraints": null,
+            "default_dart": null,
+            "default_client_dart": null,
+            "dsl_features": []
+          },
+          {
+            "name": "custom_type_name",
+            "getter_name": "customTypeName",
+            "moor_type": "string",
+            "nullable": true,
+            "customConstraints": null,
+            "default_dart": null,
+            "default_client_dart": null,
+            "dsl_features": []
+          },
+          {
+            "name": "event_date",
+            "getter_name": "eventDate",
+            "moor_type": "string",
+            "nullable": true,
+            "customConstraints": null,
+            "default_dart": null,
+            "default_client_dart": null,
+            "dsl_features": [],
+            "type_converter": {
+              "dart_expr": "const DayConverter()",
+              "dart_type_name": "DateTime"
+            }
+          },
+          {
+            "name": "deducts_from_annual",
+            "getter_name": "deductsFromAnnual",
+            "moor_type": "bool",
+            "nullable": false,
+            "customConstraints": null,
+            "defaultConstraints": "CHECK (\"deducts_from_annual\" IN (0, 1))",
+            "dialectAwareDefaultConstraints": {
+              "sqlite": "CHECK (\"deducts_from_annual\" IN (0, 1))"
+            },
+            "default_dart": null,
+            "default_client_dart": null,
+            "dsl_features": []
+          },
+          {
+            "name": "note",
+            "getter_name": "note",
+            "moor_type": "string",
+            "nullable": true,
+            "customConstraints": null,
+            "default_dart": null,
+            "default_client_dart": null,
+            "dsl_features": []
+          }
+        ],
+        "is_virtual": false,
+        "without_rowid": false,
+        "constraints": [
+          "CHECK (length(id) > 0)",
+          "CHECK (type IN ('annual', 'sick', 'unpaid', 'maternity', 'paternity',\n  'marriage', 'bereavement', 'adoption', 'disabledChildCare', 'union',\n  'excuse', 'travel', 'other'))",
+          "CHECK (date(start_date) IS start_date)",
+          "CHECK (date(end_date) IS end_date)",
+          "CHECK (end_date >= start_date)",
+          "CHECK (unit IN ('days', 'halfDay', 'hours'))",
+          "CHECK (hours IS NULL OR hours > 0)",
+          "CHECK (event_date IS NULL OR date(event_date) IS event_date)"
+        ],
+        "strict": true,
+        "explicit_pk": [
+          "id"
+        ]
+      }
+    },
+    {
+      "id": 2,
+      "references": [
+        0
+      ],
+      "type": "table",
+      "data": {
+        "name": "overtime_records",
+        "was_declared_in_moor": false,
+        "columns": [
+          {
+            "name": "id",
+            "getter_name": "id",
+            "moor_type": "string",
+            "nullable": false,
+            "customConstraints": null,
+            "default_dart": null,
+            "default_client_dart": null,
+            "dsl_features": []
+          },
+          {
+            "name": "profile_id",
+            "getter_name": "profileId",
+            "moor_type": "string",
+            "nullable": false,
+            "customConstraints": null,
+            "defaultConstraints": "REFERENCES profiles (id) ON DELETE CASCADE",
+            "dialectAwareDefaultConstraints": {
+              "sqlite": "REFERENCES profiles (id) ON DELETE CASCADE"
+            },
+            "default_dart": null,
+            "default_client_dart": null,
+            "dsl_features": [
+              {
+                "foreign_key": {
+                  "to": {
+                    "table": "profiles",
+                    "column": "id"
+                  },
+                  "initially_deferred": false,
+                  "on_update": null,
+                  "on_delete": "cascade"
+                }
+              }
+            ]
+          },
+          {
+            "name": "date",
+            "getter_name": "date",
+            "moor_type": "string",
+            "nullable": false,
+            "customConstraints": null,
+            "default_dart": null,
+            "default_client_dart": null,
+            "dsl_features": [],
+            "type_converter": {
+              "dart_expr": "const DayConverter()",
+              "dart_type_name": "DateTime"
+            }
+          },
+          {
+            "name": "hours",
+            "getter_name": "hours",
+            "moor_type": "double",
+            "nullable": false,
+            "customConstraints": null,
+            "default_dart": null,
+            "default_client_dart": null,
+            "dsl_features": []
+          },
+          {
+            "name": "note",
+            "getter_name": "note",
+            "moor_type": "string",
+            "nullable": true,
+            "customConstraints": null,
+            "default_dart": null,
+            "default_client_dart": null,
+            "dsl_features": []
+          }
+        ],
+        "is_virtual": false,
+        "without_rowid": false,
+        "constraints": [
+          "CHECK (length(id) > 0)",
+          "CHECK (date(\"date\") IS \"date\")",
+          "CHECK (hours > 0)"
+        ],
+        "strict": true,
+        "explicit_pk": [
+          "id"
+        ]
+      }
+    },
+    {
+      "id": 3,
+      "references": [
+        0
+      ],
+      "type": "table",
+      "data": {
+        "name": "settings",
+        "was_declared_in_moor": false,
+        "columns": [
+          {
+            "name": "id",
+            "getter_name": "id",
+            "moor_type": "int",
+            "nullable": false,
+            "customConstraints": null,
+            "default_dart": "const CustomExpression('1')",
+            "default_client_dart": null,
+            "dsl_features": []
+          },
+          {
+            "name": "theme_mode",
+            "getter_name": "themeMode",
+            "moor_type": "string",
+            "nullable": false,
+            "customConstraints": null,
+            "default_dart": null,
+            "default_client_dart": null,
+            "dsl_features": [],
+            "type_converter": {
+              "dart_expr": "const EnumNameConverter<AppThemeMode>(AppThemeMode.values)",
+              "dart_type_name": "AppThemeMode"
+            }
+          },
+          {
+            "name": "active_profile_id",
+            "getter_name": "activeProfileId",
+            "moor_type": "string",
+            "nullable": true,
+            "customConstraints": null,
+            "defaultConstraints": "REFERENCES profiles (id) ON DELETE SET NULL",
+            "dialectAwareDefaultConstraints": {
+              "sqlite": "REFERENCES profiles (id) ON DELETE SET NULL"
+            },
+            "default_dart": null,
+            "default_client_dart": null,
+            "dsl_features": [
+              {
+                "foreign_key": {
+                  "to": {
+                    "table": "profiles",
+                    "column": "id"
+                  },
+                  "initially_deferred": false,
+                  "on_update": null,
+                  "on_delete": "setNull"
+                }
+              }
+            ]
+          },
+          {
+            "name": "holiday_reminder",
+            "getter_name": "holidayReminder",
+            "moor_type": "bool",
+            "nullable": false,
+            "customConstraints": null,
+            "defaultConstraints": "CHECK (\"holiday_reminder\" IN (0, 1))",
+            "dialectAwareDefaultConstraints": {
+              "sqlite": "CHECK (\"holiday_reminder\" IN (0, 1))"
+            },
+            "default_dart": null,
+            "default_client_dart": null,
+            "dsl_features": []
+          },
+          {
+            "name": "holiday_days_before",
+            "getter_name": "holidayDaysBefore",
+            "moor_type": "int",
+            "nullable": false,
+            "customConstraints": null,
+            "default_dart": null,
+            "default_client_dart": null,
+            "dsl_features": []
+          },
+          {
+            "name": "accrual_reminder",
+            "getter_name": "accrualReminder",
+            "moor_type": "bool",
+            "nullable": false,
+            "customConstraints": null,
+            "defaultConstraints": "CHECK (\"accrual_reminder\" IN (0, 1))",
+            "dialectAwareDefaultConstraints": {
+              "sqlite": "CHECK (\"accrual_reminder\" IN (0, 1))"
+            },
+            "default_dart": null,
+            "default_client_dart": null,
+            "dsl_features": []
+          },
+          {
+            "name": "planned_leave_reminder",
+            "getter_name": "plannedLeaveReminder",
+            "moor_type": "bool",
+            "nullable": false,
+            "customConstraints": null,
+            "defaultConstraints": "CHECK (\"planned_leave_reminder\" IN (0, 1))",
+            "dialectAwareDefaultConstraints": {
+              "sqlite": "CHECK (\"planned_leave_reminder\" IN (0, 1))"
+            },
+            "default_dart": null,
+            "default_client_dart": null,
+            "dsl_features": []
+          },
+          {
+            "name": "planned_leave_days_before",
+            "getter_name": "plannedLeaveDaysBefore",
+            "moor_type": "int",
+            "nullable": false,
+            "customConstraints": null,
+            "default_dart": null,
+            "default_client_dart": null,
+            "dsl_features": []
+          },
+          {
+            "name": "year_end_reminder",
+            "getter_name": "yearEndReminder",
+            "moor_type": "bool",
+            "nullable": false,
+            "customConstraints": null,
+            "defaultConstraints": "CHECK (\"year_end_reminder\" IN (0, 1))",
+            "dialectAwareDefaultConstraints": {
+              "sqlite": "CHECK (\"year_end_reminder\" IN (0, 1))"
+            },
+            "default_dart": null,
+            "default_client_dart": null,
+            "dsl_features": []
+          }
+        ],
+        "is_virtual": false,
+        "without_rowid": false,
+        "constraints": [
+          "CHECK (id = 1)",
+          "CHECK (theme_mode IN ('system', 'light', 'dark'))",
+          "CHECK (holiday_days_before >= 0)",
+          "CHECK (planned_leave_days_before >= 0)"
+        ],
+        "strict": true,
+        "explicit_pk": [
+          "id"
+        ]
+      }
+    },
+    {
+      "id": 4,
+      "references": [
+        1
+      ],
+      "type": "index",
+      "data": {
+        "on": 1,
+        "name": "leave_records_profile_start",
+        "sql": null,
+        "unique": false,
+        "columns": [
+          {
+            "column": "profile_id",
+            "order_by": null
+          },
+          {
+            "column": "start_date",
+            "order_by": null
+          }
+        ]
+      }
+    },
+    {
+      "id": 5,
+      "references": [
+        2
+      ],
+      "type": "index",
+      "data": {
+        "on": 2,
+        "name": "overtime_records_profile_date",
+        "sql": null,
+        "unique": false,
+        "columns": [
+          {
+            "column": "profile_id",
+            "order_by": null
+          },
+          {
+            "column": "date",
+            "order_by": null
+          }
+        ]
+      }
+    }
+  ],
+  "fixed_sql": [
+    {
+      "name": "profiles",
+      "sql": [
+        {
+          "dialect": "sqlite",
+          "sql": "CREATE TABLE IF NOT EXISTS \"profiles\" (\"id\" TEXT NOT NULL, \"name\" TEXT NOT NULL, \"employment_type\" TEXT NOT NULL, \"employment_start_date\" TEXT NOT NULL, \"birth_date\" TEXT NULL, \"work_days\" TEXT NOT NULL, \"weekly_rest_day\" INTEGER NOT NULL, \"saturday_counts_as_leave\" INTEGER NOT NULL CHECK (\"saturday_counts_as_leave\" IN (0, 1)), \"half_day_deduction\" TEXT NOT NULL, \"daily_working_hours\" REAL NOT NULL, \"prior_service_years\" INTEGER NOT NULL, \"prior_service_months\" INTEGER NOT NULL, \"prior_service_days\" INTEGER NOT NULL, \"is_underground\" INTEGER NOT NULL CHECK (\"is_underground\" IN (0, 1)), \"contract_extra_days\" INTEGER NOT NULL, \"leave_used_before_tracking\" REAL NOT NULL, \"is_teacher\" INTEGER NOT NULL CHECK (\"is_teacher\" IN (0, 1)), \"administrative_leave_days\" TEXT NOT NULL, \"absence_periods\" TEXT NOT NULL, PRIMARY KEY (\"id\"), CHECK (length(id) > 0), CHECK (employment_type IN ('laborLaw', 'civilServant')), CHECK (date(employment_start_date) IS employment_start_date), CHECK (date(birth_date) IS birth_date), CHECK (json_type(work_days) = 'array'), CHECK (weekly_rest_day BETWEEN 1 AND 7), CHECK (half_day_deduction IN ('zero', 'half', 'full')), CHECK (daily_working_hours > 0), CHECK (prior_service_years >= 0), CHECK (prior_service_months >= 0), CHECK (prior_service_days >= 0), CHECK (contract_extra_days >= 0), CHECK (leave_used_before_tracking >= 0), CHECK (json_type(administrative_leave_days) = 'array'), CHECK (json_type(absence_periods) = 'array')) STRICT;"
+        }
+      ]
+    },
+    {
+      "name": "leave_records",
+      "sql": [
+        {
+          "dialect": "sqlite",
+          "sql": "CREATE TABLE IF NOT EXISTS \"leave_records\" (\"id\" TEXT NOT NULL, \"profile_id\" TEXT NOT NULL REFERENCES profiles (id) ON DELETE CASCADE, \"type\" TEXT NOT NULL, \"start_date\" TEXT NOT NULL, \"end_date\" TEXT NOT NULL, \"unit\" TEXT NOT NULL, \"hours\" REAL NULL, \"custom_type_name\" TEXT NULL, \"event_date\" TEXT NULL, \"deducts_from_annual\" INTEGER NOT NULL CHECK (\"deducts_from_annual\" IN (0, 1)), \"note\" TEXT NULL, PRIMARY KEY (\"id\"), CHECK (length(id) > 0), CHECK (type IN ('annual', 'sick', 'unpaid', 'maternity', 'paternity',\n  'marriage', 'bereavement', 'adoption', 'disabledChildCare', 'union',\n  'excuse', 'travel', 'other')), CHECK (date(start_date) IS start_date), CHECK (date(end_date) IS end_date), CHECK (end_date >= start_date), CHECK (unit IN ('days', 'halfDay', 'hours')), CHECK (hours IS NULL OR hours > 0), CHECK (event_date IS NULL OR date(event_date) IS event_date)) STRICT;"
+        }
+      ]
+    },
+    {
+      "name": "overtime_records",
+      "sql": [
+        {
+          "dialect": "sqlite",
+          "sql": "CREATE TABLE IF NOT EXISTS \"overtime_records\" (\"id\" TEXT NOT NULL, \"profile_id\" TEXT NOT NULL REFERENCES profiles (id) ON DELETE CASCADE, \"date\" TEXT NOT NULL, \"hours\" REAL NOT NULL, \"note\" TEXT NULL, PRIMARY KEY (\"id\"), CHECK (length(id) > 0), CHECK (date(\"date\") IS \"date\"), CHECK (hours > 0)) STRICT;"
+        }
+      ]
+    },
+    {
+      "name": "settings",
+      "sql": [
+        {
+          "dialect": "sqlite",
+          "sql": "CREATE TABLE IF NOT EXISTS \"settings\" (\"id\" INTEGER NOT NULL DEFAULT 1, \"theme_mode\" TEXT NOT NULL, \"active_profile_id\" TEXT NULL REFERENCES profiles (id) ON DELETE SET NULL, \"holiday_reminder\" INTEGER NOT NULL CHECK (\"holiday_reminder\" IN (0, 1)), \"holiday_days_before\" INTEGER NOT NULL, \"accrual_reminder\" INTEGER NOT NULL CHECK (\"accrual_reminder\" IN (0, 1)), \"planned_leave_reminder\" INTEGER NOT NULL CHECK (\"planned_leave_reminder\" IN (0, 1)), \"planned_leave_days_before\" INTEGER NOT NULL, \"year_end_reminder\" INTEGER NOT NULL CHECK (\"year_end_reminder\" IN (0, 1)), PRIMARY KEY (\"id\"), CHECK (id = 1), CHECK (theme_mode IN ('system', 'light', 'dark')), CHECK (holiday_days_before >= 0), CHECK (planned_leave_days_before >= 0)) STRICT;"
+        }
+      ]
+    },
+    {
+      "name": "leave_records_profile_start",
+      "sql": [
+        {
+          "dialect": "sqlite",
+          "sql": "CREATE INDEX leave_records_profile_start ON leave_records (profile_id, start_date)"
+        }
+      ]
+    },
+    {
+      "name": "overtime_records_profile_date",
+      "sql": [
+        {
+          "dialect": "sqlite",
+          "sql": "CREATE INDEX overtime_records_profile_date ON overtime_records (profile_id, date)"
+        }
+      ]
+    }
+  ]
+}

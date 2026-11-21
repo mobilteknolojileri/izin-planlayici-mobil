@@ -2,6 +2,8 @@
 
 Bağımlılık: 05. Paralel çalışır. Yazma alanı: `lib/data/database/`, `lib/data/repositories/`, `test/data/database/`, `test/data/repositories/`. Paralel aşamada `build_runner`'ı sadece bu task çalıştırır.
 
+Durum: tamamlandı. Profil, izin, fazla mesai ve ayar tabloları `drift` ile kuruldu, şema sürümü 1 `drift_schemas/` altında. Repository'ler, resmî tatil okuma, yedek, geri yükleme ve sıfırlama yazıldı. Analyze temiz, 113 test geçiyor. Provider'ların gerçek sınıflara bağlanması task 16'ya bırakıldı.
+
 ## Amaç
 
 Profil, izin kaydı, fazla mesai ve ayarları cihazda SQLite'ta (`drift`) saklamak, resmî tatilleri asset'ten okumak.

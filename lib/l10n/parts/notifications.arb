@@ -1,0 +1,151 @@
+{
+  "notificationsChannelName": "Hatırlatmalar",
+  "@notificationsChannelName": {
+    "description": "Android notification channel name, shown in the system notification settings."
+  },
+  "notificationsChannelDescription": "Resmî tatil, köprü, hak ediş ve izin hatırlatmaları",
+  "@notificationsChannelDescription": {
+    "description": "Android notification channel description, shown in the system notification settings."
+  },
+  "notificationsHolidayTitle": "Resmî tatil yaklaşıyor",
+  "@notificationsHolidayTitle": {
+    "description": "Notification title: an official holiday is coming."
+  },
+  "notificationsHolidayBody": "{days, plural, =0{Bugün {holiday}.} =1{Yarın {holiday}.} other{{holiday} için {days} gün kaldı.}}",
+  "@notificationsHolidayBody": {
+    "description": "Notification body: which holiday and how many days are left.",
+    "placeholders": {
+      "days": {
+        "type": "int",
+        "example": "7"
+      },
+      "holiday": {
+        "type": "String",
+        "example": "Cumhuriyet Bayramı"
+      }
+    }
+  },
+  "notificationsBridgeTitle": "Köprü fırsatı",
+  "@notificationsBridgeTitle": {
+    "description": "Notification title: a few leave days turn the coming holiday into a long break."
+  },
+  "notificationsBridgeBody": "{days, plural, =0{Bugün {holiday}.} =1{Yarın {holiday}.} other{{holiday} için {days} gün kaldı.}} Bu tatile {leaveDays} gün izin eklersen toplam {totalDays} gün tatil yaparsın.",
+  "@notificationsBridgeBody": {
+    "description": "Notification body: the coming holiday, the leave days to take and the length of the whole break.",
+    "placeholders": {
+      "days": {
+        "type": "int",
+        "example": "7"
+      },
+      "holiday": {
+        "type": "String",
+        "example": "Kurban Bayramı 1. Gün"
+      },
+      "leaveDays": {
+        "type": "double",
+        "format": "decimalPattern",
+        "example": "1.5"
+      },
+      "totalDays": {
+        "type": "int",
+        "example": "9"
+      }
+    }
+  },
+  "notificationsAccrualTitle": "Yeni izin hakkı",
+  "@notificationsAccrualTitle": {
+    "description": "Notification title: a profile earns annual leave today."
+  },
+  "notificationsAccrualBody": "{name} için bugün {days} gün yıllık izin hakkı doğdu.",
+  "@notificationsAccrualBody": {
+    "description": "Notification body: profile name and the annual leave days earned today.",
+    "placeholders": {
+      "name": {
+        "type": "String",
+        "example": "Ayşe"
+      },
+      "days": {
+        "type": "int",
+        "example": "14"
+      }
+    }
+  },
+  "notificationsLeaveStartTitle": "İzin yaklaşıyor",
+  "@notificationsLeaveStartTitle": {
+    "description": "Notification title: a planned leave starts soon."
+  },
+  "notificationsLeaveStartBody": "{days, plural, =0{{name} için planlanan izin bugün başlıyor.} =1{{name} için planlanan izin yarın başlıyor.} other{{name} için planlanan izin {days} gün sonra başlıyor.}}",
+  "@notificationsLeaveStartBody": {
+    "description": "Notification body: profile name and when the planned leave starts.",
+    "placeholders": {
+      "name": {
+        "type": "String",
+        "example": "Ayşe"
+      },
+      "days": {
+        "type": "int",
+        "example": "3"
+      }
+    }
+  },
+  "notificationsLeaveReturnTitle": "İzin bitiyor",
+  "@notificationsLeaveReturnTitle": {
+    "description": "Notification title: the leave is ending, sent the evening before the return day."
+  },
+  "notificationsLeaveReturnBody": "{name} için yarın işe dönüş günü.",
+  "@notificationsLeaveReturnBody": {
+    "description": "Notification body: the profile goes back to work tomorrow.",
+    "placeholders": {
+      "name": {
+        "type": "String",
+        "example": "Ayşe"
+      }
+    }
+  },
+  "notificationsYearEndExpiringTitle": "Kullanılmamış izin düşecek",
+  "@notificationsYearEndExpiringTitle": {
+    "description": "Notification title for civil servants (657): unused leave is dropped on 1 January."
+  },
+  "notificationsYearEndExpiringBody": "{name} için {days} gün izin yıl sonuna kadar kullanılmazsa 1 Ocak'ta düşecek.",
+  "@notificationsYearEndExpiringBody": {
+    "description": "Notification body for civil servants (657): profile name and the days dropped on 1 January if unused.",
+    "placeholders": {
+      "name": {
+        "type": "String",
+        "example": "Ayşe"
+      },
+      "days": {
+        "type": "double",
+        "format": "decimalPattern",
+        "example": "4.5"
+      }
+    }
+  },
+  "notificationsYearEndUnusedTitle": "Kullanılmamış izin var",
+  "@notificationsYearEndUnusedTitle": {
+    "description": "Notification title for workers (4857): there is unused leave. Information only."
+  },
+  "notificationsYearEndUnusedBody": "{name} için {days} gün kullanılmamış izin var. Bu izin yıl sonunda düşmez, sonraki yıla geçer.",
+  "@notificationsYearEndUnusedBody": {
+    "description": "Notification body for workers (4857): unused leave days, which carry over to the next year.",
+    "placeholders": {
+      "name": {
+        "type": "String",
+        "example": "Ayşe"
+      },
+      "days": {
+        "type": "double",
+        "format": "decimalPattern",
+        "example": "4.5"
+      }
+    }
+  },
+  "notificationsTestTitle": "Bildirimler açık",
+  "@notificationsTestTitle": {
+    "description": "Title of the test notification shown right away."
+  },
+  "notificationsTestBody": "Hatırlatmalar böyle görünecek.",
+  "@notificationsTestBody": {
+    "description": "Body of the test notification shown right away."
+  }
+}

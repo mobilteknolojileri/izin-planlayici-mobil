@@ -2,6 +2,8 @@
 
 Bağımlılık: 05. Paralel çalışır. Yazma alanı: `lib/data/services/notifications/`, `lib/l10n/parts/notifications.arb`, `test/data/services/notifications/`. Manifest ve Gradle ayarları task 05'te hazırdır, eksik varsa çıktıya not edilir.
 
+Durum: tamamlandı. Altı bildirim türü İstanbul saatiyle planlanıyor, analyze temiz, 54 test geçiyor. MuMu'da izin verilince hak ediş hatırlatması 2 Mart 2027 saat 09.00'a kuruldu. İzin reddedilince uygulama çalışmaya devam etti ve bekleyen hatırlatma silindi. Bildirimin ekrana düşmesi cihazda denenmedi.
+
 ## Yapılacaklar
 
 - `NotificationService` implementasyonu: `flutter_local_notifications` + `timezone` (`Europe/Istanbul`).

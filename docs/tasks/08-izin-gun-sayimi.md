@@ -2,6 +2,8 @@
 
 Bağımlılık: 03, 05. Paralel çalışır. Yazma alanı: `lib/domain/day_count/`, `test/domain/day_count/`.
 
+Durum: tamamlandı. İşçi ve memur için gün sayımı, bakiye, bölme ve yol izni uyarıları, kanuni gün önerisi ve yıllık özet yazıldı. Analyze temiz, 90 test geçiyor.
+
 ## Amaç
 
 Bir izin aralığından kaç günün bakiyeden düşeceğini ve güncel bakiyeyi hesaplamak.

@@ -2,13 +2,13 @@
 
 Bağımlılık: 17.
 
-Durum: başladı. Upload keystore, release imzası ve `1.0.0+2` sürümü hazır. Hesabın kapanmaması için 0.1.0 dahili test sürümü (versionCode 1) üretildi. Gizlilik politikasının yayını, README ve Play Console adımları kaldı.
+Durum: kapalı test incelemede. Dahili testte 1.0.0 (versionCode 2) yayında, kapalı test 1.0.0 (versionCode 3) 22 Kasım 2026'da incelemeye gönderildi. Test kullanıcıları `testers-community@googlegroups.com` grubu. Mağaza girişi, uygulama içeriği beyanları ve GitHub Pages'taki gizlilik politikası tamam. Üretim başvurusu 12 test kullanıcısı ve 14 gün sonra yapılır.
 
 ## Yapılacaklar
 
 1. Upload keystore `~/.keystores/izin-planla/` altında, şifreleri aynı klasördeki `key.properties` dosyasında. `android/key.properties` bu dosyanın kopyasıdır ve `.gitignore`'dadır. Klasörü şifre yöneticisine veya şifreli bir yedeğe kopyala, çünkü anahtar kaybolursa Play Console'dan upload key sıfırlama talebi açmak gerekir.
 2. `android/app/build.gradle.kts` release signing'i `key.properties`'ten okusun.
-3. `pubspec.yaml`'da `version: 1.0.0+2` (versionName 1.0.0, versionCode 2), imzalı AAB üret. versionCode 1 dahili test sürümünde kullanıldı, Play aynı numarayı ikinci kez kabul etmez.
+3. `pubspec.yaml`'daki build numarası her Play yüklemesinde bir artar, çünkü Play aynı versionCode'u ikinci kez kabul etmez. Dahili test 2, kapalı test 3 ile yüklendi, sıradaki yükleme 4.
 4. Gizlilik politikasını GitHub Pages ile repo üzerinden yayınla, URL'yi Play Console'a gir.
 5. Kök `README.md`'yi tamamla: ekran görüntüleri, Play linki, CI ve lisans rozetleri.
 6. Play Console adımları için kullanıcıya tek numaralı liste hazırla:

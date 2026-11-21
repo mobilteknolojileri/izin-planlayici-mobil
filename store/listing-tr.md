@@ -68,6 +68,13 @@ Uygulama internet izni istemez. Hesap, reklam ve analitik yoktur. Veriler sadece
 Açık kaynak
 İzin Planla, GPL-3.0 lisanslı açık kaynak bir uygulamadır.
 
+Kaynaklar
+Hesapların dayandığı resmî metinler:
+• 4857 sayılı İş Kanunu: https://www.mevzuat.gov.tr/mevzuat?MevzuatNo=4857&MevzuatTur=1&MevzuatTertip=5
+• Yıllık Ücretli İzin Yönetmeliği: https://www.mevzuat.gov.tr/mevzuat?MevzuatNo=5451&MevzuatTur=7&MevzuatTertip=5
+• 657 sayılı Devlet Memurları Kanunu: https://www.mevzuat.gov.tr/mevzuat?MevzuatNo=657&MevzuatTur=1&MevzuatTertip=5
+• 2429 sayılı Ulusal Bayram ve Genel Tatiller Hakkında Kanun: https://www.mevzuat.gov.tr/mevzuat?MevzuatNo=2429&MevzuatTur=1&MevzuatTertip=5
+
 İzin Planla bir devlet uygulaması değildir, hiçbir kamu kurumuyla bağlantısı yoktur. Bilgilendirme amaçlıdır, hukuki tavsiye değildir. Kesin bilgi için işverenine, insan kaynaklarına veya bir hukukçuya danış.
 ```
 

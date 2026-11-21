@@ -1,6 +1,114 @@
 {
   "settingsTitle": "Ayarlar",
   "@settingsTitle": {
-    "description": "App bar title of the settings screen."
-  }
+    "description": "Large title of the settings tab."
+  },
+  "settingsPeopleTitle": "Kişiler",
+  "settingsPeopleSummary": "{name} seçili. Toplam {count} kişi.",
+  "@settingsPeopleSummary": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      },
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "settingsPeopleEmpty": "Henüz kişi eklemedin.",
+  "settingsScheduleTitle": "Çalışma düzeni",
+  "settingsScheduleFor": "{name} için geçerli.",
+  "@settingsScheduleFor": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "settingsWorkDays": "Çalıştığın günler",
+  "settingsSaturdayTitle": "Çalışmadığın cumartesi izinden düşsün",
+  "settingsSaturdayHelp": "Sözleşmende veya toplu iş sözleşmende cumartesi hafta tatili olarak yazıyorsa kapat.",
+  "settingsSaturdayInfoTerm": "Cumartesi",
+  "settingsSaturdayInfo": "Yargıtayın güncel görüşüne göre çalışmadığın cumartesi izninden düşer. Eski kararlarda ve bazı bölge mahkemelerinde düşmez.",
+  "settingsHalfDayTitle": "Arife ve 28 Ekim sabahı",
+  "settingsHalfDayHelp": "Mevzuat bunu açıkça yazmaz. Uygulama varsayılan olarak yarım gün düşer.",
+  "settingsHalfDayZero": "İzinden düşmesin",
+  "settingsHalfDayHalf": "Yarım gün düşsün",
+  "settingsHalfDayFull": "Tam gün düşsün",
+  "settingsHoursTitle": "Günlük çalışma saatin",
+  "settingsHoursValue": "{hours} saat",
+  "@settingsHoursValue": {
+    "placeholders": {
+      "hours": {
+        "type": "double",
+        "format": "decimalPattern"
+      }
+    }
+  },
+  "settingsHoursHelp": "Saatlik izni güne çevirmek için kullanılır.",
+  "settingsHoursDecrease": "Yarım saat azalt",
+  "settingsHoursIncrease": "Yarım saat artır",
+  "settingsThemeTitle": "Görünüm",
+  "settingsThemeSystem": "Telefonun ayarı",
+  "settingsThemeLight": "Açık",
+  "settingsThemeDark": "Koyu",
+  "settingsRemindersTitle": "Hatırlatmalar",
+  "settingsRemindersHelp": "Bir hatırlatmayı açınca bildirim izni istenir.",
+  "settingsReminderHoliday": "Resmî tatil ve köprü",
+  "settingsReminderAccrual": "Yeni izin hakkın doğunca",
+  "settingsReminderPlanned": "Planladığın izinden önce",
+  "settingsReminderYearEnd": "Yıl sonunda kullanmadığın izin",
+  "settingsDaysBefore": "{days} gün önce",
+  "@settingsDaysBefore": {
+    "placeholders": {
+      "days": {
+        "type": "int"
+      }
+    }
+  },
+  "settingsDaysBeforeDecrease": "Gün sayısını azalt",
+  "settingsDaysBeforeIncrease": "Gün sayısını artır",
+  "settingsPermissionDenied": "Bildirim izni verilmedi. Telefonun ayarlarından açabilirsin.",
+  "settingsDataTitle": "Verilerin",
+  "settingsBackup": "Yedekle",
+  "settingsBackupHelp": "Bütün verilerini tek dosya olarak paylaş.",
+  "settingsRestore": "Yedekten geri yükle",
+  "settingsRestoreHelp": "Daha önce aldığın yedeği aç.",
+  "settingsRestoreConfirmTitle": "Yedek geri yüklensin mi?",
+  "settingsRestoreConfirmBody": "Şu anki bütün verilerin yedekteki verilerle değişir.",
+  "settingsRestoreConfirm": "Geri yükle",
+  "settingsRestoreDone": "Yedek geri yüklendi.",
+  "settingsExport": "Dışa aktar",
+  "settingsExportHelp": "İzin geçmişini PDF, Excel veya CSV dosyası olarak al.",
+  "settingsExportPdf": "PDF",
+  "settingsExportExcel": "Excel",
+  "settingsExportCsv": "CSV",
+  "settingsExportShare": "Paylaş",
+  "settingsExportSave": "Cihaza kaydet",
+  "settingsExportSaved": "Dosya kaydedildi.",
+  "settingsReset": "Bütün verileri sil",
+  "settingsResetHelp": "Kişiler, izinler ve ayarlar silinir.",
+  "settingsResetConfirmTitle": "Bütün veriler silinsin mi?",
+  "settingsResetConfirmBody": "Kişiler, izinler ve ayarlar silinir. Hemen sonra geri alabilirsin.",
+  "settingsResetConfirm": "Sil",
+  "settingsResetTypeLabel": "Onaylamak için \"sil\" yaz",
+  "@settingsResetTypeLabel": {
+    "description": "Label of the field where the user types the confirm word before all data is deleted."
+  },
+  "settingsResetWord": "sil",
+  "@settingsResetWord": {
+    "description": "The word the user types to confirm deleting all data. Must match the word inside settingsResetTypeLabel."
+  },
+  "settingsResetDone": "Bütün veriler silindi.",
+  "settingsCancel": "Vazgeç",
+  "settingsFailed": "İşlem tamamlanamadı. Tekrar dene.",
+  "settingsInfoTitle": "Bilgi",
+  "settingsStats": "İstatistik",
+  "settingsGuide": "Mevzuat rehberi",
+  "settingsAbout": "Hakkında",
+  "settingsLoading": "Ayarlar yükleniyor",
+  "settingsError": "Ayarlar açılamadı. Biraz sonra tekrar dene.",
+  "settingsRestoreNewer": "Bu yedek, uygulamanın daha yeni bir sürümüyle alınmış. Geri yüklemek için önce uygulamayı güncelle. Verilerin değişmedi.",
+  "settingsRestoreInvalid": "Bu dosya geçerli bir İzin Planla yedeği değil. Verilerin değişmedi.",
+  "settingsWorkDaysHelp": "En az bir gün seçili kalır."
 }

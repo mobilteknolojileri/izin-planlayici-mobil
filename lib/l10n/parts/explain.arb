@@ -1,6 +1,434 @@
 {
-  "explainTitle": "Nasıl Hesaplandı?",
+  "explainTitle": "Nasıl hesaplandı?",
   "@explainTitle": {
     "description": "App bar title of the explain screen."
+  },
+  "explainSummaryTitle": "Hesabın özeti",
+  "@explainSummaryTitle": {
+    "description": "Card title of the balance arithmetic."
+  },
+  "explainEarned": "Hak ettiğin",
+  "@explainEarned": {
+    "description": "Row label: annual leave days earned."
+  },
+  "explainUsed": "Kullandığın",
+  "@explainUsed": {
+    "description": "Row label: annual leave days used."
+  },
+  "explainPlanned": "Planladığın",
+  "@explainPlanned": {
+    "description": "Row label: annual leave days planned."
+  },
+  "explainRemaining": "Kalan",
+  "@explainRemaining": {
+    "description": "Row label: annual leave days remaining."
+  },
+  "explainUsedBeforeNote": "Uygulamayı kullanmadan önce aldığın {days} gün izin, kullandığın izne dâhil.",
+  "@explainUsedBeforeNote": {
+    "description": "Leave used before tracking started.",
+    "placeholders": {
+      "days": {
+        "type": "double",
+        "format": "decimalPattern"
+      }
+    }
+  },
+  "explainExpiringNote": "Kullanmazsan {days} gün yıl sonunda düşer.",
+  "@explainExpiringNote": {
+    "description": "Days dropped at year end (657 art. 103).",
+    "placeholders": {
+      "days": {
+        "type": "double",
+        "format": "decimalPattern"
+      }
+    }
+  },
+  "explainProfileHeader": "Bilgilerin",
+  "@explainProfileHeader": {
+    "description": "Card title of the facts the calculation uses."
+  },
+  "explainEmploymentLabor": "İşçi, İş Kanunu",
+  "@explainEmploymentLabor": {
+    "description": "Employment type: Labour Law 4857."
+  },
+  "explainEmploymentCivil": "Memur, Devlet Memurları Kanunu",
+  "@explainEmploymentCivil": {
+    "description": "Employment type: Civil Servants Law 657."
+  },
+  "explainStartDate": "İşe başlama: {date}",
+  "@explainStartDate": {
+    "description": "Start date of the job.",
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "explainPriorService": "Önceki çalışma: {years} yıl {months} ay {days} gün",
+  "@explainPriorService": {
+    "description": "Prior service added to the calculation.",
+    "placeholders": {
+      "years": {
+        "type": "int"
+      },
+      "months": {
+        "type": "int"
+      },
+      "days": {
+        "type": "int"
+      }
+    }
+  },
+  "explainPriorServiceTerm": "Önceki çalışma",
+  "@explainPriorServiceTerm": {
+    "description": "Term explained by the question mark button."
+  },
+  "explainPriorServiceInfoLabor": "Aynı işverende daha önce çalıştığın süre. İzin hakkın bu süre de eklenerek hesaplanır.",
+  "@explainPriorServiceInfoLabor": {
+    "description": "Prior service explanation for a worker."
+  },
+  "explainPriorServiceInfoCivil": "Kamuda daha önce geçen hizmetin. İzin hakkın bu süre de eklenerek hesaplanır.",
+  "@explainPriorServiceInfoCivil": {
+    "description": "Prior service explanation for a civil servant."
+  },
+  "explainPeriodsHeader": "Hak edişlerin",
+  "@explainPeriodsHeader": {
+    "description": "Section of the accrual periods."
+  },
+  "explainPeriodDays": "{days} gün hak ettin",
+  "@explainPeriodDays": {
+    "description": "Days earned on one accrual date.",
+    "placeholders": {
+      "days": {
+        "type": "int"
+      }
+    }
+  },
+  "explainPeriodYear": "{year} yılı için",
+  "@explainPeriodYear": {
+    "description": "Calendar year an accrual belongs to (657).",
+    "placeholders": {
+      "year": {
+        "type": "int"
+      }
+    }
+  },
+  "explainPeriodExpires": "Kullanmazsan {date} günü düşer.",
+  "@explainPeriodExpires": {
+    "description": "Day the unused part of an accrual is dropped (657).",
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "explainRuleApplied": "{reference} uygulandı.",
+  "@explainRuleApplied": {
+    "description": "A legal rule applied to an accrual, for example: 4857 md. 53 uygulandı.",
+    "placeholders": {
+      "reference": {
+        "type": "String"
+      }
+    }
+  },
+  "explainRuleLaborAnniversary": "İşe başladığın günün {serviceYears}. yıl dönümünde bu hakkı kazandın.",
+  "@explainRuleLaborAnniversary": {
+    "description": "Entitlement rule laborAnniversary. 4857: right earned on each service anniversary.",
+    "placeholders": {
+      "serviceYears": {
+        "type": "String"
+      }
+    }
+  },
+  "explainRuleLaborPriorService": "Aynı işverendeki önceki {years} yıl {months} ay {days} gün çalışman eklendi. Bu yüzden {serviceStart} günü başlamış sayılırsın.",
+  "@explainRuleLaborPriorService": {
+    "description": "Entitlement rule laborPriorService. 4857: prior service with the same employer.",
+    "placeholders": {
+      "years": {
+        "type": "String"
+      },
+      "months": {
+        "type": "String"
+      },
+      "days": {
+        "type": "String"
+      },
+      "serviceStart": {
+        "type": "String"
+      }
+    }
+  },
+  "explainRuleLaborAbsenceShift": "Girdiğin devamsızlık yüzünden hak ediş tarihin {shiftDays} gün ileri kaydı.",
+  "@explainRuleLaborAbsenceShift": {
+    "description": "Entitlement rule laborAbsenceShift. 4857: absences moved the accrual date.",
+    "placeholders": {
+      "shiftDays": {
+        "type": "String"
+      }
+    }
+  },
+  "explainRuleLaborContinuousService": "Devamsızlık girmediğin için ara vermeden çalıştığın varsayıldı.",
+  "@explainRuleLaborContinuousService": {
+    "description": "Entitlement rule laborContinuousService. 4857: continuous work assumed."
+  },
+  "explainRuleLaborSeniorityUpToFive": "Bu iş yerinde {serviceYears} yılını doldurdun. Kıdemi 5 yıla kadar (5 dâhil) olanın izni {days} gündür.",
+  "@explainRuleLaborSeniorityUpToFive": {
+    "description": "Entitlement rule laborSeniorityUpToFive. 4857: 1 to 5 years of service.",
+    "placeholders": {
+      "serviceYears": {
+        "type": "String"
+      },
+      "days": {
+        "type": "String"
+      }
+    }
+  },
+  "explainRuleLaborSeniorityFiveToFifteen": "Bu iş yerinde {serviceYears} yılını doldurdun. Kıdemi 5 yıldan fazla, 15 yıldan az olanın izni {days} gündür.",
+  "@explainRuleLaborSeniorityFiveToFifteen": {
+    "description": "Entitlement rule laborSeniorityFiveToFifteen. 4857: more than 5 and less than 15 years.",
+    "placeholders": {
+      "serviceYears": {
+        "type": "String"
+      },
+      "days": {
+        "type": "String"
+      }
+    }
+  },
+  "explainRuleLaborSeniorityFifteenOrMore": "Bu iş yerinde {serviceYears} yılını doldurdun. Kıdemi 15 yıl ve daha fazla olanın izni {days} gündür.",
+  "@explainRuleLaborSeniorityFifteenOrMore": {
+    "description": "Entitlement rule laborSeniorityFifteenOrMore. 4857: 15 years or more.",
+    "placeholders": {
+      "serviceYears": {
+        "type": "String"
+      },
+      "days": {
+        "type": "String"
+      }
+    }
+  },
+  "explainRuleLaborAgeEighteenOrYounger": "Hak ediş gününde {age} yaşındaydın. Yaşı 18 veya altında olanın izni en az {days} gündür.",
+  "@explainRuleLaborAgeEighteenOrYounger": {
+    "description": "Entitlement rule laborAgeEighteenOrYounger. 4857: age minimum for 18 or younger.",
+    "placeholders": {
+      "age": {
+        "type": "String"
+      },
+      "days": {
+        "type": "String"
+      }
+    }
+  },
+  "explainRuleLaborAgeFiftyOrOlder": "Hak ediş gününde {age} yaşındaydın. Yaşı 50 veya üstünde olanın izni en az {days} gündür.",
+  "@explainRuleLaborAgeFiftyOrOlder": {
+    "description": "Entitlement rule laborAgeFiftyOrOlder. 4857: age minimum for 50 or older.",
+    "placeholders": {
+      "age": {
+        "type": "String"
+      },
+      "days": {
+        "type": "String"
+      }
+    }
+  },
+  "explainRuleLaborUnderground": "Yer altı işinde çalıştığın için {extraDays} gün eklendi.",
+  "@explainRuleLaborUnderground": {
+    "description": "Entitlement rule laborUnderground. 4857: underground work adds days.",
+    "placeholders": {
+      "extraDays": {
+        "type": "String"
+      }
+    }
+  },
+  "explainRuleLaborContractExtra": "Sözleşmen sana {extraDays} gün ek izin veriyor.",
+  "@explainRuleLaborContractExtra": {
+    "description": "Entitlement rule laborContractExtra. 4857: extra days from a contract.",
+    "placeholders": {
+      "extraDays": {
+        "type": "String"
+      }
+    }
+  },
+  "explainRuleLaborNoExpiry": "Kullanmadığın izin yanmaz, sonraki yıllara geçer.",
+  "@explainRuleLaborNoExpiry": {
+    "description": "Entitlement rule laborNoExpiry. 4857: unused days never expire."
+  },
+  "explainRuleCivilFirstRight": "Kamudaki hizmetin {firstRightDate} günü bir yılı doldurdu. İlk izin hakkın o gün, {calendarYear} yılı için doğdu.",
+  "@explainRuleCivilFirstRight": {
+    "description": "Entitlement rule civilFirstRight. 657: first right when service reaches one year.",
+    "placeholders": {
+      "firstRightDate": {
+        "type": "String"
+      },
+      "calendarYear": {
+        "type": "String"
+      }
+    }
+  },
+  "explainRuleCivilFirstRightOnDutyStart": "İlk izin hakkın göreve başladığın {firstRightDate} günü doğdu, çünkü önceki hizmetin bir yılı geçiyordu. Bu hak {calendarYear} yılı için.",
+  "@explainRuleCivilFirstRightOnDutyStart": {
+    "description": "Entitlement rule civilFirstRightOnDutyStart. 657: first right on the start of duty.",
+    "placeholders": {
+      "firstRightDate": {
+        "type": "String"
+      },
+      "calendarYear": {
+        "type": "String"
+      }
+    }
+  },
+  "explainRuleCivilCalendarYear": "Memurlarda izin hakkı her yıl 1 Ocak'ta yenilenir. Bu yüzden {calendarYear} yılının izni 1 Ocak'ta doğdu.",
+  "@explainRuleCivilCalendarYear": {
+    "description": "Entitlement rule civilCalendarYear. 657: later rights on 1 January.",
+    "placeholders": {
+      "calendarYear": {
+        "type": "String"
+      }
+    }
+  },
+  "explainRuleCivilPriorService": "Kamudaki önceki {years} yıl {months} ay {days} gün hizmetin eklendi. Bu yüzden {serviceStart} günü başlamış sayılırsın.",
+  "@explainRuleCivilPriorService": {
+    "description": "Entitlement rule civilPriorService. 657: counted prior public service.",
+    "placeholders": {
+      "years": {
+        "type": "String"
+      },
+      "months": {
+        "type": "String"
+      },
+      "days": {
+        "type": "String"
+      },
+      "serviceStart": {
+        "type": "String"
+      }
+    }
+  },
+  "explainRuleCivilUpToTenYears": "Hizmetin {serviceYears} yıl. Hizmeti 10 yıla kadar (10 dâhil) olanın izni {days} gündür.",
+  "@explainRuleCivilUpToTenYears": {
+    "description": "Entitlement rule civilUpToTenYears. 657: 1 to 10 years of service.",
+    "placeholders": {
+      "serviceYears": {
+        "type": "String"
+      },
+      "days": {
+        "type": "String"
+      }
+    }
+  },
+  "explainRuleCivilOverTenYears": "Hizmetin {serviceYears} yıl. Hizmeti 10 yıldan fazla olanın izni {days} gündür.",
+  "@explainRuleCivilOverTenYears": {
+    "description": "Entitlement rule civilOverTenYears. 657: over 10 years of service.",
+    "placeholders": {
+      "serviceYears": {
+        "type": "String"
+      },
+      "days": {
+        "type": "String"
+      }
+    }
+  },
+  "explainRuleCivilTenYearTransition": "Hizmetin {transitionDate} günü 10 yılı geçti. Bu yüzden {calendarYear} yılı için aradaki {days} gün eklendi.",
+  "@explainRuleCivilTenYearTransition": {
+    "description": "Entitlement rule civilTenYearTransition. 657: 10 year transition during the year.",
+    "placeholders": {
+      "transitionDate": {
+        "type": "String"
+      },
+      "calendarYear": {
+        "type": "String"
+      },
+      "days": {
+        "type": "String"
+      }
+    }
+  },
+  "explainRuleCivilCarryOver": "Kullanmadığın {calendarYear} izni bir yıl daha kullanılabilir. Bu izin {expiresOn} günü düşer.",
+  "@explainRuleCivilCarryOver": {
+    "description": "Entitlement rule civilCarryOver. 657: unused days carry over one year.",
+    "placeholders": {
+      "calendarYear": {
+        "type": "String"
+      },
+      "expiresOn": {
+        "type": "String"
+      }
+    }
+  },
+  "explainNoPeriods": "Henüz izin hakkın doğmadı.",
+  "@explainNoPeriods": {
+    "description": "Shown before the first accrual."
+  },
+  "explainNextHeader": "Sıradaki hak ediş",
+  "@explainNextHeader": {
+    "description": "Card title of the next accrual."
+  },
+  "explainNextDetail": "{date} günü {days} gün eklenecek.",
+  "@explainNextDetail": {
+    "description": "When the next accrual happens and how many days it adds.",
+    "placeholders": {
+      "date": {
+        "type": "String"
+      },
+      "days": {
+        "type": "int"
+      }
+    }
+  },
+  "explainNotesHeader": "Bilmen gerekenler",
+  "@explainNotesHeader": {
+    "description": "Card title of the assumptions of the calculation."
+  },
+  "explainNoAbsenceNote": "Devamsızlık girmediğin için hesap, ara vermeden çalıştığın varsayımıyla yapıldı.",
+  "@explainNoAbsenceNote": {
+    "description": "Assumption when no absence period is entered (4857 art. 54/2)."
+  },
+  "explainHalfDayHalf": "Arife ve 28 Ekim sabahı izninden yarım gün düşer.",
+  "@explainHalfDayHalf": {
+    "description": "Half day setting: half."
+  },
+  "explainHalfDayZero": "Arife ve 28 Ekim sabahı izninden düşmez.",
+  "@explainHalfDayZero": {
+    "description": "Half day setting: zero."
+  },
+  "explainHalfDayFull": "Arife ve 28 Ekim sabahı izninden bir gün düşer.",
+  "@explainHalfDayFull": {
+    "description": "Half day setting: full."
+  },
+  "explainHalfDayUnclear": "Kanun bunu açıkça yazmıyor. Bu ayarı çalışma düzeninden değiştirebilirsin.",
+  "@explainHalfDayUnclear": {
+    "description": "Why the half day setting exists."
+  },
+  "explainSaturdayCounts": "Çalışmadığın cumartesiler izninden düşer. Yargıtayın güncel görüşü budur.",
+  "@explainSaturdayCounts": {
+    "description": "Saturday setting: counts as leave."
+  },
+  "explainSaturdayNotCounted": "Çalışmadığın cumartesiler izninden düşmez. Sözleşmende cumartesi hafta tatili olarak yazıyorsa bu doğrudur.",
+  "@explainSaturdayNotCounted": {
+    "description": "Saturday setting: does not count as leave."
+  },
+  "explainTeacherMessage": "Öğretmenler yaz ve dinlenme tatillerinde izinli sayılır. Bu yüzden ayrıca yıllık izin verilmez.",
+  "@explainTeacherMessage": {
+    "description": "Why a teacher has no annual leave (657 art. 103/2)."
+  },
+  "explainNoProfileMessage": "Hesabı görmek için önce kurulumu tamamla.",
+  "@explainNoProfileMessage": {
+    "description": "Empty state before the first setup."
+  },
+  "explainNoProfileAction": "Kuruluma başla",
+  "@explainNoProfileAction": {
+    "description": "Opens the setup."
+  },
+  "explainErrorMessage": "Bilgiler yüklenemedi.",
+  "@explainErrorMessage": {
+    "description": "Shown when the data could not be loaded."
+  },
+  "explainRetry": "Tekrar dene",
+  "@explainRetry": {
+    "description": "Loads the data again."
+  },
+  "explainLoading": "Yükleniyor",
+  "@explainLoading": {
+    "description": "Screen reader label of the loading indicator."
   }
 }

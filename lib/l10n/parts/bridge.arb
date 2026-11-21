@@ -1,6 +1,81 @@
 {
   "bridgeTitle": "Köprü",
   "@bridgeTitle": {
-    "description": "App bar title of the bridge screen."
-  }
+    "description": "Large title of the bridge tab."
+  },
+  "bridgeBudgetTitle": "İzin bütçen",
+  "@bridgeBudgetTitle": {
+    "description": "Card title: how many leave days the user wants to spend."
+  },
+  "bridgeBudgetRemaining": "Kalan iznin {days} gün.",
+  "@bridgeBudgetRemaining": {
+    "placeholders": {
+      "days": {
+        "type": "double",
+        "format": "decimalPattern"
+      }
+    }
+  },
+  "bridgeBudgetHint": "Öneriler bu bütçeye göre seçilir.",
+  "bridgeBudgetDecrease": "Bütçeyi bir gün azalt",
+  "bridgeBudgetIncrease": "Bütçeyi bir gün artır",
+  "bridgePlanTitle": "{year} için en iyi plan",
+  "@bridgePlanTitle": {
+    "placeholders": {
+      "year": {
+        "type": "int"
+      }
+    }
+  },
+  "bridgePlanUnit": "gün tatil",
+  "bridgePlanCaption": "Toplam {leave} gün izinle {count} ayrı tatil yaparsın.",
+  "@bridgePlanCaption": {
+    "placeholders": {
+      "leave": {
+        "type": "double",
+        "format": "decimalPattern"
+      },
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "bridgePlanNone": "Bu bütçeyle köprü yapılamıyor.",
+  "bridgeSortEfficiency": "En verimli",
+  "bridgeSortLength": "En uzun",
+  "bridgeSortDate": "Tarihe göre",
+  "@bridgeSortDate": {
+    "description": "Sort chips of the suggestion list."
+  },
+  "bridgeSuggestionSentence": "{leave} gün izinle {total} gün tatil, {range}",
+  "@bridgeSuggestionSentence": {
+    "description": "Main sentence of a suggestion: '2 gün izinle 5 gün tatil, 20-24 Nisan'.",
+    "placeholders": {
+      "leave": {
+        "type": "double",
+        "format": "decimalPattern"
+      },
+      "total": {
+        "type": "int"
+      },
+      "range": {
+        "type": "String"
+      }
+    }
+  },
+  "bridgeSuggestionWeekend": "Hafta sonu tatili",
+  "@bridgeSuggestionWeekend": {
+    "description": "Card title of a suggestion without an official holiday."
+  },
+  "bridgeInPlan": "En iyi planda",
+  "bridgePlanAction": "Planla",
+  "bridgePlannedLabel": "Planlandı",
+  "bridgePlannedMessage": "İzin planına eklendi.",
+  "bridgeFailedMessage": "İzin eklenemedi. Tekrar dene.",
+  "bridgeEmptyMessage": "Bu yıl için köprü önerisi yok.",
+  "bridgeEmptyAction": "Takvimi aç",
+  "bridgeNoProfileMessage": "Köprü önerilerini görmek için önce kurulumu tamamla.",
+  "bridgeNoProfileAction": "Kuruluma başla",
+  "bridgeLoading": "Öneriler yükleniyor",
+  "bridgeError": "Öneriler açılamadı. Biraz sonra tekrar dene."
 }

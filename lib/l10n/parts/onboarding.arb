@@ -1,6 +1,94 @@
 {
   "onboardingTitle": "Kurulum",
   "@onboardingTitle": {
-    "description": "App bar title of the onboarding screen."
+    "description": "Name of the setup flow."
+  },
+  "onboardingNext": "Devam",
+  "@onboardingNext": {
+    "description": "Goes to the next setup step."
+  },
+  "onboardingFinish": "Bitir",
+  "@onboardingFinish": {
+    "description": "Saves the answers on the last setup step."
+  },
+  "onboardingTypeQuestion": "Nasıl çalışıyorsun?",
+  "@onboardingTypeQuestion": {
+    "description": "Setup step 1: employment type."
+  },
+  "onboardingTypeReason": "İzin hakkı işçide ve memurda farklı hesaplanır.",
+  "@onboardingTypeReason": {
+    "description": "Why step 1 is asked."
+  },
+  "onboardingTypeLabor": "İşçiyim",
+  "@onboardingTypeLabor": {
+    "description": "Employment type option: Labour Law 4857."
+  },
+  "onboardingTypeLaborDetail": "Özel sektörde veya kamuda işçi, İş Kanunu",
+  "@onboardingTypeLaborDetail": {
+    "description": "Detail of the worker option."
+  },
+  "onboardingTypeCivil": "Devlet memuruyum",
+  "@onboardingTypeCivil": {
+    "description": "Employment type option: Civil Servants Law 657."
+  },
+  "onboardingTypeCivilDetail": "Devlet Memurları Kanunu",
+  "@onboardingTypeCivilDetail": {
+    "description": "Detail of the civil servant option."
+  },
+  "onboardingStartQuestionLabor": "Bu iş yerinde ne zaman başladın?",
+  "@onboardingStartQuestionLabor": {
+    "description": "Setup step 2 for a worker: start date."
+  },
+  "onboardingStartQuestionCivil": "Memurluğa ne zaman başladın?",
+  "@onboardingStartQuestionCivil": {
+    "description": "Setup step 2 for a civil servant: start date."
+  },
+  "onboardingStartReasonLabor": "İzin hakkın bu iş yerinde çalıştığın süreye göre artar.",
+  "@onboardingStartReasonLabor": {
+    "description": "Why step 2 is asked, worker."
+  },
+  "onboardingStartReasonCivil": "İzin hakkın kamuda çalıştığın süreye göre artar.",
+  "@onboardingStartReasonCivil": {
+    "description": "Why step 2 is asked, civil servant."
+  },
+  "onboardingStartLabel": "İşe başlama tarihi",
+  "@onboardingStartLabel": {
+    "description": "Start date field."
+  },
+  "onboardingBirthQuestion": "Doğum tarihin ne?",
+  "@onboardingBirthQuestion": {
+    "description": "Setup step 3: birth date."
+  },
+  "onboardingBirthReasonLabor": "Yaşın 18 veya altında ya da 50 veya üstündeyse izin hakkın en az 20 gün olur.",
+  "@onboardingBirthReasonLabor": {
+    "description": "Why step 3 is asked, worker (4857 art. 53/5)."
+  },
+  "onboardingBirthLabel": "Doğum tarihi",
+  "@onboardingBirthLabel": {
+    "description": "Birth date field."
+  },
+  "onboardingSaturdayQuestion": "Cumartesi çalışıyor musun?",
+  "@onboardingSaturdayQuestion": {
+    "description": "Setup step 4 for a worker: Saturday work."
+  },
+  "onboardingSaturdayReason": "İzne denk gelen cumartesilerin nasıl sayılacağı buna bağlı.",
+  "@onboardingSaturdayReason": {
+    "description": "Why step 4 is asked."
+  },
+  "onboardingSaturdayYes": "Evet, çalışıyorum",
+  "@onboardingSaturdayYes": {
+    "description": "Saturday option."
+  },
+  "onboardingSaturdayNo": "Hayır, çalışmıyorum",
+  "@onboardingSaturdayNo": {
+    "description": "Saturday option."
+  },
+  "onboardingDefaultName": "Ben",
+  "@onboardingDefaultName": {
+    "description": "Name of the first person, the user. Can be changed on the people screen."
+  },
+  "onboardingSaveError": "Bilgiler kaydedilemedi. Tekrar dene.",
+  "@onboardingSaveError": {
+    "description": "Shown when saving fails."
   }
 }

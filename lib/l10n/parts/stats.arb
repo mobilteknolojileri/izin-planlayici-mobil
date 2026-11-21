@@ -2,5 +2,96 @@
   "statsTitle": "İstatistik",
   "@statsTitle": {
     "description": "App bar title of the stats screen."
-  }
+  },
+  "statsEveryone": "Herkes",
+  "@statsEveryone": {
+    "description": "Person filter chip that sums every person."
+  },
+  "statsDaysOffTitle": "{year} yılında tatil",
+  "@statsDaysOffTitle": {
+    "placeholders": {
+      "year": {
+        "type": "int"
+      }
+    }
+  },
+  "statsDaysOffCaption": "İzin, resmî tatil ve hafta sonu birlikte.",
+  "statsDaysOffCaptionEveryone": "Herkesin izin, resmî tatil ve hafta sonu günleri birlikte.",
+  "statsDaysUnit": "gün",
+  "statsEarned": "Hak edilen",
+  "statsUsed": "Kullanılan",
+  "statsByYearTitle": "Yıllara göre",
+  "statsByYearRow": "{year}: hak edilen {earned} gün, kullanılan {used} gün",
+  "@statsByYearRow": {
+    "placeholders": {
+      "year": {
+        "type": "int"
+      },
+      "earned": {
+        "type": "double",
+        "format": "decimalPattern"
+      },
+      "used": {
+        "type": "double",
+        "format": "decimalPattern"
+      }
+    }
+  },
+  "statsByYearChart": "Yıllara göre hak edilen ve kullanılan izin grafiği. Değerler grafiğin altında yazıyor.",
+  "statsByMonthTitle": "Aylara göre",
+  "statsByMonthRow": "{month}: {days} gün",
+  "@statsByMonthRow": {
+    "placeholders": {
+      "month": {
+        "type": "String"
+      },
+      "days": {
+        "type": "double",
+        "format": "decimalPattern"
+      }
+    }
+  },
+  "statsByMonthEmpty": "Seçtiğin {year} yılında yıllık izin kullanılmadı.",
+  "@statsByMonthEmpty": {
+    "placeholders": {
+      "year": {
+        "type": "int"
+      }
+    }
+  },
+  "statsByMonthChart": "Aylara göre kullanılan yıllık izin grafiği, {year}. Değerler grafiğin altında yazıyor.",
+  "@statsByMonthChart": {
+    "placeholders": {
+      "year": {
+        "type": "int"
+      }
+    }
+  },
+  "statsByTypeTitle": "Türlere göre",
+  "statsByTypeRow": "{type}: {days} gün",
+  "@statsByTypeRow": {
+    "placeholders": {
+      "type": {
+        "type": "String"
+      },
+      "days": {
+        "type": "double",
+        "format": "decimalPattern"
+      }
+    }
+  },
+  "statsByTypeEmpty": "Seçtiğin {year} yılında kayıtlı izin yok.",
+  "@statsByTypeEmpty": {
+    "placeholders": {
+      "year": {
+        "type": "int"
+      }
+    }
+  },
+  "statsEmptyMessage": "Henüz izin eklemedin. İzin ekleyince özetini burada görürsün.",
+  "statsEmptyAction": "İzin ekle",
+  "statsNoProfileMessage": "İstatistiği görmek için önce kurulumu tamamla.",
+  "statsNoProfileAction": "Kuruluma başla",
+  "statsLoading": "İstatistik yükleniyor",
+  "statsError": "İstatistik açılamadı. Biraz sonra tekrar dene."
 }

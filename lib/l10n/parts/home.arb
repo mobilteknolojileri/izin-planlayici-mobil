@@ -1,6 +1,142 @@
 {
-  "homeTitle": "Ana Sayfa",
+  "homeTitle": "İzin durumun",
   "@homeTitle": {
-    "description": "App bar title of the home screen."
+    "description": "Large title of the home tab."
+  },
+  "homeRemainingTitle": "Kalan izin",
+  "@homeRemainingTitle": {
+    "description": "Title of the hero card with the remaining annual leave."
+  },
+  "homeDaysUnit": "gün",
+  "@homeDaysUnit": {
+    "description": "Word after the large remaining number."
+  },
+  "homeRemainingCaption": "Toplam {earned} gün hak ettin, {used} gün kullandın, {planned} gün planladın.",
+  "@homeRemainingCaption": {
+    "description": "Sentence under the remaining number.",
+    "placeholders": {
+      "earned": {
+        "type": "double",
+        "format": "decimalPattern"
+      },
+      "used": {
+        "type": "double",
+        "format": "decimalPattern"
+      },
+      "planned": {
+        "type": "double",
+        "format": "decimalPattern"
+      }
+    }
+  },
+  "homeOverdrawnCaption": "Hakkından {days} gün fazla izin kullandın veya planladın.",
+  "@homeOverdrawnCaption": {
+    "description": "Sentence under the remaining number when the balance is negative.",
+    "placeholders": {
+      "days": {
+        "type": "double",
+        "format": "decimalPattern"
+      }
+    }
+  },
+  "homeHowCalculated": "Nasıl hesaplandı?",
+  "@homeHowCalculated": {
+    "description": "Opens the calculation explanation screen."
+  },
+  "homeAddLeave": "İzin ekle",
+  "@homeAddLeave": {
+    "description": "Main button of the home screen."
+  },
+  "homeNextAccrualTitle": "Yeni izin hakkı",
+  "@homeNextAccrualTitle": {
+    "description": "Card title: days until the next annual leave accrual."
+  },
+  "homeDaysLeftUnit": "gün kaldı",
+  "@homeDaysLeftUnit": {
+    "description": "Words under a countdown number."
+  },
+  "homeNextAccrualDetail": "{date} günü {days} gün eklenecek.",
+  "@homeNextAccrualDetail": {
+    "description": "When the next accrual happens and how many days it adds.",
+    "placeholders": {
+      "date": {
+        "type": "String"
+      },
+      "days": {
+        "type": "int"
+      }
+    }
+  },
+  "homeNextHolidayTitle": "Sıradaki tatil",
+  "@homeNextHolidayTitle": {
+    "description": "Card title: days until the next official holiday."
+  },
+  "homeNextHolidayDetail": "{name}, {date}",
+  "@homeNextHolidayDetail": {
+    "description": "Name and date of the next official holiday.",
+    "placeholders": {
+      "name": {
+        "type": "String"
+      },
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "homeBridgeTitle": "Köprü önerisi",
+  "@homeBridgeTitle": {
+    "description": "Card title of the best bridge suggestion."
+  },
+  "homeBridgeCaption": "{leaveDays} gün izinle {totalDays} gün tatil, {dates}",
+  "@homeBridgeCaption": {
+    "description": "One sentence about a bridge suggestion, for example: 2 gün izinle 5 gün tatil, 20-24 Nisan 2026.",
+    "placeholders": {
+      "leaveDays": {
+        "type": "double",
+        "format": "decimalPattern"
+      },
+      "totalDays": {
+        "type": "int"
+      },
+      "dates": {
+        "type": "String"
+      }
+    }
+  },
+  "homeStatsLink": "İstatistikler",
+  "@homeStatsLink": {
+    "description": "Link to the statistics screen."
+  },
+  "homeGuideLink": "İzin kuralları",
+  "@homeGuideLink": {
+    "description": "Link to the legislation guide."
+  },
+  "homeNoProfileMessage": "İzin hakkını görmek için birkaç soruyu cevapla.",
+  "@homeNoProfileMessage": {
+    "description": "Empty state before the first setup."
+  },
+  "homeNoProfileAction": "Kuruluma başla",
+  "@homeNoProfileAction": {
+    "description": "Opens the setup."
+  },
+  "homeTeacherTitle": "Yıllık izin hesabı yok",
+  "@homeTeacherTitle": {
+    "description": "Card title for a teacher, who gets no annual leave."
+  },
+  "homeTeacherMessage": "Öğretmenler yaz ve dinlenme tatillerinde izinli sayılır. Bu yüzden ayrıca yıllık izin verilmez.",
+  "@homeTeacherMessage": {
+    "description": "Why a teacher has no annual leave balance (657 art. 103/2)."
+  },
+  "homeErrorMessage": "Bilgiler yüklenemedi.",
+  "@homeErrorMessage": {
+    "description": "Shown when the data could not be loaded."
+  },
+  "homeRetry": "Tekrar dene",
+  "@homeRetry": {
+    "description": "Loads the data again."
+  },
+  "homeLoading": "Yükleniyor",
+  "@homeLoading": {
+    "description": "Screen reader label of the loading indicator."
   }
 }

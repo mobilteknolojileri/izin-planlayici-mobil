@@ -3,7 +3,7 @@
   "@appTitle": {
     "description": "App name shown by the system."
   },
-  "navHome": "Ana Sayfa",
+  "navHome": "Ana sayfa",
   "navLeaves": "İzinlerim",
   "navCalendar": "Takvim",
   "navBridge": "Köprü",

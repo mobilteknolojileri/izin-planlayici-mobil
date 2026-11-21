@@ -2,5 +2,187 @@
   "peopleTitle": "Kişiler",
   "@peopleTitle": {
     "description": "App bar title of the people screen."
+  },
+  "peopleHint": "Eşini veya çalışanını da ekleyip izinlerini ayrı takip edebilirsin.",
+  "@peopleHint": {
+    "description": "Hint under the people list."
+  },
+  "peopleSelectHint": "Dokunduğun kişi ana sayfada görünür.",
+  "@peopleSelectHint": {
+    "description": "Explains that tapping a person makes them active."
+  },
+  "peopleEmptyMessage": "Henüz kimseyi eklemedin.",
+  "@peopleEmptyMessage": {
+    "description": "Empty state of the people screen."
+  },
+  "peopleAdd": "Kişi ekle",
+  "@peopleAdd": {
+    "description": "Main button of the people screen."
+  },
+  "peopleSelected": "Seçili",
+  "@peopleSelected": {
+    "description": "Marks the active person."
+  },
+  "peopleEditTooltip": "{name} bilgilerini düzenle",
+  "@peopleEditTooltip": {
+    "description": "Tooltip of the edit button of a person.",
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "peopleLabor": "İşçi, İş Kanunu",
+  "@peopleLabor": {
+    "description": "Employment type: Labour Law 4857."
+  },
+  "peopleCivil": "Memur, Devlet Memurları Kanunu",
+  "@peopleCivil": {
+    "description": "Employment type: Civil Servants Law 657."
+  },
+  "peopleDeleted": "{name} silindi.",
+  "@peopleDeleted": {
+    "description": "Message after a person is deleted.",
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "peopleSaveError": "Bilgiler kaydedilemedi. Tekrar dene.",
+  "@peopleSaveError": {
+    "description": "Shown when saving fails."
+  },
+  "peopleFormNewTitle": "Yeni kişi",
+  "@peopleFormNewTitle": {
+    "description": "App bar title of the form for a new person."
+  },
+  "peopleFormEditTitle": "Kişiyi düzenle",
+  "@peopleFormEditTitle": {
+    "description": "App bar title of the form for an existing person."
+  },
+  "peopleFormName": "Ad",
+  "@peopleFormName": {
+    "description": "Name field."
+  },
+  "peopleFormNameError": "Bir ad yaz.",
+  "@peopleFormNameError": {
+    "description": "Error when the name is empty."
+  },
+  "peopleFormTypeLabel": "Çalışma şekli",
+  "@peopleFormTypeLabel": {
+    "description": "Title of the employment type choice."
+  },
+  "peopleTypeLaborTitle": "İşçi",
+  "@peopleTypeLaborTitle": {
+    "description": "Employment type option."
+  },
+  "peopleTypeLaborDetail": "Özel sektörde veya kamuda işçi, İş Kanunu",
+  "@peopleTypeLaborDetail": {
+    "description": "Detail of the worker option."
+  },
+  "peopleTypeCivilTitle": "Devlet memuru",
+  "@peopleTypeCivilTitle": {
+    "description": "Employment type option."
+  },
+  "peopleTypeCivilDetail": "Devlet Memurları Kanunu",
+  "@peopleTypeCivilDetail": {
+    "description": "Detail of the civil servant option."
+  },
+  "peopleFormStart": "İşe başlama tarihi",
+  "@peopleFormStart": {
+    "description": "Start date field."
+  },
+  "peopleFormBirth": "Doğum tarihi",
+  "@peopleFormBirth": {
+    "description": "Birth date field."
+  },
+  "peopleFormDateError": "Tarihi seç.",
+  "@peopleFormDateError": {
+    "description": "Error when no date is chosen."
+  },
+  "peopleFormSaturday": "Cumartesi iş günü",
+  "@peopleFormSaturday": {
+    "description": "Switch: the person works on Saturdays."
+  },
+  "peopleFormSave": "Kaydet",
+  "@peopleFormSave": {
+    "description": "Main button of the person form."
+  },
+  "peopleFormDeleteTooltip": "Kişiyi sil",
+  "@peopleFormDeleteTooltip": {
+    "description": "Tooltip of the delete button in the app bar."
+  },
+  "peopleDatePlaceholder": "Tarih seç",
+  "@peopleDatePlaceholder": {
+    "description": "Shown in a date field before a date is chosen."
+  },
+  "peopleAdvancedTitle": "Gelişmiş (isteğe bağlı)",
+  "@peopleAdvancedTitle": {
+    "description": "Optional section with less common profile fields."
+  },
+  "peoplePriorServiceLabel": "Önceki çalışma süresi",
+  "@peoplePriorServiceLabel": {
+    "description": "Prior service, entered as years, months and days."
+  },
+  "peoplePriorServiceInfoLabor": "Aynı işverenin başka iş yerlerinde çalıştığın süre de izin hakkına eklenir. Başka işverenlerdeki süre eklenmez.",
+  "@peoplePriorServiceInfoLabor": {
+    "description": "Prior service explanation for a worker (4857 art. 54)."
+  },
+  "peoplePriorServiceInfoCivil": "Kamu kurumlarında geçen süreler ve askerlik hizmete sayılır.",
+  "@peoplePriorServiceInfoCivil": {
+    "description": "Prior service explanation for a civil servant."
+  },
+  "peopleYears": "Yıl",
+  "@peopleYears": {
+    "description": "Years part of a duration."
+  },
+  "peopleMonths": "Ay",
+  "@peopleMonths": {
+    "description": "Months part of a duration."
+  },
+  "peopleDays": "Gün",
+  "@peopleDays": {
+    "description": "Days part of a duration."
+  },
+  "peopleUsedBeforeLabel": "Uygulamadan önce kullanılan izin (gün)",
+  "@peopleUsedBeforeLabel": {
+    "description": "Annual leave days used before the app started tracking."
+  },
+  "peopleUsedBeforeHelp": "Hâlâ geçerli izin hakkından, uygulamayı kullanmaya başlamadan önce kullandığın günleri yaz. Süresi dolup düşen eski yılların iznini yazma.",
+  "@peopleUsedBeforeHelp": {
+    "description": "Help under the leave used before tracking field: only days used from the still valid balance, deducted from today's balance."
+  },
+  "peopleContractLabel": "Sözleşmeyle gelen ek izin (gün)",
+  "@peopleContractLabel": {
+    "description": "Extra days above the law from a contract or union agreement."
+  },
+  "peopleUndergroundLabel": "Yer altı işi, örneğin maden",
+  "@peopleUndergroundLabel": {
+    "description": "Switch: underground work adds days (4857)."
+  },
+  "peopleTeacherLabel": "Öğretmen",
+  "@peopleTeacherLabel": {
+    "description": "Switch: teachers get no annual leave (657)."
+  },
+  "peopleDailyHoursLabel": "Günlük çalışma saati",
+  "@peopleDailyHoursLabel": {
+    "description": "Working hours per day, for hourly leave."
+  },
+  "peopleNumberError": "Sayı yaz, örneğin 4 veya 4,5.",
+  "@peopleNumberError": {
+    "description": "Error when a number field holds no number."
+  },
+  "peopleErrorMessage": "Bilgiler yüklenemedi.",
+  "@peopleErrorMessage": {
+    "description": "Shown when the data could not be loaded."
+  },
+  "peopleRetry": "Tekrar dene",
+  "@peopleRetry": {
+    "description": "Loads the data again."
+  },
+  "peopleLoading": "Yükleniyor",
+  "@peopleLoading": {
+    "description": "Screen reader label of the loading indicator."
   }
 }

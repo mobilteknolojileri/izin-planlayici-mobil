@@ -1,6 +1,123 @@
 {
   "calendarTitle": "Takvim",
   "@calendarTitle": {
-    "description": "App bar title of the calendar screen."
-  }
+    "description": "Large title of the calendar tab."
+  },
+  "calendarViewMonth": "Aylık",
+  "calendarViewYear": "Yıllık",
+  "@calendarViewYear": {
+    "description": "Chips that switch between the month and the year view."
+  },
+  "calendarEveryone": "Herkesi göster",
+  "@calendarEveryone": {
+    "description": "Chip that shows the leave of every person on the calendar."
+  },
+  "calendarRangeMode": "Aralık seç",
+  "@calendarRangeMode": {
+    "description": "Chip that turns on range selection for a new leave."
+  },
+  "calendarPreviousMonth": "Önceki ay",
+  "calendarNextMonth": "Sonraki ay",
+  "calendarPreviousYear": "Önceki yıl",
+  "calendarNextYear": "Sonraki yıl",
+  "calendarToday": "Bugün",
+  "calendarLeaveItem": "{type}, {range}",
+  "@calendarLeaveItem": {
+    "description": "A leave on the selected day, such as 'Yıllık izin, 6-10 Temmuz'.",
+    "placeholders": {
+      "type": {
+        "type": "String"
+      },
+      "range": {
+        "type": "String"
+      }
+    }
+  },
+  "calendarPersonLeaveItem": "{person}: {type}, {range}",
+  "@calendarPersonLeaveItem": {
+    "description": "A leave of a named person in the everyone view.",
+    "placeholders": {
+      "person": {
+        "type": "String"
+      },
+      "type": {
+        "type": "String"
+      },
+      "range": {
+        "type": "String"
+      }
+    }
+  },
+  "calendarBridgeItem": "{leave} gün izinle {total} gün tatil, {range}",
+  "@calendarBridgeItem": {
+    "description": "A bridge suggestion that contains the selected day.",
+    "placeholders": {
+      "leave": {
+        "type": "double",
+        "format": "decimalPattern"
+      },
+      "total": {
+        "type": "int"
+      },
+      "range": {
+        "type": "String"
+      }
+    }
+  },
+  "calendarPickDay": "Ayrıntıyı görmek için bir güne dokun.",
+  "calendarRangeHint": "İznin ilk gününe, sonra son gününe dokun.",
+  "calendarRangePickEnd": "Şimdi iznin son gününe dokun.",
+  "calendarRangeSelected": "Seçtiğin aralık {range}, toplam {count} gün.",
+  "@calendarRangeSelected": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      },
+      "range": {
+        "type": "String"
+      }
+    }
+  },
+  "calendarAddLeaveDay": "Bu güne izin ekle",
+  "calendarAddLeaveRange": "Bu tarihlere izin ekle",
+  "calendarMonthHolidays": "{count} gün resmî tatil",
+  "@calendarMonthHolidays": {
+    "description": "Part of a month summary in the year view.",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "calendarMonthLeaves": "{count} gün izin",
+  "@calendarMonthLeaves": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "calendarMonthBridges": "{count} önerilen izin günü",
+  "@calendarMonthBridges": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "calendarMonthNothing": "Tatil ve izin yok",
+  "calendarMonthSemantics": "{month}, {summary}",
+  "@calendarMonthSemantics": {
+    "description": "Screen reader label of a month in the year view.",
+    "placeholders": {
+      "month": {
+        "type": "String"
+      },
+      "summary": {
+        "type": "String"
+      }
+    }
+  },
+  "calendarLoading": "Takvim yükleniyor",
+  "calendarError": "Takvim açılamadı. Biraz sonra tekrar dene."
 }

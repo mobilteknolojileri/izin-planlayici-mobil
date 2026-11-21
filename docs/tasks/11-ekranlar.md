@@ -2,6 +2,8 @@
 
 Bağımlılık: 05, 06. Paralel çalışır, domain ve veri task'ları bitmeden provider mock'larıyla geliştirilir. Yazma alanı: `lib/ui/<özellik>/` (`lib/ui/core/` hariç), `lib/l10n/parts/<özellik>.arb`, `test/ui/<özellik>/`. Her ekran `widgets/<özellik>_screen.dart` ve `view_models/<özellik>_view_model.dart` yapısını izler.
 
+Durum: tamamlandı. On iki ekran 11a ve 11b olarak yazıldı. Her ekranın boş, dolu, %200 yazı, AA kontrast ve TalkBack testleri var. Ekranlar task 16'da gerçek veriye bağlandı.
+
 Bu task iki subagent'a bölünür:
 - 11a: `onboarding`, `home`, `leaves`, `leave_form`, `explain`, `people`
 - 11b: `calendar`, `bridge`, `stats`, `guide`, `settings`, `about`

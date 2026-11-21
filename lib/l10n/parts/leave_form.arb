@@ -1,6 +1,269 @@
 {
-  "leaveFormTitle": "İzin Ekle",
+  "leaveFormTitle": "İzin ekle",
   "@leaveFormTitle": {
-    "description": "App bar title of the leave_form screen."
+    "description": "App bar title of the leave form for a new leave."
+  },
+  "leaveFormEditTitle": "İzni düzenle",
+  "@leaveFormEditTitle": {
+    "description": "App bar title of the leave form for an existing leave."
+  },
+  "leaveFormTypeLabel": "İzin türü",
+  "@leaveFormTypeLabel": {
+    "description": "Field that opens the leave type list."
+  },
+  "leaveFormTypeAnnual": "Yıllık izin",
+  "@leaveFormTypeAnnual": {
+    "description": "Leave type."
+  },
+  "leaveFormTypeSick": "Hastalık ve rapor",
+  "@leaveFormTypeSick": {
+    "description": "Leave type."
+  },
+  "leaveFormTypeUnpaid": "Ücretsiz izin",
+  "@leaveFormTypeUnpaid": {
+    "description": "Leave type."
+  },
+  "leaveFormTypeMaternity": "Doğum izni",
+  "@leaveFormTypeMaternity": {
+    "description": "Leave type: maternity."
+  },
+  "leaveFormTypePaternity": "Babalık izni",
+  "@leaveFormTypePaternity": {
+    "description": "Leave type."
+  },
+  "leaveFormTypeMarriage": "Evlenme izni",
+  "@leaveFormTypeMarriage": {
+    "description": "Leave type."
+  },
+  "leaveFormTypeBereavement": "Ölüm izni",
+  "@leaveFormTypeBereavement": {
+    "description": "Leave type: bereavement."
+  },
+  "leaveFormTypeAdoption": "Evlat edinme izni",
+  "@leaveFormTypeAdoption": {
+    "description": "Leave type."
+  },
+  "leaveFormTypeDisabledChildCare": "Engelli veya kronik hasta çocuk izni",
+  "@leaveFormTypeDisabledChildCare": {
+    "description": "Leave type: care of a child with a disability or chronic illness."
+  },
+  "leaveFormTypeUnion": "Sendika izni",
+  "@leaveFormTypeUnion": {
+    "description": "Leave type."
+  },
+  "leaveFormTypeExcuse": "Mazeret izni",
+  "@leaveFormTypeExcuse": {
+    "description": "Leave type."
+  },
+  "leaveFormTypeTravel": "Yol izni",
+  "@leaveFormTypeTravel": {
+    "description": "Leave type: travel days added to annual leave."
+  },
+  "leaveFormTypeOther": "Diğer",
+  "@leaveFormTypeOther": {
+    "description": "Leave type named by the user."
+  },
+  "leaveFormCustomNameLabel": "İznin adı",
+  "@leaveFormCustomNameLabel": {
+    "description": "Name field for the other leave type."
+  },
+  "leaveFormCustomNameError": "İzne bir ad ver.",
+  "@leaveFormCustomNameError": {
+    "description": "Error when the other leave type has no name."
+  },
+  "leaveFormUnitLabel": "Süre",
+  "@leaveFormUnitLabel": {
+    "description": "Title of the full day, half day or hourly choice."
+  },
+  "leaveFormUnitDays": "Tam gün",
+  "@leaveFormUnitDays": {
+    "description": "Leave measured in whole days."
+  },
+  "leaveFormUnitHalfDay": "Yarım gün",
+  "@leaveFormUnitHalfDay": {
+    "description": "Leave of half a day."
+  },
+  "leaveFormUnitHours": "Saatlik",
+  "@leaveFormUnitHours": {
+    "description": "Leave measured in hours."
+  },
+  "leaveFormStartLabel": "Başlangıç",
+  "@leaveFormStartLabel": {
+    "description": "First day of the leave."
+  },
+  "leaveFormEndLabel": "Bitiş",
+  "@leaveFormEndLabel": {
+    "description": "Last day of the leave."
+  },
+  "leaveFormDayLabel": "Gün",
+  "@leaveFormDayLabel": {
+    "description": "The day of a half day or hourly leave."
+  },
+  "leaveFormDateError": "Tarihi seç.",
+  "@leaveFormDateError": {
+    "description": "Error when no date is chosen."
+  },
+  "leaveFormHoursLabel": "Kaç saat?",
+  "@leaveFormHoursLabel": {
+    "description": "Hours field of an hourly leave."
+  },
+  "leaveFormHoursError": "Saati yaz, örneğin 2 veya 1,5.",
+  "@leaveFormHoursError": {
+    "description": "Error when the hours are missing or not a number."
+  },
+  "leaveFormHoursTooMany": "Günlük çalışma saatin {hours}. Daha uzun izin için tam gün seç.",
+  "@leaveFormHoursTooMany": {
+    "description": "Error when the hours exceed one working day.",
+    "placeholders": {
+      "hours": {
+        "type": "double",
+        "format": "decimalPattern"
+      }
+    }
+  },
+  "leaveFormWorkplaceNote": "Kanunda yarım gün ve saatlik izin yok. Bu kayıt iş yerinin uygulamasına göre tutulur.",
+  "@leaveFormWorkplaceNote": {
+    "description": "Note for half day and hourly leave."
+  },
+  "leaveFormEventDateLabel": "Çocuğun doğum tarihi",
+  "@leaveFormEventDateLabel": {
+    "description": "Birth date of the child for paternity leave."
+  },
+  "leaveFormSuggestion": "Kanuna göre bu izin {days} gün.",
+  "@leaveFormSuggestion": {
+    "description": "Legal number of days for an excuse leave type.",
+    "placeholders": {
+      "days": {
+        "type": "int"
+      }
+    }
+  },
+  "leaveFormSecondExcuseLabel": "Yılın ikinci 10 günlük mazeret izni",
+  "@leaveFormSecondExcuseLabel": {
+    "description": "Switch for the second excuse block of a civil servant."
+  },
+  "leaveFormSecondExcuseTerm": "İkinci mazeret izni",
+  "@leaveFormSecondExcuseTerm": {
+    "description": "Term explained by the question mark button."
+  },
+  "leaveFormSecondExcuseInfo": "Memurlar yılda 10 gün mazeret izni alabilir. Zorunlu durumda verilen ikinci 10 gün yıllık izinden düşülür.",
+  "@leaveFormSecondExcuseInfo": {
+    "description": "One sentence explanation of the second excuse block (657 art. 104/C)."
+  },
+  "leaveFormNoteLabel": "Not (isteğe bağlı)",
+  "@leaveFormNoteLabel": {
+    "description": "Note field."
+  },
+  "leaveFormDeductTitle": "İzninden düşülecek",
+  "@leaveFormDeductTitle": {
+    "description": "Card title of the live day count."
+  },
+  "leaveFormDeductDays": "Yıllık izninden {days} gün düşülecek.",
+  "@leaveFormDeductDays": {
+    "description": "Live day count of the chosen range.",
+    "placeholders": {
+      "days": {
+        "type": "double",
+        "format": "decimalPattern"
+      }
+    }
+  },
+  "leaveFormDeductHalfDay": "Yıllık izninden yarım gün düşülecek.",
+  "@leaveFormDeductHalfDay": {
+    "description": "Live day count of a half day leave."
+  },
+  "leaveFormDeductHours": "Yıllık izninden {hours} saat düşülecek.",
+  "@leaveFormDeductHours": {
+    "description": "Live count of an hourly leave.",
+    "placeholders": {
+      "hours": {
+        "type": "double",
+        "format": "decimalPattern"
+      }
+    }
+  },
+  "leaveFormRemainingAfter": "Bu izinden sonra {days} gün iznin kalır.",
+  "@leaveFormRemainingAfter": {
+    "description": "Balance after the leave.",
+    "placeholders": {
+      "days": {
+        "type": "double",
+        "format": "decimalPattern"
+      }
+    }
+  },
+  "leaveFormNotDeducted": "Bu izin yıllık izninden düşmez.",
+  "@leaveFormNotDeducted": {
+    "description": "Shown for leave types that do not reduce the balance."
+  },
+  "leaveFormPickDatesHint": "Tarihi seçince kaç gün düşüleceğini burada görürsün.",
+  "@leaveFormPickDatesHint": {
+    "description": "Shown before a date is chosen."
+  },
+  "leaveFormBreakdownTitle": "Gün gün döküm",
+  "@leaveFormBreakdownTitle": {
+    "description": "Card title of the day by day breakdown."
+  },
+  "leaveFormWarningTitle": "Dikkat",
+  "@leaveFormWarningTitle": {
+    "description": "Card title of the warnings."
+  },
+  "leaveFormBalanceWarning": "Bu izinle iznin {days} gün eksiye düşer. Yine de kaydedebilirsin.",
+  "@leaveFormBalanceWarning": {
+    "description": "Warning when the leave exceeds the remaining balance.",
+    "placeholders": {
+      "days": {
+        "type": "double",
+        "format": "decimalPattern"
+      }
+    }
+  },
+  "leaveFormSplitWarning": "Yıllık izni bölerek kullanıyorsan parçalardan biri en az 10 gün olmalı.",
+  "@leaveFormSplitWarning": {
+    "description": "Split rule warning (4857 art. 56)."
+  },
+  "leaveFormTravelWarning": "Yol izni bu dönemde toplam 4 günü geçemez.",
+  "@leaveFormTravelWarning": {
+    "description": "Travel leave limit warning."
+  },
+  "leaveFormSave": "Kaydet",
+  "@leaveFormSave": {
+    "description": "Main button of the leave form."
+  },
+  "leaveFormDeleteTooltip": "İzni sil",
+  "@leaveFormDeleteTooltip": {
+    "description": "Tooltip of the delete button in the app bar."
+  },
+  "leaveFormDeleted": "İzin silindi.",
+  "@leaveFormDeleted": {
+    "description": "Message after a leave is deleted."
+  },
+  "leaveFormUpdated": "İzin güncellendi.",
+  "@leaveFormUpdated": {
+    "description": "Message after a leave is edited."
+  },
+  "leaveFormSaveError": "İzin kaydedilemedi. Tekrar dene.",
+  "@leaveFormSaveError": {
+    "description": "Shown when saving fails."
+  },
+  "leaveFormNoProfileMessage": "İzin eklemek için önce kurulumu tamamla.",
+  "@leaveFormNoProfileMessage": {
+    "description": "Empty state before the first setup."
+  },
+  "leaveFormNoProfileAction": "Kuruluma başla",
+  "@leaveFormNoProfileAction": {
+    "description": "Opens the setup."
+  },
+  "leaveFormErrorMessage": "Bilgiler yüklenemedi.",
+  "@leaveFormErrorMessage": {
+    "description": "Shown when the data could not be loaded."
+  },
+  "leaveFormRetry": "Tekrar dene",
+  "@leaveFormRetry": {
+    "description": "Loads the data again."
+  },
+  "leaveFormLoading": "Yükleniyor",
+  "@leaveFormLoading": {
+    "description": "Screen reader label of the loading indicator."
   }
 }

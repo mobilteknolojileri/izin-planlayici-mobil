@@ -1,6 +1,163 @@
 {
   "leavesTitle": "İzinlerim",
   "@leavesTitle": {
-    "description": "App bar title of the leaves screen."
+    "description": "Large title of the leaves tab."
+  },
+  "leavesTabLeaves": "İzinler",
+  "@leavesTabLeaves": {
+    "description": "Section switch: leave records."
+  },
+  "leavesTabHours": "Saat ve mesai",
+  "@leavesTabHours": {
+    "description": "Section switch: hourly leave and overtime."
+  },
+  "leavesYearFilter": "Yıl: {year}",
+  "@leavesYearFilter": {
+    "description": "Button that opens the year filter.",
+    "placeholders": {
+      "year": {
+        "type": "int"
+      }
+    }
+  },
+  "leavesTypeFilter": "Tür: {type}",
+  "@leavesTypeFilter": {
+    "description": "Button that opens the leave type filter.",
+    "placeholders": {
+      "type": {
+        "type": "String"
+      }
+    }
+  },
+  "leavesTypeAll": "Tümü",
+  "@leavesTypeAll": {
+    "description": "Type filter value: every leave type."
+  },
+  "leavesYearSheetTitle": "Yıl seç",
+  "@leavesYearSheetTitle": {
+    "description": "Title of the year filter sheet."
+  },
+  "leavesTypeSheetTitle": "İzin türü seç",
+  "@leavesTypeSheetTitle": {
+    "description": "Title of the type filter sheet."
+  },
+  "leavesPlannedHeader": "Planlanan",
+  "@leavesPlannedHeader": {
+    "description": "Section of leaves that start after today."
+  },
+  "leavesUsedHeader": "Kullanılan",
+  "@leavesUsedHeader": {
+    "description": "Section of leaves already started or taken."
+  },
+  "leavesCalendarDays": "{days} takvim günü",
+  "@leavesCalendarDays": {
+    "description": "Length of a leave that does not reduce the annual balance.",
+    "placeholders": {
+      "days": {
+        "type": "int"
+      }
+    }
+  },
+  "leavesHours": "{hours} saat",
+  "@leavesHours": {
+    "description": "A number of hours.",
+    "placeholders": {
+      "hours": {
+        "type": "double",
+        "format": "decimalPattern"
+      }
+    }
+  },
+  "leavesEmptyMessage": "Henüz izin eklemedin.",
+  "@leavesEmptyMessage": {
+    "description": "Empty state of the leaves tab."
+  },
+  "leavesAdd": "İzin ekle",
+  "@leavesAdd": {
+    "description": "Main button of the leaves section."
+  },
+  "leavesNoMatch": "Bu seçime uyan izin yok.",
+  "@leavesNoMatch": {
+    "description": "Shown when the filters hide every leave."
+  },
+  "leavesOvertimeTitle": "Fazla mesai",
+  "@leavesOvertimeTitle": {
+    "description": "Card title: overtime hours in the chosen year."
+  },
+  "leavesHourlyTitle": "Saatlik izin",
+  "@leavesHourlyTitle": {
+    "description": "Card title: hourly leave in the chosen year."
+  },
+  "leavesHourUnit": "saat",
+  "@leavesHourUnit": {
+    "description": "Word under an hour total."
+  },
+  "leavesOvertimeHeader": "Fazla mesai kayıtları",
+  "@leavesOvertimeHeader": {
+    "description": "Section of overtime records."
+  },
+  "leavesHourlyHeader": "Saatlik izinler",
+  "@leavesHourlyHeader": {
+    "description": "Section of hourly leave records."
+  },
+  "leavesHoursEmpty": "Bu yıl için fazla mesai veya saatlik izin kaydın yok.",
+  "@leavesHoursEmpty": {
+    "description": "Shown when the hours section has no record in the chosen year."
+  },
+  "leavesAddOvertime": "Fazla mesai ekle",
+  "@leavesAddOvertime": {
+    "description": "Main button of the hours section."
+  },
+  "leavesOvertimeSheetTitle": "Fazla mesai",
+  "@leavesOvertimeSheetTitle": {
+    "description": "Title of the overtime form."
+  },
+  "leavesOvertimeDate": "Tarih",
+  "@leavesOvertimeDate": {
+    "description": "Date field of the overtime form."
+  },
+  "leavesOvertimeHoursLabel": "Kaç saat?",
+  "@leavesOvertimeHoursLabel": {
+    "description": "Hours field of the overtime form."
+  },
+  "leavesOvertimeHoursError": "Saati yaz, örneğin 2 veya 1,5.",
+  "@leavesOvertimeHoursError": {
+    "description": "Error when the hours are missing or not a number."
+  },
+  "leavesOvertimeNote": "Not (isteğe bağlı)",
+  "@leavesOvertimeNote": {
+    "description": "Note field of the overtime form."
+  },
+  "leavesSave": "Kaydet",
+  "@leavesSave": {
+    "description": "Saves the overtime record."
+  },
+  "leavesDelete": "Sil",
+  "@leavesDelete": {
+    "description": "Deletes the overtime record."
+  },
+  "leavesOvertimeDeleted": "Fazla mesai kaydı silindi.",
+  "@leavesOvertimeDeleted": {
+    "description": "Message after an overtime record is deleted."
+  },
+  "leavesNoProfileMessage": "İzinlerini görmek için önce kurulumu tamamla.",
+  "@leavesNoProfileMessage": {
+    "description": "Empty state before the first setup."
+  },
+  "leavesNoProfileAction": "Kuruluma başla",
+  "@leavesNoProfileAction": {
+    "description": "Opens the setup."
+  },
+  "leavesErrorMessage": "Bilgiler yüklenemedi.",
+  "@leavesErrorMessage": {
+    "description": "Shown when the data could not be loaded."
+  },
+  "leavesRetry": "Tekrar dene",
+  "@leavesRetry": {
+    "description": "Loads the data again."
+  },
+  "leavesLoading": "Yükleniyor",
+  "@leavesLoading": {
+    "description": "Screen reader label of the loading indicator."
   }
 }

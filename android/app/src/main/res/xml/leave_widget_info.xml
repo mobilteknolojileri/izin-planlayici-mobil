@@ -1,12 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Draft from task 05. Task 14 finalises size, preview and update policy. -->
+<!-- Home screen widget (task 14). Default 3x2 so the balance stays large,
+     resizable down to 2x2. The provider redraws itself after midnight with
+     an inexact alarm. updatePeriodMillis is only a fallback for lost alarms,
+     every 3 hours. -->
 <appwidget-provider xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:description="@string/widget_description"
     android:initialLayout="@layout/leave_widget"
-    android:minWidth="110dp"
-    android:minHeight="40dp"
+    android:minHeight="110dp"
+    android:minResizeHeight="110dp"
+    android:minResizeWidth="110dp"
+    android:minWidth="180dp"
+    android:previewLayout="@layout/leave_widget"
     android:resizeMode="horizontal|vertical"
-    android:targetCellWidth="2"
-    android:targetCellHeight="1"
-    android:updatePeriodMillis="0"
-    android:widgetCategory="home_screen" />
+    android:targetCellHeight="2"
+    android:targetCellWidth="3"
+    android:updatePeriodMillis="10800000"
+    android:widgetCategory="home_screen"
+    tools:targetApi="s" />

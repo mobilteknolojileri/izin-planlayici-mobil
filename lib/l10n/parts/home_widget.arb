@@ -1,0 +1,94 @@
+{
+  "homeWidgetRemainingCaption": "gün izin hakkın kaldı",
+  "@homeWidgetRemainingCaption": {
+    "description": "Home screen widget, under the large number of remaining annual leave days, for example 18."
+  },
+  "homeWidgetOverdrawnCaption": "gün fazla izin aldın",
+  "@homeWidgetOverdrawnCaption": {
+    "description": "Home screen widget, under the large number when the balance is negative. The number is shown without a minus sign."
+  },
+  "homeWidgetRemainingSentence": "{days} gün izin hakkın kaldı",
+  "@homeWidgetRemainingSentence": {
+    "description": "Screen reader text of the widget balance.",
+    "placeholders": {
+      "days": {
+        "type": "String",
+        "example": "4,5"
+      }
+    }
+  },
+  "homeWidgetOverdrawnSentence": "{days} gün fazla izin aldın",
+  "@homeWidgetOverdrawnSentence": {
+    "description": "Screen reader text of the widget balance when it is negative. The number has no minus sign.",
+    "placeholders": {
+      "days": {
+        "type": "String",
+        "example": "2"
+      }
+    }
+  },
+  "homeWidgetHolidayToday": "Bugün resmî tatil: {name}",
+  "@homeWidgetHolidayToday": {
+    "description": "Home screen widget, the official holiday is today.",
+    "placeholders": {
+      "name": {
+        "type": "String",
+        "example": "Cumhuriyet Bayramı"
+      }
+    }
+  },
+  "homeWidgetHolidayTomorrow": "Yarın resmî tatil: {name}",
+  "@homeWidgetHolidayTomorrow": {
+    "description": "Home screen widget, the next official holiday is tomorrow.",
+    "placeholders": {
+      "name": {
+        "type": "String",
+        "example": "Yılbaşı"
+      }
+    }
+  },
+  "homeWidgetHolidayInDays": "{days} gün sonra resmî tatil: {name}",
+  "@homeWidgetHolidayInDays": {
+    "description": "Home screen widget, days until the next official holiday.",
+    "placeholders": {
+      "days": {
+        "type": "String",
+        "example": "41"
+      },
+      "name": {
+        "type": "String",
+        "example": "Yılbaşı"
+      }
+    }
+  },
+  "homeWidgetNoHoliday": "Sıradaki resmî tatil bilgisi yok",
+  "@homeWidgetNoHoliday": {
+    "description": "Home screen widget, the bundled holiday list has no later holiday."
+  },
+  "homeWidgetSetup": "İzin hakkını görmek için uygulamayı aç",
+  "@homeWidgetSetup": {
+    "description": "Home screen widget before the first setup is finished."
+  },
+  "homeWidgetTeacher": "Öğretmenlere yıllık izin verilmez",
+  "@homeWidgetTeacher": {
+    "description": "Home screen widget for a teacher, who gets no annual leave (657 art. 103/2)."
+  },
+  "homeWidgetStale": "Güncel bilgi için uygulamayı aç",
+  "@homeWidgetStale": {
+    "description": "Home screen widget when the app has not been opened for a long time and the saved days ran out."
+  },
+  "homeWidgetDescription": "{balance}. {holiday}",
+  "@homeWidgetDescription": {
+    "description": "Screen reader text of the whole widget: the balance sentence, then the holiday line.",
+    "placeholders": {
+      "balance": {
+        "type": "String",
+        "example": "18 gün izin hakkın kaldı"
+      },
+      "holiday": {
+        "type": "String",
+        "example": "41 gün sonra resmî tatil: Yılbaşı"
+      }
+    }
+  }
+}

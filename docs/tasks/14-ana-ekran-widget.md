@@ -2,6 +2,8 @@
 
 Bağımlılık: 05. Paralel çalışır. Yazma alanı: `lib/data/services/home_widget/`, `lib/l10n/parts/home_widget.arb`, `test/data/services/home_widget/`, task 05'in oluşturduğu widget taslakları (Kotlin provider, `res/xml/` ve `res/layout/` dosyaları), `res/drawable/` altında `widget_` önekli yeni dosyalar. Manifest'teki receiver satırı task 05'te hazırdır.
 
+Durum: tamamlandı. Widget kalan izni ve sıradaki resmî tatili gösteriyor, önümüzdeki 60 günün metnini Dart'ta hazırlıyor ve gece yarısından sonra kendini yeniliyor. Analyze temiz, 47 test geçiyor. MuMu'da widget eklendi, gerçek veriyi gösterdi, dokununca uygulama açıldı. Gece yarısı yenilemesi ve %200 yazı cihazda denenmedi.
+
 ## Yapılacaklar
 
 - `home_widget` ile Android widget: kalan izin günü ve sıradaki resmî tatile kalan gün.

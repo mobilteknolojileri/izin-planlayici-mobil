@@ -173,7 +173,12 @@ class StatsViewModel extends Notifier<StatsState> {
           profile,
           until: DateTime.utc(year, 12, 31),
         ),
-        leaves: data.leaves[profile.id] ?? const [],
+        // Statistics show what was used. Leave that starts after today is
+        // planned and appears on the home page and in the leave list.
+        leaves: [
+          for (final leave in data.leaves[profile.id] ?? const <LeaveRecord>[])
+            if (!leave.range.start.isAfter(data.today)) leave,
+        ],
         holidays: data.holidays,
       );
       earned += summary.earned;

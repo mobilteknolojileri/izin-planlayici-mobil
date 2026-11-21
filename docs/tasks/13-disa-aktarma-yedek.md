@@ -2,6 +2,8 @@
 
 Bağımlılık: 05. Paralel çalışır. Yazma alanı: `lib/data/services/export/`, `lib/l10n/parts/export.arb`, `test/data/services/export/`.
 
+Durum: kod ve testler tamamlandı. CSV, PDF, Excel ve sürümlü yedek `lib/data/services/export/` içinde, analyze temiz, 90 test geçiyor, Excel dosyası Excel'de açıldı. MuMu'da paylaşma, kaydetme ve geri yükleme denemesi koordinatöre bırakıldı.
+
 ## Yapılacaklar
 
 - İzin geçmişi CSV: UTF-8 BOM ile (Excel Türkçe karakterleri doğru açsın), ayırıcı `;`.

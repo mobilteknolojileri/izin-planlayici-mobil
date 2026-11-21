@@ -1,0 +1,333 @@
+{
+  "exportLeavesFileStem": "İzin geçmişi",
+  "@exportLeavesFileStem": {
+    "description": "Start of the exported leave history file name. Converted to lowercase ASCII with dashes, e.g. izin-gecmisi."
+  },
+  "exportBackupFileStem": "İzin Planla yedek",
+  "@exportBackupFileStem": {
+    "description": "Start of the backup file name. Converted to lowercase ASCII with dashes, e.g. izin-planla-yedek."
+  },
+  "exportPdfTitle": "İzin geçmişi",
+  "@exportPdfTitle": {
+    "description": "Title of the PDF report."
+  },
+  "exportGeneratedOn": "Oluşturulma tarihi: {date}",
+  "@exportGeneratedOn": {
+    "description": "Under the PDF title. The date is formatted as dd.MM.yyyy.",
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "exportPageNumber": "Sayfa {page} / {total}",
+  "@exportPageNumber": {
+    "description": "PDF footer page number.",
+    "placeholders": {
+      "page": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "exportSectionProfile": "Kişi bilgileri",
+  "@exportSectionProfile": {
+    "description": "PDF section heading: profile summary."
+  },
+  "exportSectionBalance": "Yıllık izin durumu",
+  "@exportSectionBalance": {
+    "description": "PDF section heading: earned, used, planned and remaining annual leave."
+  },
+  "exportSectionEntitlements": "Hak edişler",
+  "@exportSectionEntitlements": {
+    "description": "PDF section heading: annual leave earned on each accrual date."
+  },
+  "exportSectionLeaves": "İzinler",
+  "@exportSectionLeaves": {
+    "description": "PDF section heading: leave records."
+  },
+  "exportSectionDisclaimer": "Yasal uyarı",
+  "@exportSectionDisclaimer": {
+    "description": "PDF section heading above the legal disclaimer."
+  },
+  "exportDisclaimer": "İzin Planla bilgilendirme amaçlıdır, hukuki tavsiye değildir. Hesaplar, uygulamanın bu sürümü hazırlanırken yürürlükte olan 4857 sayılı İş Kanunu'na, 657 sayılı Devlet Memurları Kanunu'na ve bunlara bağlı yönetmeliklere dayanır. Mevzuat ve yargı kararları değişebilir, uygulama hata içerebilir. Kesin bilgi için işverenine, insan kaynaklarına veya bir hukukçuya danış. Uygulama hiçbir garanti verilmeden sunulur. Kullanımından doğan sonuçlardan, yasaların izin verdiği ölçüde, geliştirici sorumlu tutulamaz (GPL-3.0 madde 15 ve 16).",
+  "@exportDisclaimer": {
+    "description": "Legal disclaimer at the end of the PDF. User-facing variant of the Yasal uyarı section of the root README.md: same claims, but the sentence about docs/mevzuat.md is replaced by the laws the calculations are based on, because a PDF reader cannot open repo files."
+  },
+  "exportFieldName": "Ad",
+  "@exportFieldName": {
+    "description": "Profile summary label: person's name."
+  },
+  "exportFieldLaw": "Tabi olduğu kanun",
+  "@exportFieldLaw": {
+    "description": "Profile summary label: Labour Law 4857 or Civil Servants Law 657."
+  },
+  "exportLawLabor": "İş Kanunu (4857)",
+  "@exportLawLabor": {
+    "description": "Value of exportFieldLaw for a worker."
+  },
+  "exportLawCivilServant": "Devlet Memurları Kanunu (657)",
+  "@exportLawCivilServant": {
+    "description": "Value of exportFieldLaw for a civil servant."
+  },
+  "exportFieldStartDateLabor": "İşe giriş tarihi",
+  "@exportFieldStartDateLabor": {
+    "description": "Profile summary label: hire date of a worker."
+  },
+  "exportFieldStartDateCivilServant": "Göreve başlama tarihi",
+  "@exportFieldStartDateCivilServant": {
+    "description": "Profile summary label: start of duty of a civil servant."
+  },
+  "exportFieldPriorService": "Önceki hizmet süresi",
+  "@exportFieldPriorService": {
+    "description": "Profile summary label: prior service entered by the user."
+  },
+  "exportFieldTotalService": "Toplam hizmet süresi",
+  "@exportFieldTotalService": {
+    "description": "Profile summary label: prior service plus service since the start date, up to the report date."
+  },
+  "exportServiceDuration": "{years} yıl {months} ay {days} gün",
+  "@exportServiceDuration": {
+    "description": "A length of service.",
+    "placeholders": {
+      "years": {
+        "type": "int"
+      },
+      "months": {
+        "type": "int"
+      },
+      "days": {
+        "type": "int"
+      }
+    }
+  },
+  "exportFieldAbsence": "Hak edişi kaydıran devamsızlık",
+  "@exportFieldAbsence": {
+    "description": "Profile summary label: absence days that shift accrual dates (4857 art. 54/2)."
+  },
+  "exportFieldContractExtraDays": "Sözleşmeyle gelen ek gün",
+  "@exportFieldContractExtraDays": {
+    "description": "Profile summary label: extra leave days granted by contract or union agreement."
+  },
+  "exportFieldUnderground": "Yer altı işi",
+  "@exportFieldUnderground": {
+    "description": "Profile summary label: the person works underground."
+  },
+  "exportFieldTeacher": "Öğretmen",
+  "@exportFieldTeacher": {
+    "description": "Profile summary label: the civil servant is a teacher."
+  },
+  "exportYes": "Evet",
+  "@exportYes": {
+    "description": "Value of a yes or no field in the profile summary."
+  },
+  "exportFieldUsedBeforeTracking": "Uygulamadan önce kullanılan izin",
+  "@exportFieldUsedBeforeTracking": {
+    "description": "Profile summary label: annual leave days used before the app started tracking."
+  },
+  "exportFieldEarned": "Hak edilen",
+  "@exportFieldEarned": {
+    "description": "Balance label: annual leave days earned."
+  },
+  "exportFieldUsed": "Kullanılan",
+  "@exportFieldUsed": {
+    "description": "Balance label: annual leave days used."
+  },
+  "exportFieldPlanned": "Planlanan",
+  "@exportFieldPlanned": {
+    "description": "Balance label: annual leave days planned for the future."
+  },
+  "exportFieldRemaining": "Kalan",
+  "@exportFieldRemaining": {
+    "description": "Balance label: annual leave days still available. May be negative."
+  },
+  "exportFieldExpiring": "Yıl sonunda düşecek",
+  "@exportFieldExpiring": {
+    "description": "Balance label: days a civil servant loses at year end if unused."
+  },
+  "exportFieldNextAccrual": "Sonraki hak ediş",
+  "@exportFieldNextAccrual": {
+    "description": "Balance label: date and days of the next accrual."
+  },
+  "exportNextAccrual": "{date}, {days} gün",
+  "@exportNextAccrual": {
+    "description": "Value of exportFieldNextAccrual. The date is dd.MM.yyyy, days is a formatted number.",
+    "placeholders": {
+      "date": {
+        "type": "String"
+      },
+      "days": {
+        "type": "String"
+      }
+    }
+  },
+  "exportDays": "{days} gün",
+  "@exportDays": {
+    "description": "A number of days. Days is a formatted number such as 1,5.",
+    "placeholders": {
+      "days": {
+        "type": "String"
+      }
+    }
+  },
+  "exportColumnField": "Bilgi",
+  "@exportColumnField": {
+    "description": "Excel summary sheet column header: label."
+  },
+  "exportColumnValue": "Değer",
+  "@exportColumnValue": {
+    "description": "Excel summary sheet column header: value."
+  },
+  "exportColumnAccrualDate": "Hak ediş tarihi",
+  "@exportColumnAccrualDate": {
+    "description": "Entitlement table column header."
+  },
+  "exportColumnYear": "Yıl",
+  "@exportColumnYear": {
+    "description": "Entitlement table column header: calendar year of a civil servant's right."
+  },
+  "exportColumnDays": "Gün",
+  "@exportColumnDays": {
+    "description": "Entitlement table column header: days earned."
+  },
+  "exportColumnExpiresOn": "Kullanılmazsa düşeceği tarih",
+  "@exportColumnExpiresOn": {
+    "description": "Entitlement table column header: day the unused part is dropped (657 art. 103)."
+  },
+  "exportColumnLegalBasis": "Dayanak",
+  "@exportColumnLegalBasis": {
+    "description": "Entitlement table column header: legal articles applied, e.g. 4857 md. 53."
+  },
+  "exportColumnType": "Tür",
+  "@exportColumnType": {
+    "description": "Leave table column header: leave type."
+  },
+  "exportColumnStart": "Başlangıç",
+  "@exportColumnStart": {
+    "description": "Leave table column header: first day."
+  },
+  "exportColumnEnd": "Bitiş",
+  "@exportColumnEnd": {
+    "description": "Leave table column header: last day."
+  },
+  "exportColumnDuration": "Süre",
+  "@exportColumnDuration": {
+    "description": "Leave table column header: calendar days, half day or hours."
+  },
+  "exportColumnAnnualDays": "Yıllık izinden düşen gün",
+  "@exportColumnAnnualDays": {
+    "description": "Leave table column header: days deducted from the annual balance."
+  },
+  "exportColumnStatus": "Durum",
+  "@exportColumnStatus": {
+    "description": "Leave table column header: used or planned."
+  },
+  "exportColumnNote": "Not",
+  "@exportColumnNote": {
+    "description": "Leave table column header: user's note."
+  },
+  "exportDurationDays": "{days} takvim günü",
+  "@exportDurationDays": {
+    "description": "Leave duration in calendar days, both ends included.",
+    "placeholders": {
+      "days": {
+        "type": "int"
+      }
+    }
+  },
+  "exportDurationHalfDay": "Yarım gün",
+  "@exportDurationHalfDay": {
+    "description": "Leave duration of a half day record."
+  },
+  "exportDurationHours": "{hours} saat",
+  "@exportDurationHours": {
+    "description": "Leave duration of an hourly record. Hours is a formatted number such as 2,5.",
+    "placeholders": {
+      "hours": {
+        "type": "String"
+      }
+    }
+  },
+  "exportStatusUsed": "Kullanıldı",
+  "@exportStatusUsed": {
+    "description": "Leave status: the leave has started or ended."
+  },
+  "exportStatusPlanned": "Planlandı",
+  "@exportStatusPlanned": {
+    "description": "Leave status: the leave starts after today."
+  },
+  "exportLeaveTypeAnnual": "Yıllık izin",
+  "@exportLeaveTypeAnnual": {
+    "description": "Leave type name in exports."
+  },
+  "exportLeaveTypeSick": "Hastalık ve rapor",
+  "@exportLeaveTypeSick": {
+    "description": "Leave type name in exports."
+  },
+  "exportLeaveTypeUnpaid": "Ücretsiz izin",
+  "@exportLeaveTypeUnpaid": {
+    "description": "Leave type name in exports."
+  },
+  "exportLeaveTypeMaternity": "Doğum izni",
+  "@exportLeaveTypeMaternity": {
+    "description": "Leave type name in exports."
+  },
+  "exportLeaveTypePaternity": "Babalık izni",
+  "@exportLeaveTypePaternity": {
+    "description": "Leave type name in exports."
+  },
+  "exportLeaveTypeMarriage": "Evlenme izni",
+  "@exportLeaveTypeMarriage": {
+    "description": "Leave type name in exports."
+  },
+  "exportLeaveTypeBereavement": "Ölüm izni",
+  "@exportLeaveTypeBereavement": {
+    "description": "Leave type name in exports."
+  },
+  "exportLeaveTypeAdoption": "Evlat edinme izni",
+  "@exportLeaveTypeAdoption": {
+    "description": "Leave type name in exports."
+  },
+  "exportLeaveTypeDisabledChildCare": "Engelli veya kronik hasta çocuk izni",
+  "@exportLeaveTypeDisabledChildCare": {
+    "description": "Leave type name in exports: care of a child with at least 70% disability or a chronic illness."
+  },
+  "exportLeaveTypeUnion": "Sendika izni",
+  "@exportLeaveTypeUnion": {
+    "description": "Leave type name in exports."
+  },
+  "exportLeaveTypeExcuse": "Mazeret izni",
+  "@exportLeaveTypeExcuse": {
+    "description": "Leave type name in exports."
+  },
+  "exportLeaveTypeTravel": "Yol izni",
+  "@exportLeaveTypeTravel": {
+    "description": "Leave type name in exports."
+  },
+  "exportLeaveTypeOther": "Diğer",
+  "@exportLeaveTypeOther": {
+    "description": "Leave type name in exports when the user gave no custom name."
+  },
+  "exportNoEntitlements": "Henüz hak ediş yok.",
+  "@exportNoEntitlements": {
+    "description": "PDF text when the profile has no accrual yet."
+  },
+  "exportNoLeaves": "Kayıtlı izin yok.",
+  "@exportNoLeaves": {
+    "description": "PDF text when the profile has no leave record."
+  },
+  "exportSheetSummary": "Özet",
+  "@exportSheetSummary": {
+    "description": "Excel sheet tab name. At most 31 characters."
+  },
+  "exportSheetEntitlements": "Hak edişler",
+  "@exportSheetEntitlements": {
+    "description": "Excel sheet tab name. At most 31 characters."
+  },
+  "exportSheetLeaves": "İzinler",
+  "@exportSheetLeaves": {
+    "description": "Excel sheet tab name. At most 31 characters."
+  }
+}

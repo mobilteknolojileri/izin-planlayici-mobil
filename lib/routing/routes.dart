@@ -36,4 +36,7 @@ abstract final class Routes {
 
   /// About the app.
   static const about = '/about';
+
+  /// Component gallery, registered in debug builds only.
+  static const gallery = '/gallery';
 }

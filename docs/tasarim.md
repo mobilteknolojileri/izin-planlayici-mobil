@@ -15,7 +15,7 @@ Hedef kullanıcı telefonu kullanan ama uygulamalarla arası iyi olmayan biri. E
 
 - Bilgi önce görselle verilir: halka grafik, takvim renkleri, hafta şeridi.
 - Köprü önerisi bir hafta şeridiyle gösterilir: çalışma günü, izin günü, resmî tatil ve hafta sonu farklı kutucuklarda. Altında tek cümle: "2 gün izinle 5 gün tatil, 20-24 Nisan".
-- Renk tek başına anlam taşımaz, her anlamın bir ikonu ve deseni de vardır.
+- Renk tek başına anlam taşımaz, her anlamın bir ikonu vardır. Metin taşımayan işaretlerde (halka, renk açıklaması, takvim işareti) desen ya da çizgi biçimi de vardır. Halkada kalan gün dolu bant, kullanılan gün çentikli bant, planlanan gün içi boş bant olarak çizilir. Üzerinde metin olan kutucuklarda desen kullanılmaz, çünkü desen metnin okunmasını zorlaştırır.
 - Renk açıklaması takvimin altında her zaman görünür.
 - Boş ekranlarda illüstrasyon, tek cümle ve tek buton olur.
 
@@ -30,15 +30,18 @@ Hedef kullanıcı telefonu kullanan ama uygulamalarla arası iyi olmayan biri. E
 
 ## Profesyonellik
 
-- Tek font ailesi, tutarlı 8 pt boşluk ölçeği, Material 3.
-- Kendi renk paleti, rakiplerden ayrışan sakin tonlar.
+- Düzen iOS'a benzer: gri zemin üzerinde kenarlıksız beyaz kartlar, yumuşak köşeler (superellipse) ve büyük başlık. Altyapı Material bileşenleridir, görünüm temadan gelir.
+- Alt menü yüzen bir Liquid Glass çubuğudur. Camın renk yoğunluğu, arkadan ne geçerse geçsin etiketleri okunur tutar.
+- Tek font ailesi (Inter), tek ikon seti (Lucide) ve tutarlı 8 pt boşluk ölçeği kullanılır.
+- Ana renk kraliyet mavisidir. Kart başlıkları türüne göre mavi, yeşil, turuncu veya mordur.
 - Animasyonlar kısa ve amaca hizmet eder, dikkat dağıtmaz.
 - Reklam, ödeme duvarı ve oyunlaştırma yok.
 
 ## Erişilebilirlik
 
 - Dokunma alanları en az 48 dp.
-- Metin kontrastı en az 4.5:1.
-- Sistem yazı boyutu %200'e çıkınca taşma ve kesilme olmaz.
+- Metin kontrastı, büyük metin de dâhil en az 4.5:1. Grafik öğeler, desenler ve kontrol kenarları en az 3:1. Yarı saydam yüzeylerde kontrast, arkadan geçebilecek her renge karşı hesaplanır.
+- Sistem yazı boyutu %200'e çıkınca taşma, kesilme ve kelime bölünmesi olmaz. Android'in doğrusal olmayan yazı ölçeği de buna dâhildir.
+- Alt menü etiketleri en fazla 1.3 katına büyür, uzun basınca tam boy gösterilir, çünkü beş etiket %200'de telefon genişliğine sığmaz.
 - Tüm görsel öğelerin TalkBack etiketi vardır, grafiklerin metin karşılığı okunur.
 - Koyu tema tam desteklenir.

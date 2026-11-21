@@ -1,0 +1,303 @@
+{
+  "coreMeaningRemaining": "Kalan",
+  "@coreMeaningRemaining": {
+    "description": "Legend label: annual leave days still available."
+  },
+  "coreMeaningUsed": "Kullanılan",
+  "@coreMeaningUsed": {
+    "description": "Legend label: leave days already taken."
+  },
+  "coreMeaningPlanned": "Planlanan",
+  "@coreMeaningPlanned": {
+    "description": "Legend label: leave days planned for the future."
+  },
+  "coreMeaningHoliday": "Resmî tatil",
+  "@coreMeaningHoliday": {
+    "description": "Legend label: full-day official holiday."
+  },
+  "coreMeaningEve": "Arife (yarım gün)",
+  "@coreMeaningEve": {
+    "description": "Legend label: eve or 28 October, off from 13.00."
+  },
+  "coreMeaningWeekend": "Hafta sonu",
+  "@coreMeaningWeekend": {
+    "description": "Legend label: weekly rest day or non-working Saturday."
+  },
+  "coreMeaningBridge": "Önerilen izin",
+  "@coreMeaningBridge": {
+    "description": "Legend label: leave day suggested by the bridge planner."
+  },
+  "coreMeaningWorkday": "Çalışma günü",
+  "@coreMeaningWorkday": {
+    "description": "Legend label: normal working day."
+  },
+  "coreDays": "{days} gün",
+  "@coreDays": {
+    "description": "A number of days, for example in the balance legend.",
+    "placeholders": {
+      "days": {
+        "type": "double",
+        "format": "decimalPattern"
+      }
+    }
+  },
+  "coreBalanceRingCenter": "gün kaldı",
+  "@coreBalanceRingCenter": {
+    "description": "Under the large remaining number in the balance ring."
+  },
+  "coreBalanceRingSemantics": "Kalan {remaining} gün, kullanılan {used} gün, planlanan {planned} gün",
+  "@coreBalanceRingSemantics": {
+    "description": "Screen reader text of the balance ring.",
+    "placeholders": {
+      "remaining": {
+        "type": "double",
+        "format": "decimalPattern"
+      },
+      "used": {
+        "type": "double",
+        "format": "decimalPattern"
+      },
+      "planned": {
+        "type": "double",
+        "format": "decimalPattern"
+      }
+    }
+  },
+  "coreDayReasonWorkday": "Çalışma günü",
+  "@coreDayReasonWorkday": {
+    "description": "Why a day in a leave range counts: a normal working day."
+  },
+  "coreDayReasonWeeklyRest": "Hafta tatili",
+  "@coreDayReasonWeeklyRest": {
+    "description": "Weekly rest day, not counted (4857)."
+  },
+  "coreDayReasonHoliday": "Resmî tatil",
+  "@coreDayReasonHoliday": {
+    "description": "Full-day official holiday without a known name."
+  },
+  "coreDayReasonHolidayNamed": "Resmî tatil: {name}",
+  "@coreDayReasonHolidayNamed": {
+    "description": "Full-day official holiday with its name.",
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "coreDayReasonContractualRest": "Çalışmadığın gün",
+  "@coreDayReasonContractualRest": {
+    "description": "Non-working Saturday or other contractual rest day."
+  },
+  "coreDayReasonHalfDay": "Arife, öğleden sonra tatil",
+  "@coreDayReasonHalfDay": {
+    "description": "Eve or 28 October without a known name."
+  },
+  "coreDayReasonHalfDayNamed": "{name}, öğleden sonra tatil",
+  "@coreDayReasonHalfDayNamed": {
+    "description": "Eve or 28 October with its name.",
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "coreDayReasonAdministrativeLeave": "İdari izin",
+  "@coreDayReasonAdministrativeLeave": {
+    "description": "Administrative leave day of a civil servant (657)."
+  },
+  "coreDayReasonWeekendInsideLeave": "İzin içinde kalan hafta sonu",
+  "@coreDayReasonWeekendInsideLeave": {
+    "description": "Weekend inside a civil servant's leave, counted (657)."
+  },
+  "coreDayReasonTrimmedEdge": "İznin başındaki veya sonundaki tatil",
+  "@coreDayReasonTrimmedEdge": {
+    "description": "Weekend or holiday at the edge of a civil servant's leave."
+  },
+  "coreDayCounted": "{days} gün",
+  "@coreDayCounted": {
+    "description": "Days deducted for one day of a leave range.",
+    "placeholders": {
+      "days": {
+        "type": "double",
+        "format": "decimalPattern"
+      }
+    }
+  },
+  "coreDayHalfCounted": "Yarım gün",
+  "@coreDayHalfCounted": {
+    "description": "Half a day deducted for one day of a leave range."
+  },
+  "coreDayNotCounted": "Sayılmaz",
+  "@coreDayNotCounted": {
+    "description": "The day is not deducted from the leave balance."
+  },
+  "coreDayBreakdownSemantics": "{date}, {reason}: {value}",
+  "@coreDayBreakdownSemantics": {
+    "description": "Screen reader text of one day in the breakdown list.",
+    "placeholders": {
+      "date": {
+        "type": "String"
+      },
+      "reason": {
+        "type": "String"
+      },
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "coreWeekStripDaySemantics": "{date}, {meaning}",
+  "@coreWeekStripDaySemantics": {
+    "description": "Screen reader text of one day in the week strip.",
+    "placeholders": {
+      "date": {
+        "type": "String"
+      },
+      "meaning": {
+        "type": "String"
+      }
+    }
+  },
+  "coreLegendSemantics": "Renklerin anlamı",
+  "@coreLegendSemantics": {
+    "description": "Screen reader title of the colour legend."
+  },
+  "coreInfoTipTooltip": "{term} nedir?",
+  "@coreInfoTipTooltip": {
+    "description": "Tooltip and screen reader label of the question mark button.",
+    "placeholders": {
+      "term": {
+        "type": "String"
+      }
+    }
+  },
+  "coreOk": "Tamam",
+  "@coreOk": {
+    "description": "Closes a dialog."
+  },
+  "coreUndo": "Geri al",
+  "@coreUndo": {
+    "description": "Undo action after a delete or edit."
+  },
+  "coreStepProgress": "Adım {step}/{total}",
+  "@coreStepProgress": {
+    "description": "Setup progress shown in the app bar.",
+    "placeholders": {
+      "step": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "coreStepProgressSemantics": "Adım {step}, toplam {total} adım",
+  "@coreStepProgressSemantics": {
+    "description": "Screen reader text of the setup progress.",
+    "placeholders": {
+      "step": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "coreGalleryBigNumberCaption": "2026 için 14 gün kullandın, 4 gün planladın.",
+  "@coreGalleryBigNumberCaption": {
+    "description": "Debug component gallery sample."
+  },
+  "coreGalleryHowCalculated": "Nasıl hesaplandı?",
+  "@coreGalleryHowCalculated": {
+    "description": "Debug component gallery sample."
+  },
+  "coreGalleryInfoTerm": "Arife",
+  "@coreGalleryInfoTerm": {
+    "description": "Debug component gallery sample."
+  },
+  "coreGalleryInfoMessage": "Bayramdan önceki gün, öğleden sonrası resmî tatildir.",
+  "@coreGalleryInfoMessage": {
+    "description": "Debug component gallery sample."
+  },
+  "coreGalleryEmptyMessage": "Henüz izin eklemedin.",
+  "@coreGalleryEmptyMessage": {
+    "description": "Debug component gallery sample."
+  },
+  "coreGalleryAddLeave": "İzin ekle",
+  "@coreGalleryAddLeave": {
+    "description": "Debug component gallery sample."
+  },
+  "coreGalleryCancel": "Vazgeç",
+  "@coreGalleryCancel": {
+    "description": "Debug component gallery sample."
+  },
+  "coreGalleryStepQuestion": "İşe ne zaman başladın?",
+  "@coreGalleryStepQuestion": {
+    "description": "Debug component gallery sample."
+  },
+  "coreGalleryStepReason": "İzin hakkın bu tarihe göre hesaplanır.",
+  "@coreGalleryStepReason": {
+    "description": "Debug component gallery sample."
+  },
+  "coreGalleryNext": "Devam",
+  "@coreGalleryNext": {
+    "description": "Debug component gallery sample."
+  },
+  "coreGalleryUndoMessage": "İzin silindi.",
+  "@coreGalleryUndoMessage": {
+    "description": "Debug component gallery sample."
+  },
+  "coreGalleryBridgeCaption": "1 gün izinle 4 gün tatil, 23-26 Nisan",
+  "@coreGalleryBridgeCaption": {
+    "description": "Debug component gallery sample."
+  },
+  "coreGalleryHomeTitle": "İzin durumun",
+  "@coreGalleryHomeTitle": {
+    "description": "Debug home screen prototype sample."
+  },
+  "coreGalleryHomeRemaining": "Kalan izin",
+  "@coreGalleryHomeRemaining": {
+    "description": "Debug home screen prototype sample."
+  },
+  "coreGalleryHomeDaysUnit": "gün",
+  "@coreGalleryHomeDaysUnit": {
+    "description": "Debug home screen prototype sample."
+  },
+  "coreGalleryHomeNextAccrual": "Yeni izin hakkı",
+  "@coreGalleryHomeNextAccrual": {
+    "description": "Debug home screen prototype sample."
+  },
+  "coreGalleryHomeNextAccrualDetail": "14 Nisan 2027'de 14 gün eklenecek",
+  "@coreGalleryHomeNextAccrualDetail": {
+    "description": "Debug home screen prototype sample."
+  },
+  "coreGalleryHomeNextHoliday": "Sıradaki tatil",
+  "@coreGalleryHomeNextHoliday": {
+    "description": "Debug home screen prototype sample."
+  },
+  "coreGalleryHomeNextHolidayDetail": "Yılbaşı, 1 Ocak",
+  "@coreGalleryHomeNextHolidayDetail": {
+    "description": "Debug home screen prototype sample."
+  },
+  "coreGalleryHomeBridgeTitle": "Köprü önerisi",
+  "@coreGalleryHomeBridgeTitle": {
+    "description": "Debug home screen prototype sample."
+  },
+  "coreGalleryHomeBridgeCaption": "1 gün izinle 6 gün tatil, 9-14 Mart",
+  "@coreGalleryHomeBridgeCaption": {
+    "description": "Debug home screen prototype sample."
+  },
+  "coreOpenLink": "{name} bağlantısını aç",
+  "@coreOpenLink": {
+    "description": "Tooltip of the button that opens a source link in the browser.",
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "coreLinkCopied": "Tarayıcı açılamadı. Bağlantı kopyalandı.",
+  "@coreLinkCopied": {
+    "description": "Shown when no browser could open a link, so it was copied instead."
+  }
+}

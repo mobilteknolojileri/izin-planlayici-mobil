@@ -1,8 +1,12 @@
 import 'package:go_router/go_router.dart';
 import 'package:izin_planla/l10n/gen/app_localizations.dart';
+import 'package:izin_planla/ui/core/widgets/app_tab_bar.dart';
+import 'package:lucide_icons_flutter/lucide_icons.dart';
 import 'package:material_ui/material_ui.dart';
 
-/// Scaffold with the bottom navigation bar around the five tab screens.
+/// Scaffold with the glass tab bar around the five tab screens. Content
+/// scrolls behind the bar, every tab screen keeps the bar height free at the
+/// end of its list through the bottom padding of `MediaQuery`.
 class AppShell extends StatelessWidget {
   /// Creates the shell for [navigationShell].
   const new({required this.navigationShell, super.key});
@@ -14,37 +18,27 @@ class AppShell extends StatelessWidget {
   Widget build(BuildContext context) {
     final l10n = AppLocalizations.of(context);
     return Scaffold(
+      extendBody: true,
       body: navigationShell,
-      bottomNavigationBar: NavigationBar(
+      bottomNavigationBar: AppTabBar(
         selectedIndex: navigationShell.currentIndex,
-        onDestinationSelected: (index) => navigationShell.goBranch(
+        onSelected: (index) => navigationShell.goBranch(
           index,
           initialLocation: index == navigationShell.currentIndex,
         ),
         destinations: [
-          NavigationDestination(
-            icon: const Icon(Icons.home_outlined),
-            selectedIcon: const Icon(Icons.home),
-            label: l10n.navHome,
-          ),
-          NavigationDestination(
-            icon: const Icon(Icons.event_note_outlined),
-            selectedIcon: const Icon(Icons.event_note),
+          AppTabDestination(icon: LucideIcons.house, label: l10n.navHome),
+          AppTabDestination(
+            icon: LucideIcons.listChecks,
             label: l10n.navLeaves,
           ),
-          NavigationDestination(
-            icon: const Icon(Icons.calendar_month_outlined),
-            selectedIcon: const Icon(Icons.calendar_month),
+          AppTabDestination(
+            icon: LucideIcons.calendarDays,
             label: l10n.navCalendar,
           ),
-          NavigationDestination(
-            icon: const Icon(Icons.beach_access_outlined),
-            selectedIcon: const Icon(Icons.beach_access),
-            label: l10n.navBridge,
-          ),
-          NavigationDestination(
-            icon: const Icon(Icons.settings_outlined),
-            selectedIcon: const Icon(Icons.settings),
+          AppTabDestination(icon: LucideIcons.treePalm, label: l10n.navBridge),
+          AppTabDestination(
+            icon: LucideIcons.settings,
             label: l10n.navSettings,
           ),
         ],

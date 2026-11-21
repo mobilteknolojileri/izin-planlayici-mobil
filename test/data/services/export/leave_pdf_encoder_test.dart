@@ -1,3 +1,4 @@
+import 'dart:async';
 import 'dart:convert';
 
 import 'package:flutter/services.dart';
@@ -125,5 +126,19 @@ void main() {
 
     final empty = await encode();
     expect(pageCount(empty), 1);
+  });
+
+  test('leaves out characters the font has no glyph for', () async {
+    final printed = <String>[];
+    await runZoned(
+      () => encode(leaves: HostileFixture.leaves()),
+      zoneSpecification: ZoneSpecification(
+        print: (self, parent, zone, line) => printed.add(line),
+      ),
+    );
+
+    // The pdf package prints a warning for each character it draws as a
+    // crossed box, here the emoji, Hebrew and Arabic notes.
+    expect(printed, isEmpty);
   });
 }

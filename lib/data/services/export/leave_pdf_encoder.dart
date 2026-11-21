@@ -11,12 +11,12 @@ import 'package:pdf/widgets.dart' as pw;
 /// Title, profile summary, balance, entitlement table, leave table and the
 /// legal disclaimer, in that order. Every glyph comes from the embedded
 /// [font], which must cover Turkish letters, so the file looks the same on
-/// every device.
+/// every device. Characters the font has no glyph for are left out.
 class LeavePdfEncoder {
   /// Creates an encoder that draws [text] with [font].
   ///
   /// Tests turn [compress] off to read the page objects.
-  const new(this.text, {required this.font, this.compress = true});
+  new(this.text, {required this.font, this.compress = true});
 
   /// MIME type of the produced file.
   static const mimeType = 'application/pdf';
@@ -40,6 +40,14 @@ class LeavePdfEncoder {
   static const _grey = PdfColor.fromInt(0xFF5F6368);
   static const _rule = PdfColor.fromInt(0xFFDADCE0);
   static const _headerFill = PdfColor.fromInt(0xFFF1F3F4);
+
+  /// Character codes [font] has a glyph for, the same map the pdf package
+  /// checks before it draws a crossed box instead. Null for a built-in font,
+  /// which keeps every character.
+  late final Map<int, int>? _glyphs = switch (font) {
+    final pw.TtfFont ttf => TtfParser(ttf.data).charToGlyphIndexMap,
+    _ => null,
+  };
 
   /// PDF bytes of [report].
   Future<Uint8List> encode(LeaveReport report) {
@@ -242,14 +250,22 @@ class LeavePdfEncoder {
   };
 
   /// Returns [value] cut to [maxCellLength], with every line break as LF,
-  /// tabs as spaces and no other control characters, which the font cannot
-  /// draw.
-  static String _cut(String value) {
+  /// tabs as spaces, no other control characters and no characters the font
+  /// has no glyph for, such as emoji or Hebrew and Arabic letters. CSV,
+  /// Excel and the backup keep them.
+  String _cut(String value) {
     var text = value
         .replaceAll('\r\n', '\n')
         .replaceAll('\r', '\n')
         .replaceAll('\t', ' ')
         .replaceAll(_controls, '');
+    final glyphs = _glyphs;
+    if (glyphs != null) {
+      // The pdf package breaks lines at LF itself, the font needs no glyph.
+      text = String.fromCharCodes(
+        text.runes.where((rune) => rune == 0x0A || glyphs.containsKey(rune)),
+      );
+    }
     if (text.length <= maxCellLength) return text;
     var end = maxCellLength;
     final last = text.codeUnitAt(end - 1);

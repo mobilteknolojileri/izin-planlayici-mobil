@@ -2,6 +2,8 @@
 
 Bağımlılık: 03, 05. Paralel çalışır. Yazma alanı: `lib/domain/bridge/`, `test/domain/bridge/`.
 
+Durum: tamamlandı. Öneriler ve yıllık optimum plan `DefaultBridgePlanner` içinde, izin maliyetini `LeaveDayCounter` sayar. 2026-2028 örnekleri ve brute force karşılaştırması dâhil 73 test geçiyor, analyze temiz.
+
 ## Amaç
 
 Resmî tatillere göre en verimli izin günlerini bulmak.

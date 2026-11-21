@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Google Play feature graphic, 1024x500. The mark group is a copy of
+     glyph.svg, keep the two in step. Text uses the app font Inter
+     (assets/fonts/Inter.ttf), the renderer loads it before drawing. -->
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="500" viewBox="0 0 1024 500">
+  <defs>
+    <linearGradient id="hero" x1="0" y1="0" x2="1024" y2="500" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#2B4FD8"/>
+      <stop offset="1" stop-color="#13277E"/>
+    </linearGradient>
+  </defs>
+  <rect width="1024" height="500" fill="url(#hero)"/>
+  <path d="M780 560 A250 250 0 0 1 1280 560" fill="none" stroke="#FFFFFF" stroke-opacity="0.06" stroke-width="96"/>
+  <path d="M-150 -60 A190 190 0 0 0 230 -60" fill="none" stroke="#FFFFFF" stroke-opacity="0.05" stroke-width="72"/>
+  <g transform="translate(-86.72 -36.72) scale(0.56)">
+    <path d="M322 494 A210.4 210.4 0 0 1 702 494" fill="none" stroke="#FFFFFF" stroke-width="60" stroke-linecap="round"/>
+    <path d="M446 524 A66 66 0 0 1 578 524 Z" fill="#FFD27A"/>
+    <rect x="290" y="548" width="132" height="132" rx="32" fill="#FFFFFF"/>
+    <rect x="446" y="548" width="132" height="132" rx="32" fill="#FFFFFF"/>
+    <rect x="602" y="548" width="132" height="132" rx="32" fill="#FFFFFF"/>
+  </g>
+  <text x="368" y="230" font-family="Inter" font-size="88" font-weight="800" fill="#FFFFFF">İzin Planla</text>
+  <text x="370" y="290" font-family="Inter" font-size="34" font-weight="500" fill="#DDE4FF">Yıllık izin hesabı, izin takibi</text>
+  <text x="370" y="336" font-family="Inter" font-size="34" font-weight="500" fill="#DDE4FF">ve köprü tatili planı</text>
+</svg>

@@ -1,0 +1,17 @@
+# flutter_launcher_icons config, kept out of pubspec.yaml on purpose.
+# Run assets/branding/tool/build_android.sh, not the tool directly: the tool
+# also rewrites the android:icon line of AndroidManifest.xml, so the script
+# runs it in a scratch copy and copies back only the res files.
+flutter_launcher_icons:
+  android: true
+  ios: false
+  min_sdk_android: 24
+  # Android 7 (API 24 and 25) has no adaptive icons and shows this one.
+  image_path: assets/branding/png/icon_legacy.png
+  adaptive_icon_background: assets/branding/png/background.png
+  adaptive_icon_foreground: assets/branding/png/foreground.png
+  # Themed icons on Android 13 and later.
+  adaptive_icon_monochrome: assets/branding/png/monochrome.png
+  # The foreground PNG is drawn on the full 108 dp layer with the mark inside
+  # the 66 dp safe zone, so it needs no extra padding.
+  adaptive_icon_foreground_inset: 0

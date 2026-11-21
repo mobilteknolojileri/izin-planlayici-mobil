@@ -2,7 +2,7 @@
 
 Türkiye'de çalışanlar için yıllık izin hakkı hesaplama, izin takibi ve köprü tatil planlama uygulaması.
 
-- Store adı: İzin Planla: Yıllık İzin & Köprü
+- Store adı: İzin Planla: Yıllık İzin Takip
 - Package id: `com.izinplanla.app` (Play'e yüklendikten sonra değiştirilemez)
 - Platform: Flutter, önce Android
 - Veri: tamamen cihazda, internet ve hesap gerekmez

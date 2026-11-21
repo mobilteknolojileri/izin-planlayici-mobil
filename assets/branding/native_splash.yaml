@@ -1,0 +1,19 @@
+# flutter_native_splash config, kept out of pubspec.yaml on purpose.
+# Run: dart run flutter_native_splash:create --path=assets/branding/native_splash.yaml
+# The background matches the app's first frame (light F2F2F7, dark 000000), so
+# the splash hands over to Flutter without a colour flash.
+flutter_native_splash:
+  android: true
+  ios: false
+  web: false
+  color: "#F2F2F7"
+  color_dark: "#000000"
+  # Before Android 12: the royal blue circle with the mark, drawn in.
+  image: assets/branding/png/splash.png
+  android_12:
+    # Android 12 and later draw the circle from icon_background_color.
+    image: assets/branding/png/splash_android12.png
+    color: "#F2F2F7"
+    color_dark: "#000000"
+    icon_background_color: "#2447D6"
+    icon_background_color_dark: "#2447D6"

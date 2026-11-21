@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- The İzin Planla mark: a bridge arch over three day tiles, with the holiday
+     sun rising under it. The canvas is the 108 dp adaptive icon layer and the
+     whole mark stays inside the 66 dp safe zone circle (radius 313, the
+     farthest point is at 266). Every image rendered by
+     assets/branding/tool/render_branding_test.dart starts from this file. -->
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024">
+  <path d="M322 494 A210.4 210.4 0 0 1 702 494" fill="none" stroke="#FFFFFF" stroke-width="60" stroke-linecap="round"/>
+  <path d="M446 524 A66 66 0 0 1 578 524 Z" fill="#FFD27A"/>
+  <rect x="290" y="548" width="132" height="132" rx="32" fill="#FFFFFF"/>
+  <rect x="446" y="548" width="132" height="132" rx="32" fill="#FFFFFF"/>
+  <rect x="602" y="548" width="132" height="132" rx="32" fill="#FFFFFF"/>
+</svg>

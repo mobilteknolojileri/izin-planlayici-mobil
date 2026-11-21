@@ -2,6 +2,8 @@
 
 Bağımlılık: 03, 05. Paralel çalışır. Yazma alanı: `lib/domain/entitlement/`, `test/domain/entitlement/`.
 
+Durum: tamamlandı. 4857 ve 657 kuralları yazıldı, 96 test geçiyor.
+
 ## Amaç
 
 Profilden yıllık izin hak edişlerini hesaplayan saf Dart motoru.

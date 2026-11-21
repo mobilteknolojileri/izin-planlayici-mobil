@@ -2,6 +2,8 @@
 
 Bağımlılık: 16.
 
+Durum: başladı. Debug APK'da kurulum, hak ediş, izin ekleme, kalıcı kayıt, beş sekme, bildirim izni verme ve reddetme, link açma ve widget denendi. Rakip senaryoları, ekran görüntüleri, büyük yazı, ekran döndürme, uçak modu, CSV, PDF, yedek ve geri yükleme kaldı.
+
 ## Yapılacaklar
 
 1. Release APK'yı MuMu'ya kur (`adb install -r`).

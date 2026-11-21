@@ -4,19 +4,236 @@
   "@aboutTitle": {
     "description": "App bar title of the about screen."
   },
+  "aboutVersion": "Sürüm {version}",
+  "@aboutVersion": {
+    "placeholders": {
+      "version": {
+        "type": "String"
+      }
+    }
+  },
+  "aboutDescription": "Yıllık izin hakkını hesaplar, izinlerini takip eder ve köprü günlerini önerir.",
+  "aboutPrivacyTitle": "Gizlilik",
+  "aboutPrivacyBody": "Verilerin sadece bu telefonda saklanır, hiçbir sunucuya gönderilmez. Uygulama internete bağlanmaz. Hesap, reklam ve analitik yoktur. Uygulamanın istediği tek izin bildirim izni, o da bir hatırlatmayı açtığında sorulur.",
+  "aboutSourcesTitle": "Mevzuat kaynakları",
+  "aboutSourcesBody": "Hesaplar bu kaynaklara dayanır. Kaynaklar en son 20 Kasım 2026'da kontrol edildi.",
+  "aboutSourceLabor": "4857 sayılı İş Kanunu",
+  "aboutSourceRegulation": "Yıllık Ücretli İzin Yönetmeliği",
+  "aboutSourceCivil": "657 sayılı Devlet Memurları Kanunu",
+  "aboutSourceHolidays": "2429 sayılı Ulusal Bayram ve Genel Tatiller Hakkında Kanun",
+  "aboutOpenGuide": "Mevzuat rehberini aç",
+  "aboutLicenseTitle": "Açık kaynak",
+  "aboutLicenseBody": "İzin Planla açık kaynaklıdır ve GPL-3.0 lisansıyla dağıtılır. Kaynak kodu GitHub'da herkese açıktır.",
+  "aboutSourceCode": "Kaynak kodu (GitHub)",
+  "aboutLegalese": "GPL-3.0 lisansıyla dağıtılır.",
+  "aboutPackages": "Kullanılan paketlerin lisansları",
+  "aboutDisclaimerTitle": "Yasal uyarı",
+  "aboutDisclaimer": "İzin Planla bilgilendirme amaçlıdır, hukuki tavsiye değildir. Hesaplar mevzuat rehberindeki kaynaklara ve kaynakların son kontrol edildiği 20 Kasım 2026 tarihindeki mevzuata dayanır. Mevzuat ve yargı kararları değişebilir, uygulama hata içerebilir. Kesin bilgi için işverenine, insan kaynaklarına veya bir hukukçuya danış. Uygulama hiçbir garanti verilmeden sunulur. Kullanımından doğan sonuçlardan, yasaların izin verdiği ölçüde, geliştirici sorumlu tutulamaz (GPL-3.0 madde 15 ve 16).",
   "bridgeTitle": "Köprü",
   "@bridgeTitle": {
-    "description": "App bar title of the bridge screen."
+    "description": "Large title of the bridge tab."
   },
+  "bridgeBudgetTitle": "İzin bütçen",
+  "@bridgeBudgetTitle": {
+    "description": "Card title: how many leave days the user wants to spend."
+  },
+  "bridgeBudgetRemaining": "Kalan iznin {days} gün.",
+  "@bridgeBudgetRemaining": {
+    "placeholders": {
+      "days": {
+        "type": "double",
+        "format": "decimalPattern"
+      }
+    }
+  },
+  "bridgeBudgetHint": "Öneriler bu bütçeye göre seçilir.",
+  "bridgeBudgetDecrease": "Bütçeyi bir gün azalt",
+  "bridgeBudgetIncrease": "Bütçeyi bir gün artır",
+  "bridgePlanTitle": "{year} için en iyi plan",
+  "@bridgePlanTitle": {
+    "placeholders": {
+      "year": {
+        "type": "int"
+      }
+    }
+  },
+  "bridgePlanUnit": "gün tatil",
+  "bridgePlanCaption": "Toplam {leave} gün izinle {count} ayrı tatil yaparsın.",
+  "@bridgePlanCaption": {
+    "placeholders": {
+      "leave": {
+        "type": "double",
+        "format": "decimalPattern"
+      },
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "bridgePlanNone": "Bu bütçeyle köprü yapılamıyor.",
+  "bridgeSortEfficiency": "En verimli",
+  "bridgeSortLength": "En uzun",
+  "bridgeSortDate": "Tarihe göre",
+  "@bridgeSortDate": {
+    "description": "Sort chips of the suggestion list."
+  },
+  "bridgeSuggestionSentence": "{leave} gün izinle {total} gün tatil, {range}",
+  "@bridgeSuggestionSentence": {
+    "description": "Main sentence of a suggestion: '2 gün izinle 5 gün tatil, 20-24 Nisan'.",
+    "placeholders": {
+      "leave": {
+        "type": "double",
+        "format": "decimalPattern"
+      },
+      "total": {
+        "type": "int"
+      },
+      "range": {
+        "type": "String"
+      }
+    }
+  },
+  "bridgeSuggestionWeekend": "Hafta sonu tatili",
+  "@bridgeSuggestionWeekend": {
+    "description": "Card title of a suggestion without an official holiday."
+  },
+  "bridgeInPlan": "En iyi planda",
+  "bridgePlanAction": "Planla",
+  "bridgePlannedLabel": "Planlandı",
+  "bridgePlannedMessage": "İzin planına eklendi.",
+  "bridgeFailedMessage": "İzin eklenemedi. Tekrar dene.",
+  "bridgeEmptyMessage": "Bu yıl için köprü önerisi yok.",
+  "bridgeEmptyAction": "Takvimi aç",
+  "bridgeNoProfileMessage": "Köprü önerilerini görmek için önce kurulumu tamamla.",
+  "bridgeNoProfileAction": "Kuruluma başla",
+  "bridgeLoading": "Öneriler yükleniyor",
+  "bridgeError": "Öneriler açılamadı. Biraz sonra tekrar dene.",
   "calendarTitle": "Takvim",
   "@calendarTitle": {
-    "description": "App bar title of the calendar screen."
+    "description": "Large title of the calendar tab."
   },
+  "calendarViewMonth": "Aylık",
+  "calendarViewYear": "Yıllık",
+  "@calendarViewYear": {
+    "description": "Chips that switch between the month and the year view."
+  },
+  "calendarEveryone": "Herkesi göster",
+  "@calendarEveryone": {
+    "description": "Chip that shows the leave of every person on the calendar."
+  },
+  "calendarRangeMode": "Aralık seç",
+  "@calendarRangeMode": {
+    "description": "Chip that turns on range selection for a new leave."
+  },
+  "calendarPreviousMonth": "Önceki ay",
+  "calendarNextMonth": "Sonraki ay",
+  "calendarPreviousYear": "Önceki yıl",
+  "calendarNextYear": "Sonraki yıl",
+  "calendarToday": "Bugün",
+  "calendarLeaveItem": "{type}, {range}",
+  "@calendarLeaveItem": {
+    "description": "A leave on the selected day, such as 'Yıllık izin, 6-10 Temmuz'.",
+    "placeholders": {
+      "type": {
+        "type": "String"
+      },
+      "range": {
+        "type": "String"
+      }
+    }
+  },
+  "calendarPersonLeaveItem": "{person}: {type}, {range}",
+  "@calendarPersonLeaveItem": {
+    "description": "A leave of a named person in the everyone view.",
+    "placeholders": {
+      "person": {
+        "type": "String"
+      },
+      "type": {
+        "type": "String"
+      },
+      "range": {
+        "type": "String"
+      }
+    }
+  },
+  "calendarBridgeItem": "{leave} gün izinle {total} gün tatil, {range}",
+  "@calendarBridgeItem": {
+    "description": "A bridge suggestion that contains the selected day.",
+    "placeholders": {
+      "leave": {
+        "type": "double",
+        "format": "decimalPattern"
+      },
+      "total": {
+        "type": "int"
+      },
+      "range": {
+        "type": "String"
+      }
+    }
+  },
+  "calendarPickDay": "Ayrıntıyı görmek için bir güne dokun.",
+  "calendarRangeHint": "İznin ilk gününe, sonra son gününe dokun.",
+  "calendarRangePickEnd": "Şimdi iznin son gününe dokun.",
+  "calendarRangeSelected": "Seçtiğin aralık {range}, toplam {count} gün.",
+  "@calendarRangeSelected": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      },
+      "range": {
+        "type": "String"
+      }
+    }
+  },
+  "calendarAddLeaveDay": "Bu güne izin ekle",
+  "calendarAddLeaveRange": "Bu tarihlere izin ekle",
+  "calendarMonthHolidays": "{count} gün resmî tatil",
+  "@calendarMonthHolidays": {
+    "description": "Part of a month summary in the year view.",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "calendarMonthLeaves": "{count} gün izin",
+  "@calendarMonthLeaves": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "calendarMonthBridges": "{count} önerilen izin günü",
+  "@calendarMonthBridges": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "calendarMonthNothing": "Tatil ve izin yok",
+  "calendarMonthSemantics": "{month}, {summary}",
+  "@calendarMonthSemantics": {
+    "description": "Screen reader label of a month in the year view.",
+    "placeholders": {
+      "month": {
+        "type": "String"
+      },
+      "summary": {
+        "type": "String"
+      }
+    }
+  },
+  "calendarLoading": "Takvim yükleniyor",
+  "calendarError": "Takvim açılamadı. Biraz sonra tekrar dene.",
   "appTitle": "İzin Planla",
   "@appTitle": {
     "description": "App name shown by the system."
   },
-  "navHome": "Ana Sayfa",
+  "navHome": "Ana sayfa",
   "navLeaves": "İzinlerim",
   "navCalendar": "Takvim",
   "navBridge": "Köprü",
@@ -24,40 +241,2467 @@
   "@navSettings": {
     "description": "Bottom navigation labels."
   },
-  "explainTitle": "Nasıl Hesaplandı?",
+  "coreMeaningRemaining": "Kalan",
+  "@coreMeaningRemaining": {
+    "description": "Legend label: annual leave days still available."
+  },
+  "coreMeaningUsed": "Kullanılan",
+  "@coreMeaningUsed": {
+    "description": "Legend label: leave days already taken."
+  },
+  "coreMeaningPlanned": "Planlanan",
+  "@coreMeaningPlanned": {
+    "description": "Legend label: leave days planned for the future."
+  },
+  "coreMeaningHoliday": "Resmî tatil",
+  "@coreMeaningHoliday": {
+    "description": "Legend label: full-day official holiday."
+  },
+  "coreMeaningEve": "Arife (yarım gün)",
+  "@coreMeaningEve": {
+    "description": "Legend label: eve or 28 October, off from 13.00."
+  },
+  "coreMeaningWeekend": "Hafta sonu",
+  "@coreMeaningWeekend": {
+    "description": "Legend label: weekly rest day or non-working Saturday."
+  },
+  "coreMeaningBridge": "Önerilen izin",
+  "@coreMeaningBridge": {
+    "description": "Legend label: leave day suggested by the bridge planner."
+  },
+  "coreMeaningWorkday": "Çalışma günü",
+  "@coreMeaningWorkday": {
+    "description": "Legend label: normal working day."
+  },
+  "coreDays": "{days} gün",
+  "@coreDays": {
+    "description": "A number of days, for example in the balance legend.",
+    "placeholders": {
+      "days": {
+        "type": "double",
+        "format": "decimalPattern"
+      }
+    }
+  },
+  "coreBalanceRingCenter": "gün kaldı",
+  "@coreBalanceRingCenter": {
+    "description": "Under the large remaining number in the balance ring."
+  },
+  "coreBalanceRingSemantics": "Kalan {remaining} gün, kullanılan {used} gün, planlanan {planned} gün",
+  "@coreBalanceRingSemantics": {
+    "description": "Screen reader text of the balance ring.",
+    "placeholders": {
+      "remaining": {
+        "type": "double",
+        "format": "decimalPattern"
+      },
+      "used": {
+        "type": "double",
+        "format": "decimalPattern"
+      },
+      "planned": {
+        "type": "double",
+        "format": "decimalPattern"
+      }
+    }
+  },
+  "coreDayReasonWorkday": "Çalışma günü",
+  "@coreDayReasonWorkday": {
+    "description": "Why a day in a leave range counts: a normal working day."
+  },
+  "coreDayReasonWeeklyRest": "Hafta tatili",
+  "@coreDayReasonWeeklyRest": {
+    "description": "Weekly rest day, not counted (4857)."
+  },
+  "coreDayReasonHoliday": "Resmî tatil",
+  "@coreDayReasonHoliday": {
+    "description": "Full-day official holiday without a known name."
+  },
+  "coreDayReasonHolidayNamed": "Resmî tatil: {name}",
+  "@coreDayReasonHolidayNamed": {
+    "description": "Full-day official holiday with its name.",
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "coreDayReasonContractualRest": "Çalışmadığın gün",
+  "@coreDayReasonContractualRest": {
+    "description": "Non-working Saturday or other contractual rest day."
+  },
+  "coreDayReasonHalfDay": "Arife, öğleden sonra tatil",
+  "@coreDayReasonHalfDay": {
+    "description": "Eve or 28 October without a known name."
+  },
+  "coreDayReasonHalfDayNamed": "{name}, öğleden sonra tatil",
+  "@coreDayReasonHalfDayNamed": {
+    "description": "Eve or 28 October with its name.",
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "coreDayReasonAdministrativeLeave": "İdari izin",
+  "@coreDayReasonAdministrativeLeave": {
+    "description": "Administrative leave day of a civil servant (657)."
+  },
+  "coreDayReasonWeekendInsideLeave": "İzin içinde kalan hafta sonu",
+  "@coreDayReasonWeekendInsideLeave": {
+    "description": "Weekend inside a civil servant's leave, counted (657)."
+  },
+  "coreDayReasonTrimmedEdge": "İznin başındaki veya sonundaki tatil",
+  "@coreDayReasonTrimmedEdge": {
+    "description": "Weekend or holiday at the edge of a civil servant's leave."
+  },
+  "coreDayCounted": "{days} gün",
+  "@coreDayCounted": {
+    "description": "Days deducted for one day of a leave range.",
+    "placeholders": {
+      "days": {
+        "type": "double",
+        "format": "decimalPattern"
+      }
+    }
+  },
+  "coreDayHalfCounted": "Yarım gün",
+  "@coreDayHalfCounted": {
+    "description": "Half a day deducted for one day of a leave range."
+  },
+  "coreDayNotCounted": "Sayılmaz",
+  "@coreDayNotCounted": {
+    "description": "The day is not deducted from the leave balance."
+  },
+  "coreDayBreakdownSemantics": "{date}, {reason}: {value}",
+  "@coreDayBreakdownSemantics": {
+    "description": "Screen reader text of one day in the breakdown list.",
+    "placeholders": {
+      "date": {
+        "type": "String"
+      },
+      "reason": {
+        "type": "String"
+      },
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "coreWeekStripDaySemantics": "{date}, {meaning}",
+  "@coreWeekStripDaySemantics": {
+    "description": "Screen reader text of one day in the week strip.",
+    "placeholders": {
+      "date": {
+        "type": "String"
+      },
+      "meaning": {
+        "type": "String"
+      }
+    }
+  },
+  "coreLegendSemantics": "Renklerin anlamı",
+  "@coreLegendSemantics": {
+    "description": "Screen reader title of the colour legend."
+  },
+  "coreInfoTipTooltip": "{term} nedir?",
+  "@coreInfoTipTooltip": {
+    "description": "Tooltip and screen reader label of the question mark button.",
+    "placeholders": {
+      "term": {
+        "type": "String"
+      }
+    }
+  },
+  "coreOk": "Tamam",
+  "@coreOk": {
+    "description": "Closes a dialog."
+  },
+  "coreUndo": "Geri al",
+  "@coreUndo": {
+    "description": "Undo action after a delete or edit."
+  },
+  "coreStepProgress": "Adım {step}/{total}",
+  "@coreStepProgress": {
+    "description": "Setup progress shown in the app bar.",
+    "placeholders": {
+      "step": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "coreStepProgressSemantics": "Adım {step}, toplam {total} adım",
+  "@coreStepProgressSemantics": {
+    "description": "Screen reader text of the setup progress.",
+    "placeholders": {
+      "step": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "coreGalleryBigNumberCaption": "2026 için 14 gün kullandın, 4 gün planladın.",
+  "@coreGalleryBigNumberCaption": {
+    "description": "Debug component gallery sample."
+  },
+  "coreGalleryHowCalculated": "Nasıl hesaplandı?",
+  "@coreGalleryHowCalculated": {
+    "description": "Debug component gallery sample."
+  },
+  "coreGalleryInfoTerm": "Arife",
+  "@coreGalleryInfoTerm": {
+    "description": "Debug component gallery sample."
+  },
+  "coreGalleryInfoMessage": "Bayramdan önceki gün, öğleden sonrası resmî tatildir.",
+  "@coreGalleryInfoMessage": {
+    "description": "Debug component gallery sample."
+  },
+  "coreGalleryEmptyMessage": "Henüz izin eklemedin.",
+  "@coreGalleryEmptyMessage": {
+    "description": "Debug component gallery sample."
+  },
+  "coreGalleryAddLeave": "İzin ekle",
+  "@coreGalleryAddLeave": {
+    "description": "Debug component gallery sample."
+  },
+  "coreGalleryCancel": "Vazgeç",
+  "@coreGalleryCancel": {
+    "description": "Debug component gallery sample."
+  },
+  "coreGalleryStepQuestion": "İşe ne zaman başladın?",
+  "@coreGalleryStepQuestion": {
+    "description": "Debug component gallery sample."
+  },
+  "coreGalleryStepReason": "İzin hakkın bu tarihe göre hesaplanır.",
+  "@coreGalleryStepReason": {
+    "description": "Debug component gallery sample."
+  },
+  "coreGalleryNext": "Devam",
+  "@coreGalleryNext": {
+    "description": "Debug component gallery sample."
+  },
+  "coreGalleryUndoMessage": "İzin silindi.",
+  "@coreGalleryUndoMessage": {
+    "description": "Debug component gallery sample."
+  },
+  "coreGalleryBridgeCaption": "1 gün izinle 4 gün tatil, 23-26 Nisan",
+  "@coreGalleryBridgeCaption": {
+    "description": "Debug component gallery sample."
+  },
+  "coreGalleryHomeTitle": "İzin durumun",
+  "@coreGalleryHomeTitle": {
+    "description": "Debug home screen prototype sample."
+  },
+  "coreGalleryHomeRemaining": "Kalan izin",
+  "@coreGalleryHomeRemaining": {
+    "description": "Debug home screen prototype sample."
+  },
+  "coreGalleryHomeDaysUnit": "gün",
+  "@coreGalleryHomeDaysUnit": {
+    "description": "Debug home screen prototype sample."
+  },
+  "coreGalleryHomeNextAccrual": "Yeni izin hakkı",
+  "@coreGalleryHomeNextAccrual": {
+    "description": "Debug home screen prototype sample."
+  },
+  "coreGalleryHomeNextAccrualDetail": "14 Nisan 2027'de 14 gün eklenecek",
+  "@coreGalleryHomeNextAccrualDetail": {
+    "description": "Debug home screen prototype sample."
+  },
+  "coreGalleryHomeNextHoliday": "Sıradaki tatil",
+  "@coreGalleryHomeNextHoliday": {
+    "description": "Debug home screen prototype sample."
+  },
+  "coreGalleryHomeNextHolidayDetail": "Yılbaşı, 1 Ocak",
+  "@coreGalleryHomeNextHolidayDetail": {
+    "description": "Debug home screen prototype sample."
+  },
+  "coreGalleryHomeBridgeTitle": "Köprü önerisi",
+  "@coreGalleryHomeBridgeTitle": {
+    "description": "Debug home screen prototype sample."
+  },
+  "coreGalleryHomeBridgeCaption": "1 gün izinle 6 gün tatil, 9-14 Mart",
+  "@coreGalleryHomeBridgeCaption": {
+    "description": "Debug home screen prototype sample."
+  },
+  "coreOpenLink": "{name} bağlantısını aç",
+  "@coreOpenLink": {
+    "description": "Tooltip of the button that opens a source link in the browser.",
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "coreLinkCopied": "Tarayıcı açılamadı. Bağlantı kopyalandı.",
+  "@coreLinkCopied": {
+    "description": "Shown when no browser could open a link, so it was copied instead."
+  },
+  "explainTitle": "Nasıl hesaplandı?",
   "@explainTitle": {
     "description": "App bar title of the explain screen."
   },
-  "guideTitle": "Mevzuat Rehberi",
+  "explainSummaryTitle": "Hesabın özeti",
+  "@explainSummaryTitle": {
+    "description": "Card title of the balance arithmetic."
+  },
+  "explainEarned": "Hak ettiğin",
+  "@explainEarned": {
+    "description": "Row label: annual leave days earned."
+  },
+  "explainUsed": "Kullandığın",
+  "@explainUsed": {
+    "description": "Row label: annual leave days used."
+  },
+  "explainPlanned": "Planladığın",
+  "@explainPlanned": {
+    "description": "Row label: annual leave days planned."
+  },
+  "explainRemaining": "Kalan",
+  "@explainRemaining": {
+    "description": "Row label: annual leave days remaining."
+  },
+  "explainUsedBeforeNote": "Uygulamayı kullanmadan önce aldığın {days} gün izin, kullandığın izne dâhil.",
+  "@explainUsedBeforeNote": {
+    "description": "Leave used before tracking started.",
+    "placeholders": {
+      "days": {
+        "type": "double",
+        "format": "decimalPattern"
+      }
+    }
+  },
+  "explainExpiringNote": "Kullanmazsan {days} gün yıl sonunda düşer.",
+  "@explainExpiringNote": {
+    "description": "Days dropped at year end (657 art. 103).",
+    "placeholders": {
+      "days": {
+        "type": "double",
+        "format": "decimalPattern"
+      }
+    }
+  },
+  "explainProfileHeader": "Bilgilerin",
+  "@explainProfileHeader": {
+    "description": "Card title of the facts the calculation uses."
+  },
+  "explainEmploymentLabor": "İşçi, İş Kanunu",
+  "@explainEmploymentLabor": {
+    "description": "Employment type: Labour Law 4857."
+  },
+  "explainEmploymentCivil": "Memur, Devlet Memurları Kanunu",
+  "@explainEmploymentCivil": {
+    "description": "Employment type: Civil Servants Law 657."
+  },
+  "explainStartDate": "İşe başlama: {date}",
+  "@explainStartDate": {
+    "description": "Start date of the job.",
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "explainPriorService": "Önceki çalışma: {years} yıl {months} ay {days} gün",
+  "@explainPriorService": {
+    "description": "Prior service added to the calculation.",
+    "placeholders": {
+      "years": {
+        "type": "int"
+      },
+      "months": {
+        "type": "int"
+      },
+      "days": {
+        "type": "int"
+      }
+    }
+  },
+  "explainPriorServiceTerm": "Önceki çalışma",
+  "@explainPriorServiceTerm": {
+    "description": "Term explained by the question mark button."
+  },
+  "explainPriorServiceInfoLabor": "Aynı işverende daha önce çalıştığın süre. İzin hakkın bu süre de eklenerek hesaplanır.",
+  "@explainPriorServiceInfoLabor": {
+    "description": "Prior service explanation for a worker."
+  },
+  "explainPriorServiceInfoCivil": "Kamuda daha önce geçen hizmetin. İzin hakkın bu süre de eklenerek hesaplanır.",
+  "@explainPriorServiceInfoCivil": {
+    "description": "Prior service explanation for a civil servant."
+  },
+  "explainPeriodsHeader": "Hak edişlerin",
+  "@explainPeriodsHeader": {
+    "description": "Section of the accrual periods."
+  },
+  "explainPeriodDays": "{days} gün hak ettin",
+  "@explainPeriodDays": {
+    "description": "Days earned on one accrual date.",
+    "placeholders": {
+      "days": {
+        "type": "int"
+      }
+    }
+  },
+  "explainPeriodYear": "{year} yılı için",
+  "@explainPeriodYear": {
+    "description": "Calendar year an accrual belongs to (657).",
+    "placeholders": {
+      "year": {
+        "type": "int"
+      }
+    }
+  },
+  "explainPeriodExpires": "Kullanmazsan {date} günü düşer.",
+  "@explainPeriodExpires": {
+    "description": "Day the unused part of an accrual is dropped (657).",
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "explainRuleApplied": "{reference} uygulandı.",
+  "@explainRuleApplied": {
+    "description": "A legal rule applied to an accrual, for example: 4857 md. 53 uygulandı.",
+    "placeholders": {
+      "reference": {
+        "type": "String"
+      }
+    }
+  },
+  "explainRuleLaborAnniversary": "İşe başladığın günün {serviceYears}. yıl dönümünde bu hakkı kazandın.",
+  "@explainRuleLaborAnniversary": {
+    "description": "Entitlement rule laborAnniversary. 4857: right earned on each service anniversary.",
+    "placeholders": {
+      "serviceYears": {
+        "type": "String"
+      }
+    }
+  },
+  "explainRuleLaborPriorService": "Aynı işverendeki önceki {years} yıl {months} ay {days} gün çalışman eklendi. Bu yüzden {serviceStart} günü başlamış sayılırsın.",
+  "@explainRuleLaborPriorService": {
+    "description": "Entitlement rule laborPriorService. 4857: prior service with the same employer.",
+    "placeholders": {
+      "years": {
+        "type": "String"
+      },
+      "months": {
+        "type": "String"
+      },
+      "days": {
+        "type": "String"
+      },
+      "serviceStart": {
+        "type": "String"
+      }
+    }
+  },
+  "explainRuleLaborAbsenceShift": "Girdiğin devamsızlık yüzünden hak ediş tarihin {shiftDays} gün ileri kaydı.",
+  "@explainRuleLaborAbsenceShift": {
+    "description": "Entitlement rule laborAbsenceShift. 4857: absences moved the accrual date.",
+    "placeholders": {
+      "shiftDays": {
+        "type": "String"
+      }
+    }
+  },
+  "explainRuleLaborContinuousService": "Devamsızlık girmediğin için ara vermeden çalıştığın varsayıldı.",
+  "@explainRuleLaborContinuousService": {
+    "description": "Entitlement rule laborContinuousService. 4857: continuous work assumed."
+  },
+  "explainRuleLaborSeniorityUpToFive": "Bu iş yerinde {serviceYears} yılını doldurdun. Kıdemi 5 yıla kadar (5 dâhil) olanın izni {days} gündür.",
+  "@explainRuleLaborSeniorityUpToFive": {
+    "description": "Entitlement rule laborSeniorityUpToFive. 4857: 1 to 5 years of service.",
+    "placeholders": {
+      "serviceYears": {
+        "type": "String"
+      },
+      "days": {
+        "type": "String"
+      }
+    }
+  },
+  "explainRuleLaborSeniorityFiveToFifteen": "Bu iş yerinde {serviceYears} yılını doldurdun. Kıdemi 5 yıldan fazla, 15 yıldan az olanın izni {days} gündür.",
+  "@explainRuleLaborSeniorityFiveToFifteen": {
+    "description": "Entitlement rule laborSeniorityFiveToFifteen. 4857: more than 5 and less than 15 years.",
+    "placeholders": {
+      "serviceYears": {
+        "type": "String"
+      },
+      "days": {
+        "type": "String"
+      }
+    }
+  },
+  "explainRuleLaborSeniorityFifteenOrMore": "Bu iş yerinde {serviceYears} yılını doldurdun. Kıdemi 15 yıl ve daha fazla olanın izni {days} gündür.",
+  "@explainRuleLaborSeniorityFifteenOrMore": {
+    "description": "Entitlement rule laborSeniorityFifteenOrMore. 4857: 15 years or more.",
+    "placeholders": {
+      "serviceYears": {
+        "type": "String"
+      },
+      "days": {
+        "type": "String"
+      }
+    }
+  },
+  "explainRuleLaborAgeEighteenOrYounger": "Hak ediş gününde {age} yaşındaydın. Yaşı 18 veya altında olanın izni en az {days} gündür.",
+  "@explainRuleLaborAgeEighteenOrYounger": {
+    "description": "Entitlement rule laborAgeEighteenOrYounger. 4857: age minimum for 18 or younger.",
+    "placeholders": {
+      "age": {
+        "type": "String"
+      },
+      "days": {
+        "type": "String"
+      }
+    }
+  },
+  "explainRuleLaborAgeFiftyOrOlder": "Hak ediş gününde {age} yaşındaydın. Yaşı 50 veya üstünde olanın izni en az {days} gündür.",
+  "@explainRuleLaborAgeFiftyOrOlder": {
+    "description": "Entitlement rule laborAgeFiftyOrOlder. 4857: age minimum for 50 or older.",
+    "placeholders": {
+      "age": {
+        "type": "String"
+      },
+      "days": {
+        "type": "String"
+      }
+    }
+  },
+  "explainRuleLaborUnderground": "Yer altı işinde çalıştığın için {extraDays} gün eklendi.",
+  "@explainRuleLaborUnderground": {
+    "description": "Entitlement rule laborUnderground. 4857: underground work adds days.",
+    "placeholders": {
+      "extraDays": {
+        "type": "String"
+      }
+    }
+  },
+  "explainRuleLaborContractExtra": "Sözleşmen sana {extraDays} gün ek izin veriyor.",
+  "@explainRuleLaborContractExtra": {
+    "description": "Entitlement rule laborContractExtra. 4857: extra days from a contract.",
+    "placeholders": {
+      "extraDays": {
+        "type": "String"
+      }
+    }
+  },
+  "explainRuleLaborNoExpiry": "Kullanmadığın izin yanmaz, sonraki yıllara geçer.",
+  "@explainRuleLaborNoExpiry": {
+    "description": "Entitlement rule laborNoExpiry. 4857: unused days never expire."
+  },
+  "explainRuleCivilFirstRight": "Kamudaki hizmetin {firstRightDate} günü bir yılı doldurdu. İlk izin hakkın o gün, {calendarYear} yılı için doğdu.",
+  "@explainRuleCivilFirstRight": {
+    "description": "Entitlement rule civilFirstRight. 657: first right when service reaches one year.",
+    "placeholders": {
+      "firstRightDate": {
+        "type": "String"
+      },
+      "calendarYear": {
+        "type": "String"
+      }
+    }
+  },
+  "explainRuleCivilFirstRightOnDutyStart": "İlk izin hakkın göreve başladığın {firstRightDate} günü doğdu, çünkü önceki hizmetin bir yılı geçiyordu. Bu hak {calendarYear} yılı için.",
+  "@explainRuleCivilFirstRightOnDutyStart": {
+    "description": "Entitlement rule civilFirstRightOnDutyStart. 657: first right on the start of duty.",
+    "placeholders": {
+      "firstRightDate": {
+        "type": "String"
+      },
+      "calendarYear": {
+        "type": "String"
+      }
+    }
+  },
+  "explainRuleCivilCalendarYear": "Memurlarda izin hakkı her yıl 1 Ocak'ta yenilenir. Bu yüzden {calendarYear} yılının izni 1 Ocak'ta doğdu.",
+  "@explainRuleCivilCalendarYear": {
+    "description": "Entitlement rule civilCalendarYear. 657: later rights on 1 January.",
+    "placeholders": {
+      "calendarYear": {
+        "type": "String"
+      }
+    }
+  },
+  "explainRuleCivilPriorService": "Kamudaki önceki {years} yıl {months} ay {days} gün hizmetin eklendi. Bu yüzden {serviceStart} günü başlamış sayılırsın.",
+  "@explainRuleCivilPriorService": {
+    "description": "Entitlement rule civilPriorService. 657: counted prior public service.",
+    "placeholders": {
+      "years": {
+        "type": "String"
+      },
+      "months": {
+        "type": "String"
+      },
+      "days": {
+        "type": "String"
+      },
+      "serviceStart": {
+        "type": "String"
+      }
+    }
+  },
+  "explainRuleCivilUpToTenYears": "Hizmetin {serviceYears} yıl. Hizmeti 10 yıla kadar (10 dâhil) olanın izni {days} gündür.",
+  "@explainRuleCivilUpToTenYears": {
+    "description": "Entitlement rule civilUpToTenYears. 657: 1 to 10 years of service.",
+    "placeholders": {
+      "serviceYears": {
+        "type": "String"
+      },
+      "days": {
+        "type": "String"
+      }
+    }
+  },
+  "explainRuleCivilOverTenYears": "Hizmetin {serviceYears} yıl. Hizmeti 10 yıldan fazla olanın izni {days} gündür.",
+  "@explainRuleCivilOverTenYears": {
+    "description": "Entitlement rule civilOverTenYears. 657: over 10 years of service.",
+    "placeholders": {
+      "serviceYears": {
+        "type": "String"
+      },
+      "days": {
+        "type": "String"
+      }
+    }
+  },
+  "explainRuleCivilTenYearTransition": "Hizmetin {transitionDate} günü 10 yılı geçti. Bu yüzden {calendarYear} yılı için aradaki {days} gün eklendi.",
+  "@explainRuleCivilTenYearTransition": {
+    "description": "Entitlement rule civilTenYearTransition. 657: 10 year transition during the year.",
+    "placeholders": {
+      "transitionDate": {
+        "type": "String"
+      },
+      "calendarYear": {
+        "type": "String"
+      },
+      "days": {
+        "type": "String"
+      }
+    }
+  },
+  "explainRuleCivilCarryOver": "Kullanmadığın {calendarYear} izni bir yıl daha kullanılabilir. Bu izin {expiresOn} günü düşer.",
+  "@explainRuleCivilCarryOver": {
+    "description": "Entitlement rule civilCarryOver. 657: unused days carry over one year.",
+    "placeholders": {
+      "calendarYear": {
+        "type": "String"
+      },
+      "expiresOn": {
+        "type": "String"
+      }
+    }
+  },
+  "explainNoPeriods": "Henüz izin hakkın doğmadı.",
+  "@explainNoPeriods": {
+    "description": "Shown before the first accrual."
+  },
+  "explainNextHeader": "Sıradaki hak ediş",
+  "@explainNextHeader": {
+    "description": "Card title of the next accrual."
+  },
+  "explainNextDetail": "{date} günü {days} gün eklenecek.",
+  "@explainNextDetail": {
+    "description": "When the next accrual happens and how many days it adds.",
+    "placeholders": {
+      "date": {
+        "type": "String"
+      },
+      "days": {
+        "type": "int"
+      }
+    }
+  },
+  "explainNotesHeader": "Bilmen gerekenler",
+  "@explainNotesHeader": {
+    "description": "Card title of the assumptions of the calculation."
+  },
+  "explainNoAbsenceNote": "Devamsızlık girmediğin için hesap, ara vermeden çalıştığın varsayımıyla yapıldı.",
+  "@explainNoAbsenceNote": {
+    "description": "Assumption when no absence period is entered (4857 art. 54/2)."
+  },
+  "explainHalfDayHalf": "Arife ve 28 Ekim sabahı izninden yarım gün düşer.",
+  "@explainHalfDayHalf": {
+    "description": "Half day setting: half."
+  },
+  "explainHalfDayZero": "Arife ve 28 Ekim sabahı izninden düşmez.",
+  "@explainHalfDayZero": {
+    "description": "Half day setting: zero."
+  },
+  "explainHalfDayFull": "Arife ve 28 Ekim sabahı izninden bir gün düşer.",
+  "@explainHalfDayFull": {
+    "description": "Half day setting: full."
+  },
+  "explainHalfDayUnclear": "Kanun bunu açıkça yazmıyor. Bu ayarı çalışma düzeninden değiştirebilirsin.",
+  "@explainHalfDayUnclear": {
+    "description": "Why the half day setting exists."
+  },
+  "explainSaturdayCounts": "Çalışmadığın cumartesiler izninden düşer. Yargıtayın güncel görüşü budur.",
+  "@explainSaturdayCounts": {
+    "description": "Saturday setting: counts as leave."
+  },
+  "explainSaturdayNotCounted": "Çalışmadığın cumartesiler izninden düşmez. Sözleşmende cumartesi hafta tatili olarak yazıyorsa bu doğrudur.",
+  "@explainSaturdayNotCounted": {
+    "description": "Saturday setting: does not count as leave."
+  },
+  "explainTeacherMessage": "Öğretmenler yaz ve dinlenme tatillerinde izinli sayılır. Bu yüzden ayrıca yıllık izin verilmez.",
+  "@explainTeacherMessage": {
+    "description": "Why a teacher has no annual leave (657 art. 103/2)."
+  },
+  "explainNoProfileMessage": "Hesabı görmek için önce kurulumu tamamla.",
+  "@explainNoProfileMessage": {
+    "description": "Empty state before the first setup."
+  },
+  "explainNoProfileAction": "Kuruluma başla",
+  "@explainNoProfileAction": {
+    "description": "Opens the setup."
+  },
+  "explainErrorMessage": "Bilgiler yüklenemedi.",
+  "@explainErrorMessage": {
+    "description": "Shown when the data could not be loaded."
+  },
+  "explainRetry": "Tekrar dene",
+  "@explainRetry": {
+    "description": "Loads the data again."
+  },
+  "explainLoading": "Yükleniyor",
+  "@explainLoading": {
+    "description": "Screen reader label of the loading indicator."
+  },
+  "exportLeavesFileStem": "İzin geçmişi",
+  "@exportLeavesFileStem": {
+    "description": "Start of the exported leave history file name. Converted to lowercase ASCII with dashes, e.g. izin-gecmisi."
+  },
+  "exportBackupFileStem": "İzin Planla yedek",
+  "@exportBackupFileStem": {
+    "description": "Start of the backup file name. Converted to lowercase ASCII with dashes, e.g. izin-planla-yedek."
+  },
+  "exportPdfTitle": "İzin geçmişi",
+  "@exportPdfTitle": {
+    "description": "Title of the PDF report."
+  },
+  "exportGeneratedOn": "Oluşturulma tarihi: {date}",
+  "@exportGeneratedOn": {
+    "description": "Under the PDF title. The date is formatted as dd.MM.yyyy.",
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "exportPageNumber": "Sayfa {page} / {total}",
+  "@exportPageNumber": {
+    "description": "PDF footer page number.",
+    "placeholders": {
+      "page": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "exportSectionProfile": "Kişi bilgileri",
+  "@exportSectionProfile": {
+    "description": "PDF section heading: profile summary."
+  },
+  "exportSectionBalance": "Yıllık izin durumu",
+  "@exportSectionBalance": {
+    "description": "PDF section heading: earned, used, planned and remaining annual leave."
+  },
+  "exportSectionEntitlements": "Hak edişler",
+  "@exportSectionEntitlements": {
+    "description": "PDF section heading: annual leave earned on each accrual date."
+  },
+  "exportSectionLeaves": "İzinler",
+  "@exportSectionLeaves": {
+    "description": "PDF section heading: leave records."
+  },
+  "exportSectionDisclaimer": "Yasal uyarı",
+  "@exportSectionDisclaimer": {
+    "description": "PDF section heading above the legal disclaimer."
+  },
+  "exportDisclaimer": "İzin Planla bilgilendirme amaçlıdır, hukuki tavsiye değildir. Hesaplar, uygulamanın bu sürümü hazırlanırken yürürlükte olan 4857 sayılı İş Kanunu'na, 657 sayılı Devlet Memurları Kanunu'na ve bunlara bağlı yönetmeliklere dayanır. Mevzuat ve yargı kararları değişebilir, uygulama hata içerebilir. Kesin bilgi için işverenine, insan kaynaklarına veya bir hukukçuya danış. Uygulama hiçbir garanti verilmeden sunulur. Kullanımından doğan sonuçlardan, yasaların izin verdiği ölçüde, geliştirici sorumlu tutulamaz (GPL-3.0 madde 15 ve 16).",
+  "@exportDisclaimer": {
+    "description": "Legal disclaimer at the end of the PDF. User-facing variant of the Yasal uyarı section of the root README.md: same claims, but the sentence about docs/mevzuat.md is replaced by the laws the calculations are based on, because a PDF reader cannot open repo files."
+  },
+  "exportFieldName": "Ad",
+  "@exportFieldName": {
+    "description": "Profile summary label: person's name."
+  },
+  "exportFieldLaw": "Tabi olduğu kanun",
+  "@exportFieldLaw": {
+    "description": "Profile summary label: Labour Law 4857 or Civil Servants Law 657."
+  },
+  "exportLawLabor": "İş Kanunu (4857)",
+  "@exportLawLabor": {
+    "description": "Value of exportFieldLaw for a worker."
+  },
+  "exportLawCivilServant": "Devlet Memurları Kanunu (657)",
+  "@exportLawCivilServant": {
+    "description": "Value of exportFieldLaw for a civil servant."
+  },
+  "exportFieldStartDateLabor": "İşe giriş tarihi",
+  "@exportFieldStartDateLabor": {
+    "description": "Profile summary label: hire date of a worker."
+  },
+  "exportFieldStartDateCivilServant": "Göreve başlama tarihi",
+  "@exportFieldStartDateCivilServant": {
+    "description": "Profile summary label: start of duty of a civil servant."
+  },
+  "exportFieldPriorService": "Önceki hizmet süresi",
+  "@exportFieldPriorService": {
+    "description": "Profile summary label: prior service entered by the user."
+  },
+  "exportFieldTotalService": "Toplam hizmet süresi",
+  "@exportFieldTotalService": {
+    "description": "Profile summary label: prior service plus service since the start date, up to the report date."
+  },
+  "exportServiceDuration": "{years} yıl {months} ay {days} gün",
+  "@exportServiceDuration": {
+    "description": "A length of service.",
+    "placeholders": {
+      "years": {
+        "type": "int"
+      },
+      "months": {
+        "type": "int"
+      },
+      "days": {
+        "type": "int"
+      }
+    }
+  },
+  "exportFieldAbsence": "Hak edişi kaydıran devamsızlık",
+  "@exportFieldAbsence": {
+    "description": "Profile summary label: absence days that shift accrual dates (4857 art. 54/2)."
+  },
+  "exportFieldContractExtraDays": "Sözleşmeyle gelen ek gün",
+  "@exportFieldContractExtraDays": {
+    "description": "Profile summary label: extra leave days granted by contract or union agreement."
+  },
+  "exportFieldUnderground": "Yer altı işi",
+  "@exportFieldUnderground": {
+    "description": "Profile summary label: the person works underground."
+  },
+  "exportFieldTeacher": "Öğretmen",
+  "@exportFieldTeacher": {
+    "description": "Profile summary label: the civil servant is a teacher."
+  },
+  "exportYes": "Evet",
+  "@exportYes": {
+    "description": "Value of a yes or no field in the profile summary."
+  },
+  "exportFieldUsedBeforeTracking": "Uygulamadan önce kullanılan izin",
+  "@exportFieldUsedBeforeTracking": {
+    "description": "Profile summary label: annual leave days used before the app started tracking."
+  },
+  "exportFieldEarned": "Hak edilen",
+  "@exportFieldEarned": {
+    "description": "Balance label: annual leave days earned."
+  },
+  "exportFieldUsed": "Kullanılan",
+  "@exportFieldUsed": {
+    "description": "Balance label: annual leave days used."
+  },
+  "exportFieldPlanned": "Planlanan",
+  "@exportFieldPlanned": {
+    "description": "Balance label: annual leave days planned for the future."
+  },
+  "exportFieldRemaining": "Kalan",
+  "@exportFieldRemaining": {
+    "description": "Balance label: annual leave days still available. May be negative."
+  },
+  "exportFieldExpiring": "Yıl sonunda düşecek",
+  "@exportFieldExpiring": {
+    "description": "Balance label: days a civil servant loses at year end if unused."
+  },
+  "exportFieldNextAccrual": "Sonraki hak ediş",
+  "@exportFieldNextAccrual": {
+    "description": "Balance label: date and days of the next accrual."
+  },
+  "exportNextAccrual": "{date}, {days} gün",
+  "@exportNextAccrual": {
+    "description": "Value of exportFieldNextAccrual. The date is dd.MM.yyyy, days is a formatted number.",
+    "placeholders": {
+      "date": {
+        "type": "String"
+      },
+      "days": {
+        "type": "String"
+      }
+    }
+  },
+  "exportDays": "{days} gün",
+  "@exportDays": {
+    "description": "A number of days. Days is a formatted number such as 1,5.",
+    "placeholders": {
+      "days": {
+        "type": "String"
+      }
+    }
+  },
+  "exportColumnField": "Bilgi",
+  "@exportColumnField": {
+    "description": "Excel summary sheet column header: label."
+  },
+  "exportColumnValue": "Değer",
+  "@exportColumnValue": {
+    "description": "Excel summary sheet column header: value."
+  },
+  "exportColumnAccrualDate": "Hak ediş tarihi",
+  "@exportColumnAccrualDate": {
+    "description": "Entitlement table column header."
+  },
+  "exportColumnYear": "Yıl",
+  "@exportColumnYear": {
+    "description": "Entitlement table column header: calendar year of a civil servant's right."
+  },
+  "exportColumnDays": "Gün",
+  "@exportColumnDays": {
+    "description": "Entitlement table column header: days earned."
+  },
+  "exportColumnExpiresOn": "Kullanılmazsa düşeceği tarih",
+  "@exportColumnExpiresOn": {
+    "description": "Entitlement table column header: day the unused part is dropped (657 art. 103)."
+  },
+  "exportColumnLegalBasis": "Dayanak",
+  "@exportColumnLegalBasis": {
+    "description": "Entitlement table column header: legal articles applied, e.g. 4857 md. 53."
+  },
+  "exportColumnType": "Tür",
+  "@exportColumnType": {
+    "description": "Leave table column header: leave type."
+  },
+  "exportColumnStart": "Başlangıç",
+  "@exportColumnStart": {
+    "description": "Leave table column header: first day."
+  },
+  "exportColumnEnd": "Bitiş",
+  "@exportColumnEnd": {
+    "description": "Leave table column header: last day."
+  },
+  "exportColumnDuration": "Süre",
+  "@exportColumnDuration": {
+    "description": "Leave table column header: calendar days, half day or hours."
+  },
+  "exportColumnAnnualDays": "Yıllık izinden düşen gün",
+  "@exportColumnAnnualDays": {
+    "description": "Leave table column header: days deducted from the annual balance."
+  },
+  "exportColumnStatus": "Durum",
+  "@exportColumnStatus": {
+    "description": "Leave table column header: used or planned."
+  },
+  "exportColumnNote": "Not",
+  "@exportColumnNote": {
+    "description": "Leave table column header: user's note."
+  },
+  "exportDurationDays": "{days} takvim günü",
+  "@exportDurationDays": {
+    "description": "Leave duration in calendar days, both ends included.",
+    "placeholders": {
+      "days": {
+        "type": "int"
+      }
+    }
+  },
+  "exportDurationHalfDay": "Yarım gün",
+  "@exportDurationHalfDay": {
+    "description": "Leave duration of a half day record."
+  },
+  "exportDurationHours": "{hours} saat",
+  "@exportDurationHours": {
+    "description": "Leave duration of an hourly record. Hours is a formatted number such as 2,5.",
+    "placeholders": {
+      "hours": {
+        "type": "String"
+      }
+    }
+  },
+  "exportStatusUsed": "Kullanıldı",
+  "@exportStatusUsed": {
+    "description": "Leave status: the leave has started or ended."
+  },
+  "exportStatusPlanned": "Planlandı",
+  "@exportStatusPlanned": {
+    "description": "Leave status: the leave starts after today."
+  },
+  "exportLeaveTypeAnnual": "Yıllık izin",
+  "@exportLeaveTypeAnnual": {
+    "description": "Leave type name in exports."
+  },
+  "exportLeaveTypeSick": "Hastalık ve rapor",
+  "@exportLeaveTypeSick": {
+    "description": "Leave type name in exports."
+  },
+  "exportLeaveTypeUnpaid": "Ücretsiz izin",
+  "@exportLeaveTypeUnpaid": {
+    "description": "Leave type name in exports."
+  },
+  "exportLeaveTypeMaternity": "Doğum izni",
+  "@exportLeaveTypeMaternity": {
+    "description": "Leave type name in exports."
+  },
+  "exportLeaveTypePaternity": "Babalık izni",
+  "@exportLeaveTypePaternity": {
+    "description": "Leave type name in exports."
+  },
+  "exportLeaveTypeMarriage": "Evlenme izni",
+  "@exportLeaveTypeMarriage": {
+    "description": "Leave type name in exports."
+  },
+  "exportLeaveTypeBereavement": "Ölüm izni",
+  "@exportLeaveTypeBereavement": {
+    "description": "Leave type name in exports."
+  },
+  "exportLeaveTypeAdoption": "Evlat edinme izni",
+  "@exportLeaveTypeAdoption": {
+    "description": "Leave type name in exports."
+  },
+  "exportLeaveTypeDisabledChildCare": "Engelli veya kronik hasta çocuk izni",
+  "@exportLeaveTypeDisabledChildCare": {
+    "description": "Leave type name in exports: care of a child with at least 70% disability or a chronic illness."
+  },
+  "exportLeaveTypeUnion": "Sendika izni",
+  "@exportLeaveTypeUnion": {
+    "description": "Leave type name in exports."
+  },
+  "exportLeaveTypeExcuse": "Mazeret izni",
+  "@exportLeaveTypeExcuse": {
+    "description": "Leave type name in exports."
+  },
+  "exportLeaveTypeTravel": "Yol izni",
+  "@exportLeaveTypeTravel": {
+    "description": "Leave type name in exports."
+  },
+  "exportLeaveTypeOther": "Diğer",
+  "@exportLeaveTypeOther": {
+    "description": "Leave type name in exports when the user gave no custom name."
+  },
+  "exportNoEntitlements": "Henüz hak ediş yok.",
+  "@exportNoEntitlements": {
+    "description": "PDF text when the profile has no accrual yet."
+  },
+  "exportNoLeaves": "Kayıtlı izin yok.",
+  "@exportNoLeaves": {
+    "description": "PDF text when the profile has no leave record."
+  },
+  "exportSheetSummary": "Özet",
+  "@exportSheetSummary": {
+    "description": "Excel sheet tab name. At most 31 characters."
+  },
+  "exportSheetEntitlements": "Hak edişler",
+  "@exportSheetEntitlements": {
+    "description": "Excel sheet tab name. At most 31 characters."
+  },
+  "exportSheetLeaves": "İzinler",
+  "@exportSheetLeaves": {
+    "description": "Excel sheet tab name. At most 31 characters."
+  },
+  "guideTitle": "Mevzuat rehberi",
   "@guideTitle": {
     "description": "App bar title of the guide screen."
   },
-  "homeTitle": "Ana Sayfa",
-  "@homeTitle": {
-    "description": "App bar title of the home screen."
+  "guideIntro": "Yıllık izin kurallarını burada sade dille bulursun. Her bölümün altında dayandığı kaynak yazar.",
+  "guideLaborLaw": "İşçi (4857)",
+  "guideCivilServant": "Memur (657)",
+  "@guideCivilServant": {
+    "description": "Chips that choose the law the guide explains."
   },
-  "leaveFormTitle": "İzin Ekle",
+  "guideSource": "Kaynak: {source}",
+  "@guideSource": {
+    "placeholders": {
+      "source": {
+        "type": "String"
+      }
+    }
+  },
+  "guideRightTitle": "İzin hakkın ne zaman başlar?",
+  "guideRightLabor": "İşe başladığın günden bir yıl sonra yıllık izin hakkın doğar. Deneme süresi de bu bir yıla dâhildir. Sonraki her hak, bir önceki haktan bir yıl sonra doğar.",
+  "guideRightLaborMerge": "Aynı işverenin farklı iş yerlerinde çalıştığın süreler birleştirilir. Başka işverenlerde geçen süre eklenmez.",
+  "guideRightLaborSource": "4857 sayılı İş Kanunu, madde 53 ve 54",
+  "guideRightCivil": "İlk izin hakkın hizmetin bir yılı doldurduğu gün doğar ve o yıla aittir. Sonraki haklar her yıl 1 Ocak'ta doğar. Hak tam süredir, yılın kalanına göre azaltılmaz.",
+  "guideRightCivilService": "Hizmet süresine kamu kurumlarında hangi statüde olursa olsun geçen süreler, kazanılmış hak aylığında sayılan süreler ve askerlik dâhildir.",
+  "guideRightCivilSource": "657 sayılı Devlet Memurları Kanunu, madde 102 ve 103",
+  "guideDurationTitle": "Kaç gün izin hakkın var?",
+  "guideDurationLaborShort": "1 yıldan 5 yıla kadar (5. yıl dâhil)",
+  "guideDurationLaborMiddle": "5 yıldan fazla, 15 yıldan az",
+  "guideDurationLaborLong": "15 yıl ve fazlası",
+  "guideDurationLaborAge": "Yaşın 18 veya altında ya da 50 veya üstündeyse iznin en az 20 gündür.",
+  "guideDurationLaborUnderground": "Yer altında çalışıyorsan her süreye 4 gün eklenir.",
+  "guideDurationLaborContract": "İş sözleşmen veya toplu iş sözleşmesi bu süreleri artırabilir.",
+  "guideDurationLaborSource": "4857 sayılı İş Kanunu, madde 53",
+  "guideDurationCivilShort": "1 yıldan 10 yıla kadar (10. yıl dâhil)",
+  "guideDurationCivilLong": "10 yıldan fazla",
+  "guideDurationCivilTeacher": "Öğretmenler yaz ve dinlenme tatillerinde izinli sayılır, ayrıca yıllık izin verilmez.",
+  "guideDurationCivilSource": "657 sayılı Devlet Memurları Kanunu, madde 102 ve 103",
+  "guideCountTitle": "Hangi günler izinden düşmez?",
+  "guideCountLabor": "Hafta tatili ve resmî tatiller izninden düşmez.",
+  "guideCountLaborSaturday": "Cumartesi çalışmıyorsan, Yargıtayın güncel görüşüne göre cumartesi yine izninden düşer. Sözleşmende cumartesi hafta tatili olarak yazıyorsa düşmez. Bunu ayarlardan değiştirebilirsin.",
+  "guideCountLaborSource": "4857 sayılı İş Kanunu, madde 56. Yargıtay 9. Hukuk Dairesi, 2020",
+  "guideCountCivil": "İznin içinde kalan cumartesi ve pazar izninden düşer. Hafta içine denk gelen resmî tatiller ve idari izin günleri düşmez. İznin başındaki ve sonundaki hafta sonu sayılmaz.",
+  "guideCountCivilSource": "Devlet Personel Başkanlığı görüşü, 29 Nisan 2016",
+  "guideCountExample": "Örnek: 26-30 Ekim 2026 arasındaki izninden 3,5 gün düşer, çünkü 28 Ekim yarım gün sayılır, 29 Ekim hiç sayılmaz.",
+  "guideHalfDayTitle": "Arife ve 28 Ekim",
+  "guideHalfDay": "Bayram arifelerinde ve 28 Ekim'de saat 13.00'ten sonrası resmî tatildir. Mevzuat bu günlerin izinden ne kadar düşeceğini açıkça yazmaz. Uygulama varsayılan olarak yarım gün düşer. İstersen ayarlardan değiştirebilirsin.",
+  "guideHalfDaySource": "2429 sayılı Ulusal Bayram ve Genel Tatiller Hakkında Kanun",
+  "guideSplitTitle": "İzni bölebilir misin?",
+  "guideSplitLabor": "İşverenin iznini tek başına bölemez. İşverenle anlaşırsan izni parçalara bölebilirsin. Parçalardan biri en az 10 gün olmalı.",
+  "guideSplitLaborSource": "4857 sayılı İş Kanunu, madde 56",
+  "guideSplitCivil": "İznini tek seferde veya parça parça kullanabilirsin. En kısa parça için bir sınır yok.",
+  "guideSplitCivilSource": "657 sayılı Devlet Memurları Kanunu, madde 103",
+  "guideUnusedTitle": "Kullanmadığın izin ne olur?",
+  "guideUnusedLabor": "Kullanmadığın izin yanmaz, sonraki yıllara geçer. İşten ayrılınca kullanmadığın günlerin ücreti ödenir. İzin hakkından vazgeçemezsin.",
+  "guideUnusedLaborSource": "4857 sayılı İş Kanunu, madde 53 ve 59",
+  "guideUnusedCivil": "Bu yılın ve geçen yılın iznini birlikte kullanabilirsin. Daha eski yıllardan kalan izin düşer. İzin kullandığında önce geçen yıldan kalan günler düşülür.",
+  "guideUnusedCivilSource": "657 sayılı Devlet Memurları Kanunu, madde 103",
+  "guideTravelTitle": "Yol izni",
+  "guideTravelLabor": "İznini iş yerinin bulunduğu yerden başka bir yerde geçireceksen ve bunu belgelersen, gidiş ve dönüş için toplam 4 güne kadar ücretsiz yol izni alabilirsin.",
+  "guideTravelLaborSource": "4857 sayılı İş Kanunu, madde 56",
+  "guideTravelCivil": "İznini belediye ve köy sınırları dışında geçireceksen ve amirin uygun görürse, iznine gidiş ve dönüş için en çok ikişer gün eklenebilir. Yol izni yılda toplam 4 günü geçemez ve ertesi yıla aktarılmaz.",
+  "guideTravelCivilSource": "657 sayılı Devlet Memurları Kanunu, madde 102",
+  "guideExcuseTitle": "Mazeret izinleri",
+  "guideExcuseLabor": "Bu izinler ücretlidir ve yıllık izninden düşmez.",
+  "guideExcuseMarriage": "Evlenme",
+  "guideExcuseAdoption": "Evlat edinme",
+  "guideExcuseLaborBereavement": "Anne, baba, eş, kardeş veya çocuğun ölümü",
+  "guideExcusePaternity": "Eşinin doğum yapması",
+  "guideExcuseLaborChild": "En az %70 engelli veya süreğen hastalığı olan çocuğunun tedavisi",
+  "guideExcuseYearly": "Yılda 10 güne kadar",
+  "guideExcuseLaborPaternityNote": "Babalık izni, 1 Mayıs 2026'dan önceki doğumlarda 5 gündür.",
+  "guideExcuseLaborSource": "4857 sayılı İş Kanunu ek madde 2 ve 7578 sayılı Kanun",
+  "guideExcuseCivilMarriage": "Kendinin veya çocuğunun evlenmesi",
+  "guideExcuseCivilBereavement": "Eşinin, çocuğunun, kendinin veya eşinin anne, baba ve kardeşinin ölümü",
+  "guideExcuseCivilOther": "Diğer mazeretler, amirin uygun görürse",
+  "guideExcuseCivilOtherValue": "Yılda 10 gün",
+  "guideExcuseCivilChild": "En az %70 engelli veya süreğen hastalığı olan çocuğunun hastalanması",
+  "guideExcuseCivilMaternity": "Doğum (analık)",
+  "guideExcuseCivilMaternityValue": "24 hafta",
+  "guideExcuseCivil": "Diğer mazeretler için zorunlu hâlde 10 gün daha verilebilir. Bu ikinci 10 gün yıllık izninden düşer. Öteki mazeret izinleri yıllık izninden düşmez.",
+  "guideExcuseCivilSource": "657 sayılı Devlet Memurları Kanunu, madde 104",
+  "guideHolidaysTitle": "Resmî tatiller",
+  "guideHolidayNewYear": "1 Ocak, Yılbaşı",
+  "guideHolidayApril": "23 Nisan, Ulusal Egemenlik ve Çocuk Bayramı",
+  "guideHolidayLabour": "1 Mayıs, Emek ve Dayanışma Günü",
+  "guideHolidayYouth": "19 Mayıs, Atatürk'ü Anma, Gençlik ve Spor Bayramı",
+  "guideHolidayDemocracy": "15 Temmuz, Demokrasi ve Millî Birlik Günü",
+  "guideHolidayVictory": "30 Ağustos, Zafer Bayramı",
+  "guideHolidayRepublicEve": "28 Ekim, saat 13.00'ten sonra",
+  "guideHolidayRepublic": "29 Ekim, Cumhuriyet Bayramı",
+  "guideHolidayRamadan": "Ramazan Bayramı, arifenin öğleden sonrası ve 3 gün",
+  "guideHolidaySacrifice": "Kurban Bayramı, arifenin öğleden sonrası ve 4 gün",
+  "guideHolidaysNote": "Hafta sonuna denk gelen tatil için yerine başka gün verilmez.",
+  "guideHolidaysSource": "2429 sayılı Ulusal Bayram ve Genel Tatiller Hakkında Kanun",
+  "guideSourcesTitle": "Kaynaklar",
+  "guideSourcesChecked": "Kaynaklar en son 20 Kasım 2026'da kontrol edildi.",
+  "guideSourceLabor": "4857 sayılı İş Kanunu",
+  "guideSourceRegulation": "Yıllık Ücretli İzin Yönetmeliği",
+  "guideSourceCivil": "657 sayılı Devlet Memurları Kanunu",
+  "guideSourceHolidays": "2429 sayılı Ulusal Bayram ve Genel Tatiller Hakkında Kanun",
+  "guideSourcePaternity": "7578 sayılı Kanun",
+  "guideSourceDiyanet": "Diyanet İşleri Başkanlığı, dinî günler",
+  "guideDisclaimerTitle": "Yasal uyarı",
+  "guideDisclaimer": "İzin Planla bilgilendirme amaçlıdır, hukuki tavsiye değildir. Hesaplar bu rehberdeki kaynaklara ve kaynakların son kontrol edildiği 20 Kasım 2026 tarihindeki mevzuata dayanır. Mevzuat ve yargı kararları değişebilir, uygulama hata içerebilir. Kesin bilgi için işverenine, insan kaynaklarına veya bir hukukçuya danış. Uygulama hiçbir garanti verilmeden sunulur. Kullanımından doğan sonuçlardan, yasaların izin verdiği ölçüde, geliştirici sorumlu tutulamaz (GPL-3.0 madde 15 ve 16).",
+  "guideLoading": "Rehber yükleniyor",
+  "homeTitle": "İzin durumun",
+  "@homeTitle": {
+    "description": "Large title of the home tab."
+  },
+  "homeRemainingTitle": "Kalan izin",
+  "@homeRemainingTitle": {
+    "description": "Title of the hero card with the remaining annual leave."
+  },
+  "homeDaysUnit": "gün",
+  "@homeDaysUnit": {
+    "description": "Word after the large remaining number."
+  },
+  "homeRemainingCaption": "Toplam {earned} gün hak ettin, {used} gün kullandın, {planned} gün planladın.",
+  "@homeRemainingCaption": {
+    "description": "Sentence under the remaining number.",
+    "placeholders": {
+      "earned": {
+        "type": "double",
+        "format": "decimalPattern"
+      },
+      "used": {
+        "type": "double",
+        "format": "decimalPattern"
+      },
+      "planned": {
+        "type": "double",
+        "format": "decimalPattern"
+      }
+    }
+  },
+  "homeOverdrawnCaption": "Hakkından {days} gün fazla izin kullandın veya planladın.",
+  "@homeOverdrawnCaption": {
+    "description": "Sentence under the remaining number when the balance is negative.",
+    "placeholders": {
+      "days": {
+        "type": "double",
+        "format": "decimalPattern"
+      }
+    }
+  },
+  "homeHowCalculated": "Nasıl hesaplandı?",
+  "@homeHowCalculated": {
+    "description": "Opens the calculation explanation screen."
+  },
+  "homeAddLeave": "İzin ekle",
+  "@homeAddLeave": {
+    "description": "Main button of the home screen."
+  },
+  "homeNextAccrualTitle": "Yeni izin hakkı",
+  "@homeNextAccrualTitle": {
+    "description": "Card title: days until the next annual leave accrual."
+  },
+  "homeDaysLeftUnit": "gün kaldı",
+  "@homeDaysLeftUnit": {
+    "description": "Words under a countdown number."
+  },
+  "homeNextAccrualDetail": "{date} günü {days} gün eklenecek.",
+  "@homeNextAccrualDetail": {
+    "description": "When the next accrual happens and how many days it adds.",
+    "placeholders": {
+      "date": {
+        "type": "String"
+      },
+      "days": {
+        "type": "int"
+      }
+    }
+  },
+  "homeNextHolidayTitle": "Sıradaki tatil",
+  "@homeNextHolidayTitle": {
+    "description": "Card title: days until the next official holiday."
+  },
+  "homeNextHolidayDetail": "{name}, {date}",
+  "@homeNextHolidayDetail": {
+    "description": "Name and date of the next official holiday.",
+    "placeholders": {
+      "name": {
+        "type": "String"
+      },
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "homeBridgeTitle": "Köprü önerisi",
+  "@homeBridgeTitle": {
+    "description": "Card title of the best bridge suggestion."
+  },
+  "homeBridgeCaption": "{leaveDays} gün izinle {totalDays} gün tatil, {dates}",
+  "@homeBridgeCaption": {
+    "description": "One sentence about a bridge suggestion, for example: 2 gün izinle 5 gün tatil, 20-24 Nisan 2026.",
+    "placeholders": {
+      "leaveDays": {
+        "type": "double",
+        "format": "decimalPattern"
+      },
+      "totalDays": {
+        "type": "int"
+      },
+      "dates": {
+        "type": "String"
+      }
+    }
+  },
+  "homeStatsLink": "İstatistikler",
+  "@homeStatsLink": {
+    "description": "Link to the statistics screen."
+  },
+  "homeGuideLink": "İzin kuralları",
+  "@homeGuideLink": {
+    "description": "Link to the legislation guide."
+  },
+  "homeNoProfileMessage": "İzin hakkını görmek için birkaç soruyu cevapla.",
+  "@homeNoProfileMessage": {
+    "description": "Empty state before the first setup."
+  },
+  "homeNoProfileAction": "Kuruluma başla",
+  "@homeNoProfileAction": {
+    "description": "Opens the setup."
+  },
+  "homeTeacherTitle": "Yıllık izin hesabı yok",
+  "@homeTeacherTitle": {
+    "description": "Card title for a teacher, who gets no annual leave."
+  },
+  "homeTeacherMessage": "Öğretmenler yaz ve dinlenme tatillerinde izinli sayılır. Bu yüzden ayrıca yıllık izin verilmez.",
+  "@homeTeacherMessage": {
+    "description": "Why a teacher has no annual leave balance (657 art. 103/2)."
+  },
+  "homeErrorMessage": "Bilgiler yüklenemedi.",
+  "@homeErrorMessage": {
+    "description": "Shown when the data could not be loaded."
+  },
+  "homeRetry": "Tekrar dene",
+  "@homeRetry": {
+    "description": "Loads the data again."
+  },
+  "homeLoading": "Yükleniyor",
+  "@homeLoading": {
+    "description": "Screen reader label of the loading indicator."
+  },
+  "homeWidgetRemainingCaption": "gün izin hakkın kaldı",
+  "@homeWidgetRemainingCaption": {
+    "description": "Home screen widget, under the large number of remaining annual leave days, for example 18."
+  },
+  "homeWidgetOverdrawnCaption": "gün fazla izin aldın",
+  "@homeWidgetOverdrawnCaption": {
+    "description": "Home screen widget, under the large number when the balance is negative. The number is shown without a minus sign."
+  },
+  "homeWidgetRemainingSentence": "{days} gün izin hakkın kaldı",
+  "@homeWidgetRemainingSentence": {
+    "description": "Screen reader text of the widget balance.",
+    "placeholders": {
+      "days": {
+        "type": "String",
+        "example": "4,5"
+      }
+    }
+  },
+  "homeWidgetOverdrawnSentence": "{days} gün fazla izin aldın",
+  "@homeWidgetOverdrawnSentence": {
+    "description": "Screen reader text of the widget balance when it is negative. The number has no minus sign.",
+    "placeholders": {
+      "days": {
+        "type": "String",
+        "example": "2"
+      }
+    }
+  },
+  "homeWidgetHolidayToday": "Bugün resmî tatil: {name}",
+  "@homeWidgetHolidayToday": {
+    "description": "Home screen widget, the official holiday is today.",
+    "placeholders": {
+      "name": {
+        "type": "String",
+        "example": "Cumhuriyet Bayramı"
+      }
+    }
+  },
+  "homeWidgetHolidayTomorrow": "Yarın resmî tatil: {name}",
+  "@homeWidgetHolidayTomorrow": {
+    "description": "Home screen widget, the next official holiday is tomorrow.",
+    "placeholders": {
+      "name": {
+        "type": "String",
+        "example": "Yılbaşı"
+      }
+    }
+  },
+  "homeWidgetHolidayInDays": "{days} gün sonra resmî tatil: {name}",
+  "@homeWidgetHolidayInDays": {
+    "description": "Home screen widget, days until the next official holiday.",
+    "placeholders": {
+      "days": {
+        "type": "String",
+        "example": "41"
+      },
+      "name": {
+        "type": "String",
+        "example": "Yılbaşı"
+      }
+    }
+  },
+  "homeWidgetNoHoliday": "Sıradaki resmî tatil bilgisi yok",
+  "@homeWidgetNoHoliday": {
+    "description": "Home screen widget, the bundled holiday list has no later holiday."
+  },
+  "homeWidgetSetup": "İzin hakkını görmek için uygulamayı aç",
+  "@homeWidgetSetup": {
+    "description": "Home screen widget before the first setup is finished."
+  },
+  "homeWidgetTeacher": "Öğretmenlere yıllık izin verilmez",
+  "@homeWidgetTeacher": {
+    "description": "Home screen widget for a teacher, who gets no annual leave (657 art. 103/2)."
+  },
+  "homeWidgetStale": "Güncel bilgi için uygulamayı aç",
+  "@homeWidgetStale": {
+    "description": "Home screen widget when the app has not been opened for a long time and the saved days ran out."
+  },
+  "homeWidgetDescription": "{balance}. {holiday}",
+  "@homeWidgetDescription": {
+    "description": "Screen reader text of the whole widget: the balance sentence, then the holiday line.",
+    "placeholders": {
+      "balance": {
+        "type": "String",
+        "example": "18 gün izin hakkın kaldı"
+      },
+      "holiday": {
+        "type": "String",
+        "example": "41 gün sonra resmî tatil: Yılbaşı"
+      }
+    }
+  },
+  "leaveFormTitle": "İzin ekle",
   "@leaveFormTitle": {
-    "description": "App bar title of the leave_form screen."
+    "description": "App bar title of the leave form for a new leave."
+  },
+  "leaveFormEditTitle": "İzni düzenle",
+  "@leaveFormEditTitle": {
+    "description": "App bar title of the leave form for an existing leave."
+  },
+  "leaveFormTypeLabel": "İzin türü",
+  "@leaveFormTypeLabel": {
+    "description": "Field that opens the leave type list."
+  },
+  "leaveFormTypeAnnual": "Yıllık izin",
+  "@leaveFormTypeAnnual": {
+    "description": "Leave type."
+  },
+  "leaveFormTypeSick": "Hastalık ve rapor",
+  "@leaveFormTypeSick": {
+    "description": "Leave type."
+  },
+  "leaveFormTypeUnpaid": "Ücretsiz izin",
+  "@leaveFormTypeUnpaid": {
+    "description": "Leave type."
+  },
+  "leaveFormTypeMaternity": "Doğum izni",
+  "@leaveFormTypeMaternity": {
+    "description": "Leave type: maternity."
+  },
+  "leaveFormTypePaternity": "Babalık izni",
+  "@leaveFormTypePaternity": {
+    "description": "Leave type."
+  },
+  "leaveFormTypeMarriage": "Evlenme izni",
+  "@leaveFormTypeMarriage": {
+    "description": "Leave type."
+  },
+  "leaveFormTypeBereavement": "Ölüm izni",
+  "@leaveFormTypeBereavement": {
+    "description": "Leave type: bereavement."
+  },
+  "leaveFormTypeAdoption": "Evlat edinme izni",
+  "@leaveFormTypeAdoption": {
+    "description": "Leave type."
+  },
+  "leaveFormTypeDisabledChildCare": "Engelli veya kronik hasta çocuk izni",
+  "@leaveFormTypeDisabledChildCare": {
+    "description": "Leave type: care of a child with a disability or chronic illness."
+  },
+  "leaveFormTypeUnion": "Sendika izni",
+  "@leaveFormTypeUnion": {
+    "description": "Leave type."
+  },
+  "leaveFormTypeExcuse": "Mazeret izni",
+  "@leaveFormTypeExcuse": {
+    "description": "Leave type."
+  },
+  "leaveFormTypeTravel": "Yol izni",
+  "@leaveFormTypeTravel": {
+    "description": "Leave type: travel days added to annual leave."
+  },
+  "leaveFormTypeOther": "Diğer",
+  "@leaveFormTypeOther": {
+    "description": "Leave type named by the user."
+  },
+  "leaveFormCustomNameLabel": "İznin adı",
+  "@leaveFormCustomNameLabel": {
+    "description": "Name field for the other leave type."
+  },
+  "leaveFormCustomNameError": "İzne bir ad ver.",
+  "@leaveFormCustomNameError": {
+    "description": "Error when the other leave type has no name."
+  },
+  "leaveFormUnitLabel": "Süre",
+  "@leaveFormUnitLabel": {
+    "description": "Title of the full day, half day or hourly choice."
+  },
+  "leaveFormUnitDays": "Tam gün",
+  "@leaveFormUnitDays": {
+    "description": "Leave measured in whole days."
+  },
+  "leaveFormUnitHalfDay": "Yarım gün",
+  "@leaveFormUnitHalfDay": {
+    "description": "Leave of half a day."
+  },
+  "leaveFormUnitHours": "Saatlik",
+  "@leaveFormUnitHours": {
+    "description": "Leave measured in hours."
+  },
+  "leaveFormStartLabel": "Başlangıç",
+  "@leaveFormStartLabel": {
+    "description": "First day of the leave."
+  },
+  "leaveFormEndLabel": "Bitiş",
+  "@leaveFormEndLabel": {
+    "description": "Last day of the leave."
+  },
+  "leaveFormDayLabel": "Gün",
+  "@leaveFormDayLabel": {
+    "description": "The day of a half day or hourly leave."
+  },
+  "leaveFormDateError": "Tarihi seç.",
+  "@leaveFormDateError": {
+    "description": "Error when no date is chosen."
+  },
+  "leaveFormHoursLabel": "Kaç saat?",
+  "@leaveFormHoursLabel": {
+    "description": "Hours field of an hourly leave."
+  },
+  "leaveFormHoursError": "Saati yaz, örneğin 2 veya 1,5.",
+  "@leaveFormHoursError": {
+    "description": "Error when the hours are missing or not a number."
+  },
+  "leaveFormHoursTooMany": "Günlük çalışma saatin {hours}. Daha uzun izin için tam gün seç.",
+  "@leaveFormHoursTooMany": {
+    "description": "Error when the hours exceed one working day.",
+    "placeholders": {
+      "hours": {
+        "type": "double",
+        "format": "decimalPattern"
+      }
+    }
+  },
+  "leaveFormWorkplaceNote": "Kanunda yarım gün ve saatlik izin yok. Bu kayıt iş yerinin uygulamasına göre tutulur.",
+  "@leaveFormWorkplaceNote": {
+    "description": "Note for half day and hourly leave."
+  },
+  "leaveFormEventDateLabel": "Çocuğun doğum tarihi",
+  "@leaveFormEventDateLabel": {
+    "description": "Birth date of the child for paternity leave."
+  },
+  "leaveFormSuggestion": "Kanuna göre bu izin {days} gün.",
+  "@leaveFormSuggestion": {
+    "description": "Legal number of days for an excuse leave type.",
+    "placeholders": {
+      "days": {
+        "type": "int"
+      }
+    }
+  },
+  "leaveFormSecondExcuseLabel": "Yılın ikinci 10 günlük mazeret izni",
+  "@leaveFormSecondExcuseLabel": {
+    "description": "Switch for the second excuse block of a civil servant."
+  },
+  "leaveFormSecondExcuseTerm": "İkinci mazeret izni",
+  "@leaveFormSecondExcuseTerm": {
+    "description": "Term explained by the question mark button."
+  },
+  "leaveFormSecondExcuseInfo": "Memurlar yılda 10 gün mazeret izni alabilir. Zorunlu durumda verilen ikinci 10 gün yıllık izinden düşülür.",
+  "@leaveFormSecondExcuseInfo": {
+    "description": "One sentence explanation of the second excuse block (657 art. 104/C)."
+  },
+  "leaveFormNoteLabel": "Not (isteğe bağlı)",
+  "@leaveFormNoteLabel": {
+    "description": "Note field."
+  },
+  "leaveFormDeductTitle": "İzninden düşülecek",
+  "@leaveFormDeductTitle": {
+    "description": "Card title of the live day count."
+  },
+  "leaveFormDeductDays": "Yıllık izninden {days} gün düşülecek.",
+  "@leaveFormDeductDays": {
+    "description": "Live day count of the chosen range.",
+    "placeholders": {
+      "days": {
+        "type": "double",
+        "format": "decimalPattern"
+      }
+    }
+  },
+  "leaveFormDeductHalfDay": "Yıllık izninden yarım gün düşülecek.",
+  "@leaveFormDeductHalfDay": {
+    "description": "Live day count of a half day leave."
+  },
+  "leaveFormDeductHours": "Yıllık izninden {hours} saat düşülecek.",
+  "@leaveFormDeductHours": {
+    "description": "Live count of an hourly leave.",
+    "placeholders": {
+      "hours": {
+        "type": "double",
+        "format": "decimalPattern"
+      }
+    }
+  },
+  "leaveFormRemainingAfter": "Bu izinden sonra {days} gün iznin kalır.",
+  "@leaveFormRemainingAfter": {
+    "description": "Balance after the leave.",
+    "placeholders": {
+      "days": {
+        "type": "double",
+        "format": "decimalPattern"
+      }
+    }
+  },
+  "leaveFormNotDeducted": "Bu izin yıllık izninden düşmez.",
+  "@leaveFormNotDeducted": {
+    "description": "Shown for leave types that do not reduce the balance."
+  },
+  "leaveFormPickDatesHint": "Tarihi seçince kaç gün düşüleceğini burada görürsün.",
+  "@leaveFormPickDatesHint": {
+    "description": "Shown before a date is chosen."
+  },
+  "leaveFormBreakdownTitle": "Gün gün döküm",
+  "@leaveFormBreakdownTitle": {
+    "description": "Card title of the day by day breakdown."
+  },
+  "leaveFormWarningTitle": "Dikkat",
+  "@leaveFormWarningTitle": {
+    "description": "Card title of the warnings."
+  },
+  "leaveFormBalanceWarning": "Bu izinle iznin {days} gün eksiye düşer. Yine de kaydedebilirsin.",
+  "@leaveFormBalanceWarning": {
+    "description": "Warning when the leave exceeds the remaining balance.",
+    "placeholders": {
+      "days": {
+        "type": "double",
+        "format": "decimalPattern"
+      }
+    }
+  },
+  "leaveFormSplitWarning": "Yıllık izni bölerek kullanıyorsan parçalardan biri en az 10 gün olmalı.",
+  "@leaveFormSplitWarning": {
+    "description": "Split rule warning (4857 art. 56)."
+  },
+  "leaveFormTravelWarning": "Yol izni bu dönemde toplam 4 günü geçemez.",
+  "@leaveFormTravelWarning": {
+    "description": "Travel leave limit warning."
+  },
+  "leaveFormSave": "Kaydet",
+  "@leaveFormSave": {
+    "description": "Main button of the leave form."
+  },
+  "leaveFormDeleteTooltip": "İzni sil",
+  "@leaveFormDeleteTooltip": {
+    "description": "Tooltip of the delete button in the app bar."
+  },
+  "leaveFormDeleted": "İzin silindi.",
+  "@leaveFormDeleted": {
+    "description": "Message after a leave is deleted."
+  },
+  "leaveFormUpdated": "İzin güncellendi.",
+  "@leaveFormUpdated": {
+    "description": "Message after a leave is edited."
+  },
+  "leaveFormSaveError": "İzin kaydedilemedi. Tekrar dene.",
+  "@leaveFormSaveError": {
+    "description": "Shown when saving fails."
+  },
+  "leaveFormNoProfileMessage": "İzin eklemek için önce kurulumu tamamla.",
+  "@leaveFormNoProfileMessage": {
+    "description": "Empty state before the first setup."
+  },
+  "leaveFormNoProfileAction": "Kuruluma başla",
+  "@leaveFormNoProfileAction": {
+    "description": "Opens the setup."
+  },
+  "leaveFormErrorMessage": "Bilgiler yüklenemedi.",
+  "@leaveFormErrorMessage": {
+    "description": "Shown when the data could not be loaded."
+  },
+  "leaveFormRetry": "Tekrar dene",
+  "@leaveFormRetry": {
+    "description": "Loads the data again."
+  },
+  "leaveFormLoading": "Yükleniyor",
+  "@leaveFormLoading": {
+    "description": "Screen reader label of the loading indicator."
   },
   "leavesTitle": "İzinlerim",
   "@leavesTitle": {
-    "description": "App bar title of the leaves screen."
+    "description": "Large title of the leaves tab."
+  },
+  "leavesTabLeaves": "İzinler",
+  "@leavesTabLeaves": {
+    "description": "Section switch: leave records."
+  },
+  "leavesTabHours": "Saat ve mesai",
+  "@leavesTabHours": {
+    "description": "Section switch: hourly leave and overtime."
+  },
+  "leavesYearFilter": "Yıl: {year}",
+  "@leavesYearFilter": {
+    "description": "Button that opens the year filter.",
+    "placeholders": {
+      "year": {
+        "type": "int"
+      }
+    }
+  },
+  "leavesTypeFilter": "Tür: {type}",
+  "@leavesTypeFilter": {
+    "description": "Button that opens the leave type filter.",
+    "placeholders": {
+      "type": {
+        "type": "String"
+      }
+    }
+  },
+  "leavesTypeAll": "Tümü",
+  "@leavesTypeAll": {
+    "description": "Type filter value: every leave type."
+  },
+  "leavesYearSheetTitle": "Yıl seç",
+  "@leavesYearSheetTitle": {
+    "description": "Title of the year filter sheet."
+  },
+  "leavesTypeSheetTitle": "İzin türü seç",
+  "@leavesTypeSheetTitle": {
+    "description": "Title of the type filter sheet."
+  },
+  "leavesPlannedHeader": "Planlanan",
+  "@leavesPlannedHeader": {
+    "description": "Section of leaves that start after today."
+  },
+  "leavesUsedHeader": "Kullanılan",
+  "@leavesUsedHeader": {
+    "description": "Section of leaves already started or taken."
+  },
+  "leavesCalendarDays": "{days} takvim günü",
+  "@leavesCalendarDays": {
+    "description": "Length of a leave that does not reduce the annual balance.",
+    "placeholders": {
+      "days": {
+        "type": "int"
+      }
+    }
+  },
+  "leavesHours": "{hours} saat",
+  "@leavesHours": {
+    "description": "A number of hours.",
+    "placeholders": {
+      "hours": {
+        "type": "double",
+        "format": "decimalPattern"
+      }
+    }
+  },
+  "leavesEmptyMessage": "Henüz izin eklemedin.",
+  "@leavesEmptyMessage": {
+    "description": "Empty state of the leaves tab."
+  },
+  "leavesAdd": "İzin ekle",
+  "@leavesAdd": {
+    "description": "Main button of the leaves section."
+  },
+  "leavesNoMatch": "Bu seçime uyan izin yok.",
+  "@leavesNoMatch": {
+    "description": "Shown when the filters hide every leave."
+  },
+  "leavesOvertimeTitle": "Fazla mesai",
+  "@leavesOvertimeTitle": {
+    "description": "Card title: overtime hours in the chosen year."
+  },
+  "leavesHourlyTitle": "Saatlik izin",
+  "@leavesHourlyTitle": {
+    "description": "Card title: hourly leave in the chosen year."
+  },
+  "leavesHourUnit": "saat",
+  "@leavesHourUnit": {
+    "description": "Word under an hour total."
+  },
+  "leavesOvertimeHeader": "Fazla mesai kayıtları",
+  "@leavesOvertimeHeader": {
+    "description": "Section of overtime records."
+  },
+  "leavesHourlyHeader": "Saatlik izinler",
+  "@leavesHourlyHeader": {
+    "description": "Section of hourly leave records."
+  },
+  "leavesHoursEmpty": "Bu yıl için fazla mesai veya saatlik izin kaydın yok.",
+  "@leavesHoursEmpty": {
+    "description": "Shown when the hours section has no record in the chosen year."
+  },
+  "leavesAddOvertime": "Fazla mesai ekle",
+  "@leavesAddOvertime": {
+    "description": "Main button of the hours section."
+  },
+  "leavesOvertimeSheetTitle": "Fazla mesai",
+  "@leavesOvertimeSheetTitle": {
+    "description": "Title of the overtime form."
+  },
+  "leavesOvertimeDate": "Tarih",
+  "@leavesOvertimeDate": {
+    "description": "Date field of the overtime form."
+  },
+  "leavesOvertimeHoursLabel": "Kaç saat?",
+  "@leavesOvertimeHoursLabel": {
+    "description": "Hours field of the overtime form."
+  },
+  "leavesOvertimeHoursError": "Saati yaz, örneğin 2 veya 1,5.",
+  "@leavesOvertimeHoursError": {
+    "description": "Error when the hours are missing or not a number."
+  },
+  "leavesOvertimeNote": "Not (isteğe bağlı)",
+  "@leavesOvertimeNote": {
+    "description": "Note field of the overtime form."
+  },
+  "leavesSave": "Kaydet",
+  "@leavesSave": {
+    "description": "Saves the overtime record."
+  },
+  "leavesDelete": "Sil",
+  "@leavesDelete": {
+    "description": "Deletes the overtime record."
+  },
+  "leavesOvertimeDeleted": "Fazla mesai kaydı silindi.",
+  "@leavesOvertimeDeleted": {
+    "description": "Message after an overtime record is deleted."
+  },
+  "leavesNoProfileMessage": "İzinlerini görmek için önce kurulumu tamamla.",
+  "@leavesNoProfileMessage": {
+    "description": "Empty state before the first setup."
+  },
+  "leavesNoProfileAction": "Kuruluma başla",
+  "@leavesNoProfileAction": {
+    "description": "Opens the setup."
+  },
+  "leavesErrorMessage": "Bilgiler yüklenemedi.",
+  "@leavesErrorMessage": {
+    "description": "Shown when the data could not be loaded."
+  },
+  "leavesRetry": "Tekrar dene",
+  "@leavesRetry": {
+    "description": "Loads the data again."
+  },
+  "leavesLoading": "Yükleniyor",
+  "@leavesLoading": {
+    "description": "Screen reader label of the loading indicator."
+  },
+  "notificationsChannelName": "Hatırlatmalar",
+  "@notificationsChannelName": {
+    "description": "Android notification channel name, shown in the system notification settings."
+  },
+  "notificationsChannelDescription": "Resmî tatil, köprü, hak ediş ve izin hatırlatmaları",
+  "@notificationsChannelDescription": {
+    "description": "Android notification channel description, shown in the system notification settings."
+  },
+  "notificationsHolidayTitle": "Resmî tatil yaklaşıyor",
+  "@notificationsHolidayTitle": {
+    "description": "Notification title: an official holiday is coming."
+  },
+  "notificationsHolidayBody": "{days, plural, =0{Bugün {holiday}.} =1{Yarın {holiday}.} other{{holiday} için {days} gün kaldı.}}",
+  "@notificationsHolidayBody": {
+    "description": "Notification body: which holiday and how many days are left.",
+    "placeholders": {
+      "days": {
+        "type": "int",
+        "example": "7"
+      },
+      "holiday": {
+        "type": "String",
+        "example": "Cumhuriyet Bayramı"
+      }
+    }
+  },
+  "notificationsBridgeTitle": "Köprü fırsatı",
+  "@notificationsBridgeTitle": {
+    "description": "Notification title: a few leave days turn the coming holiday into a long break."
+  },
+  "notificationsBridgeBody": "{days, plural, =0{Bugün {holiday}.} =1{Yarın {holiday}.} other{{holiday} için {days} gün kaldı.}} Bu tatile {leaveDays} gün izin eklersen toplam {totalDays} gün tatil yaparsın.",
+  "@notificationsBridgeBody": {
+    "description": "Notification body: the coming holiday, the leave days to take and the length of the whole break.",
+    "placeholders": {
+      "days": {
+        "type": "int",
+        "example": "7"
+      },
+      "holiday": {
+        "type": "String",
+        "example": "Kurban Bayramı 1. Gün"
+      },
+      "leaveDays": {
+        "type": "double",
+        "format": "decimalPattern",
+        "example": "1.5"
+      },
+      "totalDays": {
+        "type": "int",
+        "example": "9"
+      }
+    }
+  },
+  "notificationsAccrualTitle": "Yeni izin hakkı",
+  "@notificationsAccrualTitle": {
+    "description": "Notification title: a profile earns annual leave today."
+  },
+  "notificationsAccrualBody": "{name} için bugün {days} gün yıllık izin hakkı doğdu.",
+  "@notificationsAccrualBody": {
+    "description": "Notification body: profile name and the annual leave days earned today.",
+    "placeholders": {
+      "name": {
+        "type": "String",
+        "example": "Ayşe"
+      },
+      "days": {
+        "type": "int",
+        "example": "14"
+      }
+    }
+  },
+  "notificationsLeaveStartTitle": "İzin yaklaşıyor",
+  "@notificationsLeaveStartTitle": {
+    "description": "Notification title: a planned leave starts soon."
+  },
+  "notificationsLeaveStartBody": "{days, plural, =0{{name} için planlanan izin bugün başlıyor.} =1{{name} için planlanan izin yarın başlıyor.} other{{name} için planlanan izin {days} gün sonra başlıyor.}}",
+  "@notificationsLeaveStartBody": {
+    "description": "Notification body: profile name and when the planned leave starts.",
+    "placeholders": {
+      "name": {
+        "type": "String",
+        "example": "Ayşe"
+      },
+      "days": {
+        "type": "int",
+        "example": "3"
+      }
+    }
+  },
+  "notificationsLeaveReturnTitle": "İzin bitiyor",
+  "@notificationsLeaveReturnTitle": {
+    "description": "Notification title: the leave is ending, sent the evening before the return day."
+  },
+  "notificationsLeaveReturnBody": "{name} için yarın işe dönüş günü.",
+  "@notificationsLeaveReturnBody": {
+    "description": "Notification body: the profile goes back to work tomorrow.",
+    "placeholders": {
+      "name": {
+        "type": "String",
+        "example": "Ayşe"
+      }
+    }
+  },
+  "notificationsYearEndExpiringTitle": "Kullanılmamış izin düşecek",
+  "@notificationsYearEndExpiringTitle": {
+    "description": "Notification title for civil servants (657): unused leave is dropped on 1 January."
+  },
+  "notificationsYearEndExpiringBody": "{name} için {days} gün izin yıl sonuna kadar kullanılmazsa 1 Ocak'ta düşecek.",
+  "@notificationsYearEndExpiringBody": {
+    "description": "Notification body for civil servants (657): profile name and the days dropped on 1 January if unused.",
+    "placeholders": {
+      "name": {
+        "type": "String",
+        "example": "Ayşe"
+      },
+      "days": {
+        "type": "double",
+        "format": "decimalPattern",
+        "example": "4.5"
+      }
+    }
+  },
+  "notificationsYearEndUnusedTitle": "Kullanılmamış izin var",
+  "@notificationsYearEndUnusedTitle": {
+    "description": "Notification title for workers (4857): there is unused leave. Information only."
+  },
+  "notificationsYearEndUnusedBody": "{name} için {days} gün kullanılmamış izin var. Bu izin yıl sonunda düşmez, sonraki yıla geçer.",
+  "@notificationsYearEndUnusedBody": {
+    "description": "Notification body for workers (4857): unused leave days, which carry over to the next year.",
+    "placeholders": {
+      "name": {
+        "type": "String",
+        "example": "Ayşe"
+      },
+      "days": {
+        "type": "double",
+        "format": "decimalPattern",
+        "example": "4.5"
+      }
+    }
+  },
+  "notificationsTestTitle": "Bildirimler açık",
+  "@notificationsTestTitle": {
+    "description": "Title of the test notification shown right away."
+  },
+  "notificationsTestBody": "Hatırlatmalar böyle görünecek.",
+  "@notificationsTestBody": {
+    "description": "Body of the test notification shown right away."
   },
   "onboardingTitle": "Kurulum",
   "@onboardingTitle": {
-    "description": "App bar title of the onboarding screen."
+    "description": "Name of the setup flow."
+  },
+  "onboardingNext": "Devam",
+  "@onboardingNext": {
+    "description": "Goes to the next setup step."
+  },
+  "onboardingFinish": "Bitir",
+  "@onboardingFinish": {
+    "description": "Saves the answers on the last setup step."
+  },
+  "onboardingTypeQuestion": "Nasıl çalışıyorsun?",
+  "@onboardingTypeQuestion": {
+    "description": "Setup step 1: employment type."
+  },
+  "onboardingTypeReason": "İzin hakkı işçide ve memurda farklı hesaplanır.",
+  "@onboardingTypeReason": {
+    "description": "Why step 1 is asked."
+  },
+  "onboardingTypeLabor": "İşçiyim",
+  "@onboardingTypeLabor": {
+    "description": "Employment type option: Labour Law 4857."
+  },
+  "onboardingTypeLaborDetail": "Özel sektörde veya kamuda işçi, İş Kanunu",
+  "@onboardingTypeLaborDetail": {
+    "description": "Detail of the worker option."
+  },
+  "onboardingTypeCivil": "Devlet memuruyum",
+  "@onboardingTypeCivil": {
+    "description": "Employment type option: Civil Servants Law 657."
+  },
+  "onboardingTypeCivilDetail": "Devlet Memurları Kanunu",
+  "@onboardingTypeCivilDetail": {
+    "description": "Detail of the civil servant option."
+  },
+  "onboardingStartQuestionLabor": "Bu iş yerinde ne zaman başladın?",
+  "@onboardingStartQuestionLabor": {
+    "description": "Setup step 2 for a worker: start date."
+  },
+  "onboardingStartQuestionCivil": "Memurluğa ne zaman başladın?",
+  "@onboardingStartQuestionCivil": {
+    "description": "Setup step 2 for a civil servant: start date."
+  },
+  "onboardingStartReasonLabor": "İzin hakkın bu iş yerinde çalıştığın süreye göre artar.",
+  "@onboardingStartReasonLabor": {
+    "description": "Why step 2 is asked, worker."
+  },
+  "onboardingStartReasonCivil": "İzin hakkın kamuda çalıştığın süreye göre artar.",
+  "@onboardingStartReasonCivil": {
+    "description": "Why step 2 is asked, civil servant."
+  },
+  "onboardingStartLabel": "İşe başlama tarihi",
+  "@onboardingStartLabel": {
+    "description": "Start date field."
+  },
+  "onboardingBirthQuestion": "Doğum tarihin ne?",
+  "@onboardingBirthQuestion": {
+    "description": "Setup step 3: birth date."
+  },
+  "onboardingBirthReasonLabor": "Yaşın 18 veya altında ya da 50 veya üstündeyse izin hakkın en az 20 gün olur.",
+  "@onboardingBirthReasonLabor": {
+    "description": "Why step 3 is asked, worker (4857 art. 53/5)."
+  },
+  "onboardingBirthLabel": "Doğum tarihi",
+  "@onboardingBirthLabel": {
+    "description": "Birth date field."
+  },
+  "onboardingSaturdayQuestion": "Cumartesi çalışıyor musun?",
+  "@onboardingSaturdayQuestion": {
+    "description": "Setup step 4 for a worker: Saturday work."
+  },
+  "onboardingSaturdayReason": "İzne denk gelen cumartesilerin nasıl sayılacağı buna bağlı.",
+  "@onboardingSaturdayReason": {
+    "description": "Why step 4 is asked."
+  },
+  "onboardingSaturdayYes": "Evet, çalışıyorum",
+  "@onboardingSaturdayYes": {
+    "description": "Saturday option."
+  },
+  "onboardingSaturdayNo": "Hayır, çalışmıyorum",
+  "@onboardingSaturdayNo": {
+    "description": "Saturday option."
+  },
+  "onboardingDefaultName": "Ben",
+  "@onboardingDefaultName": {
+    "description": "Name of the first person, the user. Can be changed on the people screen."
+  },
+  "onboardingSaveError": "Bilgiler kaydedilemedi. Tekrar dene.",
+  "@onboardingSaveError": {
+    "description": "Shown when saving fails."
   },
   "peopleTitle": "Kişiler",
   "@peopleTitle": {
     "description": "App bar title of the people screen."
   },
+  "peopleHint": "Eşini veya çalışanını da ekleyip izinlerini ayrı takip edebilirsin.",
+  "@peopleHint": {
+    "description": "Hint under the people list."
+  },
+  "peopleSelectHint": "Dokunduğun kişi ana sayfada görünür.",
+  "@peopleSelectHint": {
+    "description": "Explains that tapping a person makes them active."
+  },
+  "peopleEmptyMessage": "Henüz kimseyi eklemedin.",
+  "@peopleEmptyMessage": {
+    "description": "Empty state of the people screen."
+  },
+  "peopleAdd": "Kişi ekle",
+  "@peopleAdd": {
+    "description": "Main button of the people screen."
+  },
+  "peopleSelected": "Seçili",
+  "@peopleSelected": {
+    "description": "Marks the active person."
+  },
+  "peopleEditTooltip": "{name} bilgilerini düzenle",
+  "@peopleEditTooltip": {
+    "description": "Tooltip of the edit button of a person.",
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "peopleLabor": "İşçi, İş Kanunu",
+  "@peopleLabor": {
+    "description": "Employment type: Labour Law 4857."
+  },
+  "peopleCivil": "Memur, Devlet Memurları Kanunu",
+  "@peopleCivil": {
+    "description": "Employment type: Civil Servants Law 657."
+  },
+  "peopleDeleted": "{name} silindi.",
+  "@peopleDeleted": {
+    "description": "Message after a person is deleted.",
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "peopleSaveError": "Bilgiler kaydedilemedi. Tekrar dene.",
+  "@peopleSaveError": {
+    "description": "Shown when saving fails."
+  },
+  "peopleFormNewTitle": "Yeni kişi",
+  "@peopleFormNewTitle": {
+    "description": "App bar title of the form for a new person."
+  },
+  "peopleFormEditTitle": "Kişiyi düzenle",
+  "@peopleFormEditTitle": {
+    "description": "App bar title of the form for an existing person."
+  },
+  "peopleFormName": "Ad",
+  "@peopleFormName": {
+    "description": "Name field."
+  },
+  "peopleFormNameError": "Bir ad yaz.",
+  "@peopleFormNameError": {
+    "description": "Error when the name is empty."
+  },
+  "peopleFormTypeLabel": "Çalışma şekli",
+  "@peopleFormTypeLabel": {
+    "description": "Title of the employment type choice."
+  },
+  "peopleTypeLaborTitle": "İşçi",
+  "@peopleTypeLaborTitle": {
+    "description": "Employment type option."
+  },
+  "peopleTypeLaborDetail": "Özel sektörde veya kamuda işçi, İş Kanunu",
+  "@peopleTypeLaborDetail": {
+    "description": "Detail of the worker option."
+  },
+  "peopleTypeCivilTitle": "Devlet memuru",
+  "@peopleTypeCivilTitle": {
+    "description": "Employment type option."
+  },
+  "peopleTypeCivilDetail": "Devlet Memurları Kanunu",
+  "@peopleTypeCivilDetail": {
+    "description": "Detail of the civil servant option."
+  },
+  "peopleFormStart": "İşe başlama tarihi",
+  "@peopleFormStart": {
+    "description": "Start date field."
+  },
+  "peopleFormBirth": "Doğum tarihi",
+  "@peopleFormBirth": {
+    "description": "Birth date field."
+  },
+  "peopleFormDateError": "Tarihi seç.",
+  "@peopleFormDateError": {
+    "description": "Error when no date is chosen."
+  },
+  "peopleFormSaturday": "Cumartesi iş günü",
+  "@peopleFormSaturday": {
+    "description": "Switch: the person works on Saturdays."
+  },
+  "peopleFormSave": "Kaydet",
+  "@peopleFormSave": {
+    "description": "Main button of the person form."
+  },
+  "peopleFormDeleteTooltip": "Kişiyi sil",
+  "@peopleFormDeleteTooltip": {
+    "description": "Tooltip of the delete button in the app bar."
+  },
+  "peopleDatePlaceholder": "Tarih seç",
+  "@peopleDatePlaceholder": {
+    "description": "Shown in a date field before a date is chosen."
+  },
+  "peopleAdvancedTitle": "Gelişmiş (isteğe bağlı)",
+  "@peopleAdvancedTitle": {
+    "description": "Optional section with less common profile fields."
+  },
+  "peoplePriorServiceLabel": "Önceki çalışma süresi",
+  "@peoplePriorServiceLabel": {
+    "description": "Prior service, entered as years, months and days."
+  },
+  "peoplePriorServiceInfoLabor": "Aynı işverenin başka iş yerlerinde çalıştığın süre de izin hakkına eklenir. Başka işverenlerdeki süre eklenmez.",
+  "@peoplePriorServiceInfoLabor": {
+    "description": "Prior service explanation for a worker (4857 art. 54)."
+  },
+  "peoplePriorServiceInfoCivil": "Kamu kurumlarında geçen süreler ve askerlik hizmete sayılır.",
+  "@peoplePriorServiceInfoCivil": {
+    "description": "Prior service explanation for a civil servant."
+  },
+  "peopleYears": "Yıl",
+  "@peopleYears": {
+    "description": "Years part of a duration."
+  },
+  "peopleMonths": "Ay",
+  "@peopleMonths": {
+    "description": "Months part of a duration."
+  },
+  "peopleDays": "Gün",
+  "@peopleDays": {
+    "description": "Days part of a duration."
+  },
+  "peopleUsedBeforeLabel": "Uygulamadan önce kullanılan izin (gün)",
+  "@peopleUsedBeforeLabel": {
+    "description": "Annual leave days used before the app started tracking."
+  },
+  "peopleUsedBeforeHelp": "Hâlâ geçerli izin hakkından, uygulamayı kullanmaya başlamadan önce kullandığın günleri yaz. Süresi dolup düşen eski yılların iznini yazma.",
+  "@peopleUsedBeforeHelp": {
+    "description": "Help under the leave used before tracking field: only days used from the still valid balance, deducted from today's balance."
+  },
+  "peopleContractLabel": "Sözleşmeyle gelen ek izin (gün)",
+  "@peopleContractLabel": {
+    "description": "Extra days above the law from a contract or union agreement."
+  },
+  "peopleUndergroundLabel": "Yer altı işi, örneğin maden",
+  "@peopleUndergroundLabel": {
+    "description": "Switch: underground work adds days (4857)."
+  },
+  "peopleTeacherLabel": "Öğretmen",
+  "@peopleTeacherLabel": {
+    "description": "Switch: teachers get no annual leave (657)."
+  },
+  "peopleDailyHoursLabel": "Günlük çalışma saati",
+  "@peopleDailyHoursLabel": {
+    "description": "Working hours per day, for hourly leave."
+  },
+  "peopleNumberError": "Sayı yaz, örneğin 4 veya 4,5.",
+  "@peopleNumberError": {
+    "description": "Error when a number field holds no number."
+  },
+  "peopleErrorMessage": "Bilgiler yüklenemedi.",
+  "@peopleErrorMessage": {
+    "description": "Shown when the data could not be loaded."
+  },
+  "peopleRetry": "Tekrar dene",
+  "@peopleRetry": {
+    "description": "Loads the data again."
+  },
+  "peopleLoading": "Yükleniyor",
+  "@peopleLoading": {
+    "description": "Screen reader label of the loading indicator."
+  },
   "settingsTitle": "Ayarlar",
   "@settingsTitle": {
-    "description": "App bar title of the settings screen."
+    "description": "Large title of the settings tab."
   },
+  "settingsPeopleTitle": "Kişiler",
+  "settingsPeopleSummary": "{name} seçili. Toplam {count} kişi.",
+  "@settingsPeopleSummary": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      },
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "settingsPeopleEmpty": "Henüz kişi eklemedin.",
+  "settingsScheduleTitle": "Çalışma düzeni",
+  "settingsScheduleFor": "{name} için geçerli.",
+  "@settingsScheduleFor": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "settingsWorkDays": "Çalıştığın günler",
+  "settingsSaturdayTitle": "Çalışmadığın cumartesi izinden düşsün",
+  "settingsSaturdayHelp": "Sözleşmende veya toplu iş sözleşmende cumartesi hafta tatili olarak yazıyorsa kapat.",
+  "settingsSaturdayInfoTerm": "Cumartesi",
+  "settingsSaturdayInfo": "Yargıtayın güncel görüşüne göre çalışmadığın cumartesi izninden düşer. Eski kararlarda ve bazı bölge mahkemelerinde düşmez.",
+  "settingsHalfDayTitle": "Arife ve 28 Ekim sabahı",
+  "settingsHalfDayHelp": "Mevzuat bunu açıkça yazmaz. Uygulama varsayılan olarak yarım gün düşer.",
+  "settingsHalfDayZero": "İzinden düşmesin",
+  "settingsHalfDayHalf": "Yarım gün düşsün",
+  "settingsHalfDayFull": "Tam gün düşsün",
+  "settingsHoursTitle": "Günlük çalışma saatin",
+  "settingsHoursValue": "{hours} saat",
+  "@settingsHoursValue": {
+    "placeholders": {
+      "hours": {
+        "type": "double",
+        "format": "decimalPattern"
+      }
+    }
+  },
+  "settingsHoursHelp": "Saatlik izni güne çevirmek için kullanılır.",
+  "settingsHoursDecrease": "Yarım saat azalt",
+  "settingsHoursIncrease": "Yarım saat artır",
+  "settingsThemeTitle": "Görünüm",
+  "settingsThemeSystem": "Telefonun ayarı",
+  "settingsThemeLight": "Açık",
+  "settingsThemeDark": "Koyu",
+  "settingsRemindersTitle": "Hatırlatmalar",
+  "settingsRemindersHelp": "Bir hatırlatmayı açınca bildirim izni istenir.",
+  "settingsReminderHoliday": "Resmî tatil ve köprü",
+  "settingsReminderAccrual": "Yeni izin hakkın doğunca",
+  "settingsReminderPlanned": "Planladığın izinden önce",
+  "settingsReminderYearEnd": "Yıl sonunda kullanmadığın izin",
+  "settingsDaysBefore": "{days} gün önce",
+  "@settingsDaysBefore": {
+    "placeholders": {
+      "days": {
+        "type": "int"
+      }
+    }
+  },
+  "settingsDaysBeforeDecrease": "Gün sayısını azalt",
+  "settingsDaysBeforeIncrease": "Gün sayısını artır",
+  "settingsPermissionDenied": "Bildirim izni verilmedi. Telefonun ayarlarından açabilirsin.",
+  "settingsDataTitle": "Verilerin",
+  "settingsBackup": "Yedekle",
+  "settingsBackupHelp": "Bütün verilerini tek dosya olarak paylaş.",
+  "settingsRestore": "Yedekten geri yükle",
+  "settingsRestoreHelp": "Daha önce aldığın yedeği aç.",
+  "settingsRestoreConfirmTitle": "Yedek geri yüklensin mi?",
+  "settingsRestoreConfirmBody": "Şu anki bütün verilerin yedekteki verilerle değişir.",
+  "settingsRestoreConfirm": "Geri yükle",
+  "settingsRestoreDone": "Yedek geri yüklendi.",
+  "settingsExport": "Dışa aktar",
+  "settingsExportHelp": "İzin geçmişini PDF, Excel veya CSV dosyası olarak al.",
+  "settingsExportPdf": "PDF",
+  "settingsExportExcel": "Excel",
+  "settingsExportCsv": "CSV",
+  "settingsExportShare": "Paylaş",
+  "settingsExportSave": "Cihaza kaydet",
+  "settingsExportSaved": "Dosya kaydedildi.",
+  "settingsReset": "Bütün verileri sil",
+  "settingsResetHelp": "Kişiler, izinler ve ayarlar silinir.",
+  "settingsResetConfirmTitle": "Bütün veriler silinsin mi?",
+  "settingsResetConfirmBody": "Kişiler, izinler ve ayarlar silinir. Hemen sonra geri alabilirsin.",
+  "settingsResetConfirm": "Sil",
+  "settingsResetTypeLabel": "Onaylamak için \"sil\" yaz",
+  "@settingsResetTypeLabel": {
+    "description": "Label of the field where the user types the confirm word before all data is deleted."
+  },
+  "settingsResetWord": "sil",
+  "@settingsResetWord": {
+    "description": "The word the user types to confirm deleting all data. Must match the word inside settingsResetTypeLabel."
+  },
+  "settingsResetDone": "Bütün veriler silindi.",
+  "settingsCancel": "Vazgeç",
+  "settingsFailed": "İşlem tamamlanamadı. Tekrar dene.",
+  "settingsInfoTitle": "Bilgi",
+  "settingsStats": "İstatistik",
+  "settingsGuide": "Mevzuat rehberi",
+  "settingsAbout": "Hakkında",
+  "settingsLoading": "Ayarlar yükleniyor",
+  "settingsError": "Ayarlar açılamadı. Biraz sonra tekrar dene.",
+  "settingsRestoreNewer": "Bu yedek, uygulamanın daha yeni bir sürümüyle alınmış. Geri yüklemek için önce uygulamayı güncelle. Verilerin değişmedi.",
+  "settingsRestoreInvalid": "Bu dosya geçerli bir İzin Planla yedeği değil. Verilerin değişmedi.",
+  "settingsWorkDaysHelp": "En az bir gün seçili kalır.",
   "statsTitle": "İstatistik",
   "@statsTitle": {
     "description": "App bar title of the stats screen."
-  }
+  },
+  "statsEveryone": "Herkes",
+  "@statsEveryone": {
+    "description": "Person filter chip that sums every person."
+  },
+  "statsDaysOffTitle": "{year} yılında tatil",
+  "@statsDaysOffTitle": {
+    "placeholders": {
+      "year": {
+        "type": "int"
+      }
+    }
+  },
+  "statsDaysOffCaption": "İzin, resmî tatil ve hafta sonu birlikte.",
+  "statsDaysOffCaptionEveryone": "Herkesin izin, resmî tatil ve hafta sonu günleri birlikte.",
+  "statsDaysUnit": "gün",
+  "statsEarned": "Hak edilen",
+  "statsUsed": "Kullanılan",
+  "statsByYearTitle": "Yıllara göre",
+  "statsByYearRow": "{year}: hak edilen {earned} gün, kullanılan {used} gün",
+  "@statsByYearRow": {
+    "placeholders": {
+      "year": {
+        "type": "int"
+      },
+      "earned": {
+        "type": "double",
+        "format": "decimalPattern"
+      },
+      "used": {
+        "type": "double",
+        "format": "decimalPattern"
+      }
+    }
+  },
+  "statsByYearChart": "Yıllara göre hak edilen ve kullanılan izin grafiği. Değerler grafiğin altında yazıyor.",
+  "statsByMonthTitle": "Aylara göre",
+  "statsByMonthRow": "{month}: {days} gün",
+  "@statsByMonthRow": {
+    "placeholders": {
+      "month": {
+        "type": "String"
+      },
+      "days": {
+        "type": "double",
+        "format": "decimalPattern"
+      }
+    }
+  },
+  "statsByMonthEmpty": "Seçtiğin {year} yılında yıllık izin kullanılmadı.",
+  "@statsByMonthEmpty": {
+    "placeholders": {
+      "year": {
+        "type": "int"
+      }
+    }
+  },
+  "statsByMonthChart": "Aylara göre kullanılan yıllık izin grafiği, {year}. Değerler grafiğin altında yazıyor.",
+  "@statsByMonthChart": {
+    "placeholders": {
+      "year": {
+        "type": "int"
+      }
+    }
+  },
+  "statsByTypeTitle": "Türlere göre",
+  "statsByTypeRow": "{type}: {days} gün",
+  "@statsByTypeRow": {
+    "placeholders": {
+      "type": {
+        "type": "String"
+      },
+      "days": {
+        "type": "double",
+        "format": "decimalPattern"
+      }
+    }
+  },
+  "statsByTypeEmpty": "Seçtiğin {year} yılında kayıtlı izin yok.",
+  "@statsByTypeEmpty": {
+    "placeholders": {
+      "year": {
+        "type": "int"
+      }
+    }
+  },
+  "statsEmptyMessage": "Henüz izin eklemedin. İzin ekleyince özetini burada görürsün.",
+  "statsEmptyAction": "İzin ekle",
+  "statsNoProfileMessage": "İstatistiği görmek için önce kurulumu tamamla.",
+  "statsNoProfileAction": "Kuruluma başla",
+  "statsLoading": "İstatistik yükleniyor",
+  "statsError": "İstatistik açılamadı. Biraz sonra tekrar dene."
 }

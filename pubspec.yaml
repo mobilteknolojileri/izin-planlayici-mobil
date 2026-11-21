@@ -2,7 +2,7 @@ name: izin_planla
 description: "Türkiye'deki çalışanlar için yıllık izin hesaplama, izin takibi ve köprü tatil planlama."
 publish_to: 'none'
 
-version: 1.0.0+1
+version: 1.0.0+2
 
 environment:
   sdk: ^3.14.0
@@ -28,13 +28,17 @@ dependencies:
   home_widget: ^0.10.0
   intl: ^0.20.3
   json_annotation: ^4.12.0
+  liquid_glass_widgets: ^1.19.0
+  lucide_icons_flutter: ^4.0.3
   material_ui: ^1.11.1
+  package_info_plus: ^10.2.2
   path_provider: ^2.1.6
   pdf: ^3.13.1
   printing: ^5.15.1
   share_plus: ^13.3.1
   table_calendar: ^3.3.0
   timezone: ^0.11.2
+  url_launcher: ^6.3.3
 
 dev_dependencies:
   alchemist: ^0.15.0
@@ -54,3 +58,10 @@ flutter:
   generate: true
   assets:
     - assets/holidays/
+    - assets/illustrations/
+    - assets/fonts/OFL.txt
+  fonts:
+    # One variable font file, FontWeight drives its weight axis.
+    - family: Inter
+      fonts:
+        - asset: assets/fonts/Inter.ttf

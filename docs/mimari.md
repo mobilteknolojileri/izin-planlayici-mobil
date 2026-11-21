@@ -4,7 +4,7 @@ Yapı Flutter'ın resmî mimari rehberini izler (https://docs.flutter.dev/app-ar
 
 ## Teknoloji
 
-- Flutter (stable), Dart 3, Material 3. Material import'u `package:material_ui/material_ui.dart`, çünkü `package:flutter/material.dart` deprecated.
+- Flutter (stable), Dart 3, Material bileşenleri üzerinde iOS düzeni (`docs/tasarim.md`). Material import'u `package:material_ui/material_ui.dart`, çünkü `package:flutter/material.dart` deprecated.
 - State ve bağımlılık: `flutter_riverpod`. Her ekranın tek view model'i vardır.
 - Veri: cihazda SQLite (`drift`), repository arayüzü arkasında. Resmî tatiller `assets/holidays/` içindeki JSON'dan okunur.
 - Modeller: `freezed` + `json_serializable`, immutable.
@@ -12,7 +12,7 @@ Yapı Flutter'ın resmî mimari rehberini izler (https://docs.flutter.dev/app-ar
 - Tarih: `intl`. Takvim: `table_calendar`. Router: `go_router`.
 - Bildirim: `flutter_local_notifications`, `timezone`. Widget: `home_widget`.
 - Dışa aktarma: `pdf`, `printing`, `share_plus`, `file_picker`, Excel için `archive` ile kendi xlsx yazıcımız.
-- Grafik: `fl_chart`. Görsel: `flutter_svg`. Animasyon: `flutter_animate`, `animations`.
+- Grafik: `fl_chart`. Görsel: `flutter_svg`. İkon: `lucide_icons_flutter`. Alt menü camı: `liquid_glass_widgets`. Animasyon: `flutter_animate`, `animations`.
 - Kalite: `very_good_analysis`, `mocktail`, `alchemist`.
 
 Kesin liste ve sürümler `docs/araclar.md` içinde. Paket listesi task 05'te `pubspec.yaml`'a bir kez eklenir. Paralel task'lar `pubspec.yaml`'ı değiştirmez, yeni paket gerekirse task sahibi koordinatöre bildirir.
@@ -51,6 +51,8 @@ lib/
       notifications/            # task 12
       export/                   # task 13
       home_widget/              # task 14
+      links/                    # task 16, linki tarayıcıda açar
+      app_info/                 # task 16, kurulu sürümü okur
     fakes/                      # task 05, ekranlar için geliştirme verisi
 test/                           # lib/ ile birebir aynı yapı
 testing/

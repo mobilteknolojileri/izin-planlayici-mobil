@@ -13,7 +13,10 @@ _Profile _$ProfileFromJson(Map<String, dynamic> json) => _Profile(
   employmentStartDate: const DateOnlyConverter().fromJson(
     json['employmentStartDate'] as String,
   ),
-  birthDate: const DateOnlyConverter().fromJson(json['birthDate'] as String),
+  birthDate: _$JsonConverterFromJson<String, DateTime>(
+    json['birthDate'],
+    const DateOnlyConverter().fromJson,
+  ),
   workSchedule: json['workSchedule'] == null
       ? const WorkSchedule()
       : WorkSchedule.fromJson(json['workSchedule'] as Map<String, dynamic>),
@@ -44,7 +47,10 @@ Map<String, dynamic> _$ProfileToJson(_Profile instance) => <String, dynamic>{
   'employmentStartDate': const DateOnlyConverter().toJson(
     instance.employmentStartDate,
   ),
-  'birthDate': const DateOnlyConverter().toJson(instance.birthDate),
+  'birthDate': ?_$JsonConverterToJson<String, DateTime>(
+    instance.birthDate,
+    const DateOnlyConverter().toJson,
+  ),
   'workSchedule': instance.workSchedule.toJson(),
   'priorService': instance.priorService.toJson(),
   'isUnderground': instance.isUnderground,
@@ -61,3 +67,13 @@ const _$EmploymentTypeEnumMap = {
   EmploymentType.laborLaw: 'laborLaw',
   EmploymentType.civilServant: 'civilServant',
 };
+
+Value? _$JsonConverterFromJson<Json, Value>(
+  Object? json,
+  Value? Function(Json json) fromJson,
+) => json == null ? null : fromJson(json as Json);
+
+Json? _$JsonConverterToJson<Json, Value>(
+  Value? value,
+  Json? Function(Value value) toJson,
+) => value == null ? null : toJson(value);

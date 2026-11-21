@@ -20,8 +20,9 @@ abstract class Profile with _$Profile {
     /// Hire date (4857) or start of duty (657).
     @DateOnlyConverter() required DateTime employmentStartDate,
 
-    /// Needed for the age rules of 4857 art. 53.
-    @DateOnlyConverter() required DateTime birthDate,
+    /// Needed for the age rules of 4857 art. 53. Null for civil servants,
+    /// because their leave does not depend on age (657 art. 102).
+    @DateOnlyConverter() DateTime? birthDate,
     @Default(WorkSchedule()) WorkSchedule workSchedule,
 
     /// Prior service with the same employer (4857) or counted public

@@ -18,10 +18,8 @@ migrate_working_dir/
 *.iws
 .idea/
 
-# The .vscode folder contains launch configuration and tasks you configure in
-# VS Code which you may wish to be included in version control, so this line
-# is commented out by default.
-#.vscode/
+# Editor settings stay on each machine.
+.vscode/
 
 # Flutter/Dart/Pub related
 **/doc/api/
@@ -54,3 +52,5 @@ rakipler/
 key.properties
 *.jks
 *.keystore
+# Golden diff images written when a golden test fails
+test/**/failures/

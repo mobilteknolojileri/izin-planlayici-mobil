@@ -77,8 +77,12 @@ Task 04 çıktısı. Kurulumlar proje kapsamındadır (`.claude/settings.json`, 
 | file_picker | 13.4.0 | Yedek geri yükleme |
 | fl_chart | 1.3.1 | İstatistik grafikleri |
 | flutter_svg | 2.5.0 | İllüstrasyonlar |
+| liquid_glass_widgets | 1.19.0 | Alt menünün Liquid Glass cam efekti. Saf Flutter shader, Android'de çalışır. Kaynak tarandı: ağ erişimi yok, `dart:io` sadece test ortamını tanımak için. Kurulum `main.dart`'ta (kullanıcı onayladı) |
+| lucide_icons_flutter | 4.0.3 | Tek ikon seti, SF Symbols'e yakın ince çizgi. SF Symbols Apple lisansı nedeniyle Android'de kullanılamaz (kullanıcı onayladı) |
 | flutter_animate | 4.5.2 | Kodla animasyon (kullanıcı onayladı) |
 | animations | 3.0.0 | Material ekran geçişleri (kullanıcı onayladı) |
+| url_launcher | 6.3.3 | Mevzuat kaynaklarını telefondaki tarayıcıda açar. Uygulamaya internet izni eklenmez, linkler tarayıcı uygulamasında açılır (kullanıcı onayladı) |
+| package_info_plus | 10.2.2 | Hakkında ekranındaki ve yedek dosyasındaki sürüm numarası. İzin eklemez, `http` bağımlılığı sadece web içindir (kullanıcı onayladı) |
 | very_good_analysis | 11.0.0 | Sıkı lint kuralları |
 | mocktail | 1.0.5 | Test mock'ları |
 | alchemist | 0.15.0 | Golden testler |

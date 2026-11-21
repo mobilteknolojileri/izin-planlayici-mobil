@@ -6,7 +6,7 @@ Uygulama tek sürümde eksiksiz çıkar. Rakiplerin tüm faydalı özelliklerini
 
 - Birden fazla kişi, ücretsiz ve sınırsız (kendisi, eşi, çalışanı). Kişiler arasında tek dokunuşla geçiş.
 - Çalışan tipi: İş Kanunu (4857) veya Devlet Memuru (657).
-- İşe giriş tarihi, doğum tarihi (yaş kuralı için, nedeni ekranda yazar).
+- İşe giriş tarihi. Doğum tarihi sadece işçilerden istenir, çünkü yaş kuralı sadece İş Kanunu'nda vardır. Nedeni ekranda yazar.
 - Aynı işverende önceki hizmet süresi (4857) veya toplam hizmet süresi (657). Taşeron (alt işveren) çalışanı için hizmetin nasıl birleştiği bu alanın açıklamasında anlatılır, kural `docs/mevzuat.md`'de doğrulanmadan otomatik birleştirme yapılmaz.
 - Yer altı işinde çalışıyor mu (4857, ek gün).
 - Sözleşme veya sendika ile kanunun üstünde verilen ek izin günü.

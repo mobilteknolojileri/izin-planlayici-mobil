@@ -2,6 +2,8 @@
 
 Bağımlılık: 07-15 tamamlanmış olmalı.
 
+Durum: tamamlandı. Provider'lar gerçek implementasyonlara bağlandı, fake'ler sadece testlerde `withFakeDependencies` ile kullanılıyor. Dört ana senaryo `test/integration/app_flow_test.dart` içinde bellekteki gerçek veritabanıyla test ediliyor. Analyze temiz, 1039 test geçiyor. Release APK ve AAB derlendi, release APK MuMu'ya kuruldu. Cihazda kurulum, izin ekleme, kalıcı kayıt, bildirim izni, link açma, widget ve bütün verileri silme denendi.
+
 ## Yapılacaklar
 
 1. Fake provider'ları (`lib/data/fakes/`) gerçek implementasyonlarla değiştir. Fake'ler geliştirme için kalır, release build'e girmez.

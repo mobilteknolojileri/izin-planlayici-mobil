@@ -17,8 +17,9 @@ T _$identity<T>(T value) => value;
 mixin _$Profile {
 
  String get id; String get name; EmploymentType get employmentType;/// Hire date (4857) or start of duty (657).
-@DateOnlyConverter() DateTime get employmentStartDate;/// Needed for the age rules of 4857 art. 53.
-@DateOnlyConverter() DateTime get birthDate; WorkSchedule get workSchedule;/// Prior service with the same employer (4857) or counted public
+@DateOnlyConverter() DateTime get employmentStartDate;/// Needed for the age rules of 4857 art. 53. Null for civil servants,
+/// because their leave does not depend on age (657 art. 102).
+@DateOnlyConverter() DateTime? get birthDate; WorkSchedule get workSchedule;/// Prior service with the same employer (4857) or counted public
 /// service (657).
  ServiceDuration get priorService;/// Underground work adds days (4857 art. 53/4).
  bool get isUnderground;/// Extra days granted above the law by contract or union agreement.
@@ -64,7 +65,7 @@ abstract mixin class $ProfileCopyWith<$Res>  {
   factory $ProfileCopyWith(Profile value, $Res Function(Profile) _then) = _$ProfileCopyWithImpl;
 @useResult
 $Res call({
- String id, String name, EmploymentType employmentType,@DateOnlyConverter() DateTime employmentStartDate,@DateOnlyConverter() DateTime birthDate, WorkSchedule workSchedule, ServiceDuration priorService, bool isUnderground, int contractExtraDays, double leaveUsedBeforeTracking, bool isTeacher,@DateOnlyConverter() List<DateTime> administrativeLeaveDays, List<DateRange> absencePeriods
+ String id, String name, EmploymentType employmentType,@DateOnlyConverter() DateTime employmentStartDate,@DateOnlyConverter() DateTime? birthDate, WorkSchedule workSchedule, ServiceDuration priorService, bool isUnderground, int contractExtraDays, double leaveUsedBeforeTracking, bool isTeacher,@DateOnlyConverter() List<DateTime> administrativeLeaveDays, List<DateRange> absencePeriods
 });
 
 
@@ -81,14 +82,14 @@ class _$ProfileCopyWithImpl<$Res>
 
 /// Create a copy of Profile
 /// with the given fields replaced by the non-null parameter values.
-@pragma('vm:prefer-inline') @override $Res call({Object? id = null,Object? name = null,Object? employmentType = null,Object? employmentStartDate = null,Object? birthDate = null,Object? workSchedule = null,Object? priorService = null,Object? isUnderground = null,Object? contractExtraDays = null,Object? leaveUsedBeforeTracking = null,Object? isTeacher = null,Object? administrativeLeaveDays = null,Object? absencePeriods = null,}) {
+@pragma('vm:prefer-inline') @override $Res call({Object? id = null,Object? name = null,Object? employmentType = null,Object? employmentStartDate = null,Object? birthDate = freezed,Object? workSchedule = null,Object? priorService = null,Object? isUnderground = null,Object? contractExtraDays = null,Object? leaveUsedBeforeTracking = null,Object? isTeacher = null,Object? administrativeLeaveDays = null,Object? absencePeriods = null,}) {
   return _then(Profile(
 id: null == id ? _self.id : id // ignore: cast_nullable_to_non_nullable
 as String,name: null == name ? _self.name : name // ignore: cast_nullable_to_non_nullable
 as String,employmentType: null == employmentType ? _self.employmentType : employmentType // ignore: cast_nullable_to_non_nullable
 as EmploymentType,employmentStartDate: null == employmentStartDate ? _self.employmentStartDate : employmentStartDate // ignore: cast_nullable_to_non_nullable
-as DateTime,birthDate: null == birthDate ? _self.birthDate : birthDate // ignore: cast_nullable_to_non_nullable
-as DateTime,workSchedule: null == workSchedule ? _self.workSchedule : workSchedule // ignore: cast_nullable_to_non_nullable
+as DateTime,birthDate: freezed == birthDate ? _self.birthDate : birthDate // ignore: cast_nullable_to_non_nullable
+as DateTime?,workSchedule: null == workSchedule ? _self.workSchedule : workSchedule // ignore: cast_nullable_to_non_nullable
 as WorkSchedule,priorService: null == priorService ? _self.priorService : priorService // ignore: cast_nullable_to_non_nullable
 as ServiceDuration,isUnderground: null == isUnderground ? _self.isUnderground : isUnderground // ignore: cast_nullable_to_non_nullable
 as bool,contractExtraDays: null == contractExtraDays ? _self.contractExtraDays : contractExtraDays // ignore: cast_nullable_to_non_nullable
@@ -199,7 +200,7 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String id,  String name,  EmploymentType employmentType, @DateOnlyConverter()  DateTime employmentStartDate, @DateOnlyConverter()  DateTime birthDate,  WorkSchedule workSchedule,  ServiceDuration priorService,  bool isUnderground,  int contractExtraDays,  double leaveUsedBeforeTracking,  bool isTeacher, @DateOnlyConverter()  List<DateTime> administrativeLeaveDays,  List<DateRange> absencePeriods)?  $default,{required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String id,  String name,  EmploymentType employmentType, @DateOnlyConverter()  DateTime employmentStartDate, @DateOnlyConverter()  DateTime? birthDate,  WorkSchedule workSchedule,  ServiceDuration priorService,  bool isUnderground,  int contractExtraDays,  double leaveUsedBeforeTracking,  bool isTeacher, @DateOnlyConverter()  List<DateTime> administrativeLeaveDays,  List<DateRange> absencePeriods)?  $default,{required TResult orElse(),}) {final _that = this;
 switch (_that) {
 case _Profile() when $default != null:
 return $default(_that.id,_that.name,_that.employmentType,_that.employmentStartDate,_that.birthDate,_that.workSchedule,_that.priorService,_that.isUnderground,_that.contractExtraDays,_that.leaveUsedBeforeTracking,_that.isTeacher,_that.administrativeLeaveDays,_that.absencePeriods);case _:
@@ -220,7 +221,7 @@ return $default(_that.id,_that.name,_that.employmentType,_that.employmentStartDa
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String id,  String name,  EmploymentType employmentType, @DateOnlyConverter()  DateTime employmentStartDate, @DateOnlyConverter()  DateTime birthDate,  WorkSchedule workSchedule,  ServiceDuration priorService,  bool isUnderground,  int contractExtraDays,  double leaveUsedBeforeTracking,  bool isTeacher, @DateOnlyConverter()  List<DateTime> administrativeLeaveDays,  List<DateRange> absencePeriods)  $default,) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String id,  String name,  EmploymentType employmentType, @DateOnlyConverter()  DateTime employmentStartDate, @DateOnlyConverter()  DateTime? birthDate,  WorkSchedule workSchedule,  ServiceDuration priorService,  bool isUnderground,  int contractExtraDays,  double leaveUsedBeforeTracking,  bool isTeacher, @DateOnlyConverter()  List<DateTime> administrativeLeaveDays,  List<DateRange> absencePeriods)  $default,) {final _that = this;
 switch (_that) {
 case _Profile():
 return $default(_that.id,_that.name,_that.employmentType,_that.employmentStartDate,_that.birthDate,_that.workSchedule,_that.priorService,_that.isUnderground,_that.contractExtraDays,_that.leaveUsedBeforeTracking,_that.isTeacher,_that.administrativeLeaveDays,_that.absencePeriods);case _:
@@ -240,7 +241,7 @@ return $default(_that.id,_that.name,_that.employmentType,_that.employmentStartDa
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String id,  String name,  EmploymentType employmentType, @DateOnlyConverter()  DateTime employmentStartDate, @DateOnlyConverter()  DateTime birthDate,  WorkSchedule workSchedule,  ServiceDuration priorService,  bool isUnderground,  int contractExtraDays,  double leaveUsedBeforeTracking,  bool isTeacher, @DateOnlyConverter()  List<DateTime> administrativeLeaveDays,  List<DateRange> absencePeriods)?  $default,) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String id,  String name,  EmploymentType employmentType, @DateOnlyConverter()  DateTime employmentStartDate, @DateOnlyConverter()  DateTime? birthDate,  WorkSchedule workSchedule,  ServiceDuration priorService,  bool isUnderground,  int contractExtraDays,  double leaveUsedBeforeTracking,  bool isTeacher, @DateOnlyConverter()  List<DateTime> administrativeLeaveDays,  List<DateRange> absencePeriods)?  $default,) {final _that = this;
 switch (_that) {
 case _Profile() when $default != null:
 return $default(_that.id,_that.name,_that.employmentType,_that.employmentStartDate,_that.birthDate,_that.workSchedule,_that.priorService,_that.isUnderground,_that.contractExtraDays,_that.leaveUsedBeforeTracking,_that.isTeacher,_that.administrativeLeaveDays,_that.absencePeriods);case _:
@@ -255,7 +256,7 @@ return $default(_that.id,_that.name,_that.employmentType,_that.employmentStartDa
 @JsonSerializable()
 
 class _Profile implements Profile {
-  const _Profile({required this.id, required this.name, required this.employmentType, @DateOnlyConverter() required this.employmentStartDate, @DateOnlyConverter() required this.birthDate, this.workSchedule = const WorkSchedule(), this.priorService = const ServiceDuration(), this.isUnderground = false, this.contractExtraDays = 0, this.leaveUsedBeforeTracking = 0, this.isTeacher = false, @DateOnlyConverter()  List<DateTime> administrativeLeaveDays = const <DateTime>[],  List<DateRange> absencePeriods = const <DateRange>[]}): _administrativeLeaveDays = administrativeLeaveDays,_absencePeriods = absencePeriods;
+  const _Profile({required this.id, required this.name, required this.employmentType, @DateOnlyConverter() required this.employmentStartDate, @DateOnlyConverter() this.birthDate, this.workSchedule = const WorkSchedule(), this.priorService = const ServiceDuration(), this.isUnderground = false, this.contractExtraDays = 0, this.leaveUsedBeforeTracking = 0, this.isTeacher = false, @DateOnlyConverter()  List<DateTime> administrativeLeaveDays = const <DateTime>[],  List<DateRange> absencePeriods = const <DateRange>[]}): _administrativeLeaveDays = administrativeLeaveDays,_absencePeriods = absencePeriods;
   factory _Profile.fromJson(Map<String, dynamic> json) => _$ProfileFromJson(json);
 
 @override final  String id;
@@ -263,8 +264,9 @@ class _Profile implements Profile {
 @override final  EmploymentType employmentType;
 /// Hire date (4857) or start of duty (657).
 @override@DateOnlyConverter() final  DateTime employmentStartDate;
-/// Needed for the age rules of 4857 art. 53.
-@override@DateOnlyConverter() final  DateTime birthDate;
+/// Needed for the age rules of 4857 art. 53. Null for civil servants,
+/// because their leave does not depend on age (657 art. 102).
+@override@DateOnlyConverter() final  DateTime? birthDate;
 @override@JsonKey() final  WorkSchedule workSchedule;
 /// Prior service with the same employer (4857) or counted public
 /// service (657).
@@ -331,7 +333,7 @@ abstract mixin class _$ProfileCopyWith<$Res> implements $ProfileCopyWith<$Res> {
   factory _$ProfileCopyWith(_Profile value, $Res Function(_Profile) _then) = __$ProfileCopyWithImpl;
 @override @useResult
 $Res call({
- String id, String name, EmploymentType employmentType,@DateOnlyConverter() DateTime employmentStartDate,@DateOnlyConverter() DateTime birthDate, WorkSchedule workSchedule, ServiceDuration priorService, bool isUnderground, int contractExtraDays, double leaveUsedBeforeTracking, bool isTeacher,@DateOnlyConverter() List<DateTime> administrativeLeaveDays, List<DateRange> absencePeriods
+ String id, String name, EmploymentType employmentType,@DateOnlyConverter() DateTime employmentStartDate,@DateOnlyConverter() DateTime? birthDate, WorkSchedule workSchedule, ServiceDuration priorService, bool isUnderground, int contractExtraDays, double leaveUsedBeforeTracking, bool isTeacher,@DateOnlyConverter() List<DateTime> administrativeLeaveDays, List<DateRange> absencePeriods
 });
 
 
@@ -348,14 +350,14 @@ class __$ProfileCopyWithImpl<$Res>
 
 /// Create a copy of Profile
 /// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? id = null,Object? name = null,Object? employmentType = null,Object? employmentStartDate = null,Object? birthDate = null,Object? workSchedule = null,Object? priorService = null,Object? isUnderground = null,Object? contractExtraDays = null,Object? leaveUsedBeforeTracking = null,Object? isTeacher = null,Object? administrativeLeaveDays = null,Object? absencePeriods = null,}) {
+@override @pragma('vm:prefer-inline') $Res call({Object? id = null,Object? name = null,Object? employmentType = null,Object? employmentStartDate = null,Object? birthDate = freezed,Object? workSchedule = null,Object? priorService = null,Object? isUnderground = null,Object? contractExtraDays = null,Object? leaveUsedBeforeTracking = null,Object? isTeacher = null,Object? administrativeLeaveDays = null,Object? absencePeriods = null,}) {
   return _then(_Profile(
 id: null == id ? _self.id : id // ignore: cast_nullable_to_non_nullable
 as String,name: null == name ? _self.name : name // ignore: cast_nullable_to_non_nullable
 as String,employmentType: null == employmentType ? _self.employmentType : employmentType // ignore: cast_nullable_to_non_nullable
 as EmploymentType,employmentStartDate: null == employmentStartDate ? _self.employmentStartDate : employmentStartDate // ignore: cast_nullable_to_non_nullable
-as DateTime,birthDate: null == birthDate ? _self.birthDate : birthDate // ignore: cast_nullable_to_non_nullable
-as DateTime,workSchedule: null == workSchedule ? _self.workSchedule : workSchedule // ignore: cast_nullable_to_non_nullable
+as DateTime,birthDate: freezed == birthDate ? _self.birthDate : birthDate // ignore: cast_nullable_to_non_nullable
+as DateTime?,workSchedule: null == workSchedule ? _self.workSchedule : workSchedule // ignore: cast_nullable_to_non_nullable
 as WorkSchedule,priorService: null == priorService ? _self.priorService : priorService // ignore: cast_nullable_to_non_nullable
 as ServiceDuration,isUnderground: null == isUnderground ? _self.isUnderground : isUnderground // ignore: cast_nullable_to_non_nullable
 as bool,contractExtraDays: null == contractExtraDays ? _self.contractExtraDays : contractExtraDays // ignore: cast_nullable_to_non_nullable

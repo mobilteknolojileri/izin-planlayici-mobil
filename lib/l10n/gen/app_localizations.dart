@@ -205,8 +205,14 @@ abstract class AppLocalizations {
   /// No description provided for @aboutDisclaimer.
   ///
   /// In tr, this message translates to:
-  /// **'İzin Planla bilgilendirme amaçlıdır, hukuki tavsiye değildir. Hesaplar mevzuat rehberindeki kaynaklara ve kaynakların son kontrol edildiği 20 Kasım 2026 tarihindeki mevzuata dayanır. Mevzuat ve yargı kararları değişebilir, uygulama hata içerebilir. Kesin bilgi için işverenine, insan kaynaklarına veya bir hukukçuya danış. Uygulama hiçbir garanti verilmeden sunulur. Kullanımından doğan sonuçlardan, yasaların izin verdiği ölçüde, geliştirici sorumlu tutulamaz (GPL-3.0 madde 15 ve 16).'**
+  /// **'İzin Planla bağımsız bir uygulamadır. Resmî bir uygulama değildir, hiçbir kamu kurumuyla bağlantısı yoktur. Bilgilendirme amaçlıdır, hukuki tavsiye değildir. Hesaplar mevzuat rehberindeki kaynaklara ve kaynakların son kontrol edildiği 20 Kasım 2026 tarihindeki mevzuata dayanır. Mevzuat ve yargı kararları değişebilir, uygulama hata içerebilir. Kesin bilgi için işverenine, insan kaynaklarına veya bir hukukçuya danış. Uygulama hiçbir garanti verilmeden sunulur. Kullanımından doğan sonuçlardan, yasaların izin verdiği ölçüde, geliştirici sorumlu tutulamaz (GPL-3.0 madde 15 ve 16).'**
   String get aboutDisclaimer;
+
+  /// Name of the link that opens the published privacy policy in the browser.
+  ///
+  /// In tr, this message translates to:
+  /// **'Gizlilik politikası'**
+  String get aboutPrivacyPolicy;
 
   /// Large title of the bridge tab.
   ///
@@ -1324,7 +1330,7 @@ abstract class AppLocalizations {
   /// Legal disclaimer at the end of the PDF. User-facing variant of the Yasal uyarı section of the root README.md: same claims, but the sentence about docs/mevzuat.md is replaced by the laws the calculations are based on, because a PDF reader cannot open repo files.
   ///
   /// In tr, this message translates to:
-  /// **'İzin Planla bilgilendirme amaçlıdır, hukuki tavsiye değildir. Hesaplar, uygulamanın bu sürümü hazırlanırken yürürlükte olan 4857 sayılı İş Kanunu\'na, 657 sayılı Devlet Memurları Kanunu\'na ve bunlara bağlı yönetmeliklere dayanır. Mevzuat ve yargı kararları değişebilir, uygulama hata içerebilir. Kesin bilgi için işverenine, insan kaynaklarına veya bir hukukçuya danış. Uygulama hiçbir garanti verilmeden sunulur. Kullanımından doğan sonuçlardan, yasaların izin verdiği ölçüde, geliştirici sorumlu tutulamaz (GPL-3.0 madde 15 ve 16).'**
+  /// **'İzin Planla bağımsız bir uygulamadır. Resmî bir uygulama değildir, hiçbir kamu kurumuyla bağlantısı yoktur. Bilgilendirme amaçlıdır, hukuki tavsiye değildir. Hesaplar, uygulamanın bu sürümü hazırlanırken yürürlükte olan 4857 sayılı İş Kanunu\'na, 657 sayılı Devlet Memurları Kanunu\'na ve bunlara bağlı yönetmeliklere dayanır. Mevzuat ve yargı kararları değişebilir, uygulama hata içerebilir. Kesin bilgi için işverenine, insan kaynaklarına veya bir hukukçuya danış. Uygulama hiçbir garanti verilmeden sunulur. Kullanımından doğan sonuçlardan, yasaların izin verdiği ölçüde, geliştirici sorumlu tutulamaz (GPL-3.0 madde 15 ve 16).'**
   String get exportDisclaimer;
 
   /// Profile summary label: person's name.
@@ -2230,7 +2236,7 @@ abstract class AppLocalizations {
   /// No description provided for @guideDisclaimer.
   ///
   /// In tr, this message translates to:
-  /// **'İzin Planla bilgilendirme amaçlıdır, hukuki tavsiye değildir. Hesaplar bu rehberdeki kaynaklara ve kaynakların son kontrol edildiği 20 Kasım 2026 tarihindeki mevzuata dayanır. Mevzuat ve yargı kararları değişebilir, uygulama hata içerebilir. Kesin bilgi için işverenine, insan kaynaklarına veya bir hukukçuya danış. Uygulama hiçbir garanti verilmeden sunulur. Kullanımından doğan sonuçlardan, yasaların izin verdiği ölçüde, geliştirici sorumlu tutulamaz (GPL-3.0 madde 15 ve 16).'**
+  /// **'İzin Planla bağımsız bir uygulamadır. Resmî bir uygulama değildir, hiçbir kamu kurumuyla bağlantısı yoktur. Bilgilendirme amaçlıdır, hukuki tavsiye değildir. Hesaplar bu rehberdeki kaynaklara ve kaynakların son kontrol edildiği 20 Kasım 2026 tarihindeki mevzuata dayanır. Mevzuat ve yargı kararları değişebilir, uygulama hata içerebilir. Kesin bilgi için işverenine, insan kaynaklarına veya bir hukukçuya danış. Uygulama hiçbir garanti verilmeden sunulur. Kullanımından doğan sonuçlardan, yasaların izin verdiği ölçüde, geliştirici sorumlu tutulamaz (GPL-3.0 madde 15 ve 16).'**
   String get guideDisclaimer;
 
   /// No description provided for @guideLoading.

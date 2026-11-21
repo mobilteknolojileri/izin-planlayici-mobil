@@ -98,6 +98,19 @@ void main() {
     expect(opener.opened, [AboutLink.sourceCode.url]);
   });
 
+  testWidgets('the privacy policy opens in the browser', (tester) async {
+    final opener = RecordingLinkOpener();
+    await pumpScreen(tester, linkOpener: opener);
+    await tester.tap(find.byTooltip('Gizlilik politikası bağlantısını aç'));
+    await tester.pumpAndSettle();
+    expect(opener.opened, [AboutLink.privacyPolicy.url]);
+  });
+
+  testWidgets('the disclaimer says the app is not official', (tester) async {
+    await pumpScreen(tester);
+    expect(find.textContaining('Resmî bir uygulama değildir'), findsOneWidget);
+  });
+
   testWidgets('without a browser the source code link is copied', (
     tester,
   ) async {

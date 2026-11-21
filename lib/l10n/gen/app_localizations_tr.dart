@@ -72,7 +72,10 @@ class AppLocalizationsTr extends AppLocalizations {
 
   @override
   String get aboutDisclaimer =>
-      'İzin Planla bilgilendirme amaçlıdır, hukuki tavsiye değildir. Hesaplar mevzuat rehberindeki kaynaklara ve kaynakların son kontrol edildiği 20 Kasım 2026 tarihindeki mevzuata dayanır. Mevzuat ve yargı kararları değişebilir, uygulama hata içerebilir. Kesin bilgi için işverenine, insan kaynaklarına veya bir hukukçuya danış. Uygulama hiçbir garanti verilmeden sunulur. Kullanımından doğan sonuçlardan, yasaların izin verdiği ölçüde, geliştirici sorumlu tutulamaz (GPL-3.0 madde 15 ve 16).';
+      'İzin Planla bağımsız bir uygulamadır. Resmî bir uygulama değildir, hiçbir kamu kurumuyla bağlantısı yoktur. Bilgilendirme amaçlıdır, hukuki tavsiye değildir. Hesaplar mevzuat rehberindeki kaynaklara ve kaynakların son kontrol edildiği 20 Kasım 2026 tarihindeki mevzuata dayanır. Mevzuat ve yargı kararları değişebilir, uygulama hata içerebilir. Kesin bilgi için işverenine, insan kaynaklarına veya bir hukukçuya danış. Uygulama hiçbir garanti verilmeden sunulur. Kullanımından doğan sonuçlardan, yasaların izin verdiği ölçüde, geliştirici sorumlu tutulamaz (GPL-3.0 madde 15 ve 16).';
+
+  @override
+  String get aboutPrivacyPolicy => 'Gizlilik politikası';
 
   @override
   String get bridgeTitle => 'Köprü';
@@ -819,7 +822,7 @@ class AppLocalizationsTr extends AppLocalizations {
 
   @override
   String get exportDisclaimer =>
-      'İzin Planla bilgilendirme amaçlıdır, hukuki tavsiye değildir. Hesaplar, uygulamanın bu sürümü hazırlanırken yürürlükte olan 4857 sayılı İş Kanunu\'na, 657 sayılı Devlet Memurları Kanunu\'na ve bunlara bağlı yönetmeliklere dayanır. Mevzuat ve yargı kararları değişebilir, uygulama hata içerebilir. Kesin bilgi için işverenine, insan kaynaklarına veya bir hukukçuya danış. Uygulama hiçbir garanti verilmeden sunulur. Kullanımından doğan sonuçlardan, yasaların izin verdiği ölçüde, geliştirici sorumlu tutulamaz (GPL-3.0 madde 15 ve 16).';
+      'İzin Planla bağımsız bir uygulamadır. Resmî bir uygulama değildir, hiçbir kamu kurumuyla bağlantısı yoktur. Bilgilendirme amaçlıdır, hukuki tavsiye değildir. Hesaplar, uygulamanın bu sürümü hazırlanırken yürürlükte olan 4857 sayılı İş Kanunu\'na, 657 sayılı Devlet Memurları Kanunu\'na ve bunlara bağlı yönetmeliklere dayanır. Mevzuat ve yargı kararları değişebilir, uygulama hata içerebilir. Kesin bilgi için işverenine, insan kaynaklarına veya bir hukukçuya danış. Uygulama hiçbir garanti verilmeden sunulur. Kullanımından doğan sonuçlardan, yasaların izin verdiği ölçüde, geliştirici sorumlu tutulamaz (GPL-3.0 madde 15 ve 16).';
 
   @override
   String get exportFieldName => 'Ad';
@@ -1333,7 +1336,7 @@ class AppLocalizationsTr extends AppLocalizations {
 
   @override
   String get guideDisclaimer =>
-      'İzin Planla bilgilendirme amaçlıdır, hukuki tavsiye değildir. Hesaplar bu rehberdeki kaynaklara ve kaynakların son kontrol edildiği 20 Kasım 2026 tarihindeki mevzuata dayanır. Mevzuat ve yargı kararları değişebilir, uygulama hata içerebilir. Kesin bilgi için işverenine, insan kaynaklarına veya bir hukukçuya danış. Uygulama hiçbir garanti verilmeden sunulur. Kullanımından doğan sonuçlardan, yasaların izin verdiği ölçüde, geliştirici sorumlu tutulamaz (GPL-3.0 madde 15 ve 16).';
+      'İzin Planla bağımsız bir uygulamadır. Resmî bir uygulama değildir, hiçbir kamu kurumuyla bağlantısı yoktur. Bilgilendirme amaçlıdır, hukuki tavsiye değildir. Hesaplar bu rehberdeki kaynaklara ve kaynakların son kontrol edildiği 20 Kasım 2026 tarihindeki mevzuata dayanır. Mevzuat ve yargı kararları değişebilir, uygulama hata içerebilir. Kesin bilgi için işverenine, insan kaynaklarına veya bir hukukçuya danış. Uygulama hiçbir garanti verilmeden sunulur. Kullanımından doğan sonuçlardan, yasaların izin verdiği ölçüde, geliştirici sorumlu tutulamaz (GPL-3.0 madde 15 ve 16).';
 
   @override
   String get guideLoading => 'Rehber yükleniyor';

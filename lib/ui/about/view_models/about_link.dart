@@ -20,6 +20,11 @@ enum AboutLink {
     'https://www.mevzuat.gov.tr/mevzuat?MevzuatNo=2429&MevzuatTur=1&MevzuatTertip=5',
   ),
 
+  /// The privacy policy, published with GitHub Pages.
+  privacyPolicy(
+    'https://mobilteknolojileri.github.io/izin-planlayici-mobil/store/privacy-policy.html',
+  ),
+
   /// The public source code repository.
   sourceCode('https://github.com/mobilteknolojileri/izin-planlayici-mobil');
 

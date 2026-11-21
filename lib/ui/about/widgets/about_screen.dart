@@ -67,6 +67,10 @@ class AboutScreen extends ConsumerWidget {
               l10n.aboutPrivacyTitle,
             ),
             summary: Text(l10n.aboutPrivacyBody, style: text.bodyLarge),
+            child: _LinkRow(
+              name: l10n.aboutPrivacyPolicy,
+              link: AboutLink.privacyPolicy,
+            ),
           ),
           const SizedBox(height: AppSpacing.smd),
           InsetCard(

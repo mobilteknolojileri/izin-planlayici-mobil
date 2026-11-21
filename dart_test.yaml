@@ -1,0 +1,4 @@
+# Tags used by the tests. alchemist marks every golden test with `golden`,
+# so `flutter test --exclude-tags golden` skips them.
+tags:
+  golden:

@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:izin_planla/data/services/home_widget/plugin_home_widget_gateway.dart';
@@ -36,6 +37,15 @@ void main() {
   );
 
   const gateway = PluginHomeWidgetGateway();
+
+  /// Collects what the gateway logs in this test instead of printing it.
+  List<String?> captureLogs() {
+    final logs = <String?>[];
+    final original = debugPrint;
+    debugPrint = (message, {wrapWidth}) => logs.add(message);
+    addTearDown(() => debugPrint = original);
+    return logs;
+  }
 
   test('save stores the string under the key', () async {
     await gateway.save('leave_widget_data', '{}');
@@ -76,15 +86,19 @@ void main() {
   });
 
   test('platform errors do not reach the caller', () async {
+    final logs = captureLogs();
     handle((call) async => throw PlatformException(code: '-3'));
 
     await expectLater(gateway.update(), completes);
+    expect(logs, [startsWith('Home widget call failed')]);
   });
 
   test('a missing plugin does not reach the caller', () async {
+    final logs = captureLogs();
     TestDefaultBinaryMessengerBinding.instance.defaultBinaryMessenger
         .setMockMethodCallHandler(_channel, null);
 
     await expectLater(gateway.save('leave_widget_data', '{}'), completes);
+    expect(logs, [startsWith('Home widget unavailable')]);
   });
 }

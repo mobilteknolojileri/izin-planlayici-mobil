@@ -42,7 +42,7 @@ Köprü planlayıcı
 • Beğendiğin öneriyi tek dokunuşla planlanan izin olarak eklersin.
 
 Resmî tatiller 2027 ve 2028
-• 2026, 2027 ve 2028 resmî tatilleri, dinî bayramlar ve arifeler uygulamanın içinde gelir, internet gerekmez.
+• Uygulamanın içinde 2026, 2027 ve 2028 resmî tatilleri, dinî bayramlar ve arifeler gelir, internet gerekmez.
 • Sıradaki resmî tatile kalan günü uygulamada ve ana ekran widget'ında görürsün.
 
 Takvim ve istatistik

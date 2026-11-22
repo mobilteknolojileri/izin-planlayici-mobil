@@ -45,11 +45,12 @@ class DefaultBridgePlanner implements BridgePlanner {
     required List<Holiday> holidays,
     double? budget,
     int maxLeaveDays = 5,
+    DateTime? after,
   }) {
     final limit = budget == null
         ? maxLeaveDays.toDouble()
         : math.min(budget, maxLeaveDays.toDouble());
-    final candidates = _candidates(year, profile, holidays, limit)
+    final candidates = _candidates(year, profile, holidays, limit, after)
       ..sort((a, b) => compareBridgeSuggestions(a.suggestion, b.suggestion));
 
     final groups = <String>{};
@@ -74,18 +75,21 @@ class DefaultBridgePlanner implements BridgePlanner {
     required Profile profile,
     required List<Holiday> holidays,
     required double budget,
+    DateTime? after,
   }) => const BridgePlanOptimizer().solve([
-    for (final candidate in _candidates(year, profile, holidays, budget))
+    for (final candidate in _candidates(year, profile, holidays, budget, after))
       candidate.suggestion,
   ], budget: budget);
 
   /// Every leave range in [year] that costs at most [limit] days and makes
-  /// a bridge, in date order.
+  /// a bridge, in date order. With [after], breaks that start on or before
+  /// that day are left out.
   List<_Candidate> _candidates(
     int year,
     Profile profile,
     List<Holiday> holidays,
     double limit,
+    DateTime? after,
   ) {
     if (limit.isNaN || limit < 0) return [];
     if (profile.employmentType == EmploymentType.civilServant &&
@@ -107,10 +111,13 @@ class DefaultBridgePlanner implements BridgePlanner {
           holiday,
     ];
 
+    final afterDay = after == null ? null : BridgeCalendar.dayNumber(after);
+
     final result = <_Candidate>[];
     for (var start = first; start <= last; start++) {
       if (!calendar.kindOf(start).needsLeave) continue;
       final breakStart = calendar.breakStartFor(start);
+      if (afterDay != null && breakStart <= afterDay) continue;
       // A working day that is not a holiday costs a full day under 4857
       // (1.9) and 657 (2.5), so this count is a lower bound of the cost.
       var fullDays = 0;

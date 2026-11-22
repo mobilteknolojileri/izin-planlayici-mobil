@@ -164,11 +164,13 @@ class BridgeViewModel extends Notifier<BridgeState> {
       );
     }
     final planner = ref.read(bridgePlannerProvider);
+    // Breaks that already started cannot be planned any more.
     final plan = planner.optimalPlan(
       year: year,
       profile: profile,
       holidays: data.holidays,
       budget: budget.toDouble(),
+      after: data.today,
     );
     final suggestions = [
       ...planner.suggestions(
@@ -176,6 +178,7 @@ class BridgeViewModel extends Notifier<BridgeState> {
         profile: profile,
         holidays: data.holidays,
         budget: budget.toDouble(),
+        after: data.today,
       ),
     ]..sort(_comparator(ui.sort));
     final holidays = {

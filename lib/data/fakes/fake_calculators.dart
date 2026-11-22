@@ -146,6 +146,7 @@ class FakeBridgePlanner implements BridgePlanner {
     required List<Holiday> holidays,
     double? budget,
     int maxLeaveDays = 5,
+    DateTime? after,
   }) => [_sample];
 
   @override
@@ -154,5 +155,6 @@ class FakeBridgePlanner implements BridgePlanner {
     required Profile profile,
     required List<Holiday> holidays,
     required double budget,
+    DateTime? after,
   }) => [_sample];
 }

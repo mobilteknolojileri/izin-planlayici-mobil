@@ -185,6 +185,46 @@ void main() {
       expect(find(suggest(2027), day(2026, 12, 31), day(2027, 1, 3)), isNull);
     });
 
+    test('after leaves out breaks that already started', () {
+      final today = day(2026, 11, 22);
+      final list = planner.suggestions(
+        year: 2026,
+        profile: laborProfile(),
+        holidays: holidays,
+        after: today,
+      );
+      expect(list.every((s) => s.vacation.start.isAfter(today)), isTrue);
+      expect(find(list, day(2026, 12, 31), day(2027, 1, 3)), isNotNull);
+      expect(
+        find(suggest(2026), day(2026, 5, 26), day(2026, 5, 31)),
+        isNotNull,
+      );
+      expect(find(list, day(2026, 5, 26), day(2026, 5, 31)), isNull);
+    });
+
+    test('after a break start drops that break', () {
+      final list = planner.suggestions(
+        year: 2026,
+        profile: laborProfile(),
+        holidays: holidays,
+        after: day(2026, 12, 31),
+      );
+      expect(find(list, day(2026, 12, 31), day(2027, 1, 3)), isNull);
+    });
+
+    test('the plan spends the budget only after the given day', () {
+      final today = day(2026, 11, 22);
+      final list = planner.optimalPlan(
+        year: 2026,
+        profile: laborProfile(),
+        holidays: holidays,
+        budget: 20,
+        after: today,
+      );
+      expect(list, isNotEmpty);
+      expect(list.every((s) => s.vacation.start.isAfter(today)), isTrue);
+    });
+
     test('holidays of other years give nothing', () {
       final only2026 = [
         for (final h in holidays)

@@ -18,6 +18,10 @@ import 'package:material_ui/material_ui.dart';
 import '../../../config/fake_dependencies.dart';
 import '../../core/golden_harness.dart' show AndroidNonlinear200;
 
+/// The `after` day of every planner call, so tests can see the screen
+/// asks for future breaks only.
+final _afterSeen = <DateTime?>[];
+
 /// Planner with two suggestions in 2026, or none.
 class _Planner implements BridgePlanner {
   const new({this.empty = false});
@@ -53,7 +57,11 @@ class _Planner implements BridgePlanner {
     required List<Holiday> holidays,
     double? budget,
     int maxLeaveDays = 5,
-  }) => empty ? const [] : [_long, _short];
+    DateTime? after,
+  }) {
+    _afterSeen.add(after);
+    return empty ? const [] : [_long, _short];
+  }
 
   @override
   List<BridgeSuggestion> optimalPlan({
@@ -61,7 +69,11 @@ class _Planner implements BridgePlanner {
     required Profile profile,
     required List<Holiday> holidays,
     required double budget,
-  }) => empty ? const [] : [_short];
+    DateTime? after,
+  }) {
+    _afterSeen.add(after);
+    return empty ? const [] : [_short];
+  }
 }
 
 /// Leave storage that remembers what the screen saved and deleted.
@@ -172,6 +184,13 @@ void main() {
       findsWidgets,
     );
     expect(find.text('2027'), findsOneWidget);
+  });
+
+  testWidgets('asks the planner for breaks after today only', (tester) async {
+    _afterSeen.clear();
+    await pumpScreen(tester);
+    expect(_afterSeen, isNotEmpty);
+    expect(_afterSeen.toSet(), {DateTime.utc(2026, 10, 20)});
   });
 
   testWidgets('sorting by date puts the earlier break first', (tester) async {

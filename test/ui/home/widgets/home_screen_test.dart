@@ -41,6 +41,7 @@ class _Planner implements BridgePlanner {
     required List<Holiday> holidays,
     double? budget,
     int maxLeaveDays = 5,
+    DateTime? after,
   }) => year == 2027 ? [suggestion] : const [];
 
   @override
@@ -49,6 +50,7 @@ class _Planner implements BridgePlanner {
     required Profile profile,
     required List<Holiday> holidays,
     required double budget,
+    DateTime? after,
   }) => const [];
 }
 

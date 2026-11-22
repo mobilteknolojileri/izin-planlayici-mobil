@@ -77,6 +77,8 @@ final _dataProvider = FutureProvider<CalendarData>((ref) async {
           profile: active,
           holidays: holidays,
           budget: math.max(0, balance.remaining),
+          // A past day is never a suggestion.
+          after: today,
         ),
       );
     }

@@ -54,6 +54,7 @@ class StubCalculators
     required List<Holiday> holidays,
     double? budget,
     int maxLeaveDays = 5,
+    DateTime? after,
   }) {
     bridgeBudgets.add(budget);
     return bridges[year] ?? const [];
@@ -65,5 +66,6 @@ class StubCalculators
     required Profile profile,
     required List<Holiday> holidays,
     required double budget,
+    DateTime? after,
   }) => const [];
 }

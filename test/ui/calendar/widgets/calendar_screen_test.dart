@@ -2,6 +2,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:go_router/go_router.dart';
 import 'package:izin_planla/config/dependencies.dart';
+import 'package:izin_planla/data/fakes/fake_calculators.dart';
 import 'package:izin_planla/data/fakes/fake_leave_repository.dart';
 import 'package:izin_planla/data/fakes/fake_profile_repository.dart';
 import 'package:izin_planla/data/fakes/fake_settings_repository.dart';
@@ -17,12 +18,36 @@ import 'package:material_ui/material_ui.dart';
 import '../../../config/fake_dependencies.dart';
 import '../../core/golden_harness.dart' show AndroidNonlinear200;
 
+/// Sample planner that remembers the `after` day of every plan request.
+class _Planner extends FakeBridgePlanner {
+  final after = <DateTime?>[];
+
+  @override
+  List<BridgeSuggestion> optimalPlan({
+    required int year,
+    required Profile profile,
+    required List<Holiday> holidays,
+    required double budget,
+    DateTime? after,
+  }) {
+    this.after.add(after);
+    return super.optimalPlan(
+      year: year,
+      profile: profile,
+      holidays: holidays,
+      budget: budget,
+      after: after,
+    );
+  }
+}
+
 void main() {
   final today = DateTime.utc(2026, 10, 20);
 
   Future<List<String>> pumpScreen(
     WidgetTester tester, {
     bool empty = false,
+    _Planner? planner,
     bool dark = false,
     TextScaler textScaler = TextScaler.noScaling,
     double width = 360,
@@ -84,6 +109,7 @@ void main() {
           profileRepositoryProvider.overrideWithValue(profiles),
           leaveRepositoryProvider.overrideWithValue(leaves),
           settingsRepositoryProvider.overrideWithValue(settings),
+          if (planner != null) bridgePlannerProvider.overrideWithValue(planner),
         ]),
         child: MaterialApp.router(
           theme: dark ? AppTheme.dark : AppTheme.light,
@@ -107,6 +133,13 @@ void main() {
     await tester.pumpAndSettle();
     return pushed;
   }
+
+  testWidgets('suggests only days after today', (tester) async {
+    final planner = _Planner();
+    await pumpScreen(tester, planner: planner);
+    expect(planner.after, isNotEmpty);
+    expect(planner.after.toSet(), {today});
+  });
 
   testWidgets('month view marks holidays, eves, leave and bridges', (
     tester,

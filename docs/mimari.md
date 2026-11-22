@@ -103,7 +103,7 @@ tools/                          # proje script'leri (mumu.sh, merge_arb.dart, ch
 
 ## Kalite kapıları
 
-- `.githooks/pre-commit`: format, analyze, test, gizli dosya ve büyük dosya kontrolü.
+- `.githooks/pre-commit`: gizli dosya ve büyük dosya kontrolü, kod üretimi ve ARB güncelliği, format, analyze, test.
 - `.githooks/commit-msg`: tek satır Conventional Commits (English, en fazla 72 karakter, tipler: feat, fix, docs, test, refactor, perf, build, ci, chore, revert). Body, footer, `Co-authored-by` ve yapay zekâ imzası reddedilir.
 - Kontroller `tools/checks/` altındaki script'lerdedir. Hook'lar ve CI aynı script'leri çağırır, böylece `--no-verify` ile atlanan kural CI'da yakalanır.
 - CI: format, `flutter analyze --fatal-infos`, kod üretimi ve ARB güncelliği, `flutter test`, debug APK build, commit mesajı ve dosya kuralları.

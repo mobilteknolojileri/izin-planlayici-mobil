@@ -52,8 +52,8 @@ Paralel task'ların birbirini beklemeden çalışabilmesi için projeyi, ortak m
     - `commit_message.sh`: tek satır, `^(feat|fix|docs|test|refactor|perf|build|ci|chore|revert)(\([a-z0-9_-]+\))?: .+`, en fazla 72 karakter. İkinci satır varsa, `Co-authored-by` veya yapay zekâ imzası ("Generated with", "Claude", "Copilot" vb.) geçerse reddeder.
     - `forbidden_files.sh`: `key.properties`, `*.jks`, `*.keystore`, `.env*`, `local.properties`, `*.apk`, `*.aab` ve 5 MB üstü dosyaları reddeder.
     - `quality.sh`: `dart format --set-exit-if-changed`, `flutter analyze --fatal-infos`, `flutter test`.
-    - `generated_fresh.sh`: `build_runner` ve `merge_arb.dart` yeniden çalışınca `git diff --exit-code`.
-19. `.githooks/pre-commit` (`forbidden_files.sh` + `quality.sh`) ve `.githooks/commit-msg` (`commit_message.sh`).
+    - `generated_fresh.sh`: `build_runner` ve `merge_arb.dart` yeniden çalıştıktan sonra `lib` altında unstaged veya untracked dosya kalırsa reddeder.
+19. `.githooks/pre-commit` (`forbidden_files.sh` + `generated_fresh.sh` + `quality.sh`) ve `.githooks/commit-msg` (`commit_message.sh`).
 20. `.github/workflows/ci.yml`: Flutter 3.50.1 sabit, push ve pull request'te tüm `tools/checks/` script'leri, `flutter build apk --debug`. Commit mesajı kontrolü push'taki tüm commit'lere uygulanır.
 21. Açık kaynak dosyaları: `LICENSE` (GPL-3.0 tam metni), kısa `README.md` (Türkçe, altında kısa English özet, lisans, gizlilik ilkesi, derleme adımları), `CONTRIBUTING.md` (hook kurulumu, commit kuralları, klasör yapısı, `docs/` yönlendirmesi).
 22. Git komutlarını kullanıcı çalıştırır. Task sonunda tek PowerShell bloğu verilir: `git init -b main`, `git config core.hooksPath .githooks`, ilk commit, `gh repo create` ile public repo ve push.

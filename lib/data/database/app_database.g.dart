@@ -511,7 +511,7 @@ class ProfileRow extends DataClass implements Insertable<ProfileRow> {
   /// Hire date (4857) or start of duty (657).
   final DateTime employmentStartDate;
 
-  /// Birth date for the age rules.
+  /// Birth date for the age rules of 4857, null for civil servants.
   final DateTime? birthDate;
 
   /// Working weekdays, `WorkSchedule.workDays`.

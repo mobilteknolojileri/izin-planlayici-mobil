@@ -8,6 +8,8 @@ import 'package:izin_planla/data/fakes/fake_settings_repository.dart';
 import 'package:izin_planla/data/fakes/sample_data.dart';
 import 'package:izin_planla/data/repositories/backup_codec.dart';
 import 'package:izin_planla/data/repositories/backup_exception.dart';
+import 'package:izin_planla/data/services/export/export_failure.dart';
+import 'package:izin_planla/data/services/export/export_failure_reason.dart';
 import 'package:izin_planla/data/services/notifications/notification_service.dart';
 import 'package:izin_planla/domain/models/models.dart';
 import 'package:izin_planla/l10n/gen/app_localizations.dart';
@@ -62,8 +64,13 @@ class _Codec implements BackupCodec {
 }
 
 class _Export extends FakeExportService {
+  new({this.pick = const Result.ok('{}')});
+
+  /// What picking a backup file gives.
+  final Result<String?> pick;
+
   @override
-  Future<Result<String?>> pickBackupFile() async => const Result.ok('{}');
+  Future<Result<String?>> pickBackupFile() async => pick;
 }
 
 void main() {
@@ -73,6 +80,7 @@ void main() {
     bool noProfile = false,
     bool granted = true,
     _Codec? codec,
+    Result<String?> pick = const Result.ok('{}'),
     bool dark = false,
     TextScaler textScaler = TextScaler.noScaling,
     double width = 360,
@@ -108,7 +116,7 @@ void main() {
             _Notifications(granted: granted),
           ),
           backupCodecProvider.overrideWithValue(codec ?? _Codec()),
-          exportServiceProvider.overrideWithValue(_Export()),
+          exportServiceProvider.overrideWithValue(_Export(pick: pick)),
         ]),
         child: MaterialApp.router(
           theme: dark ? AppTheme.dark : AppTheme.light,
@@ -214,6 +222,29 @@ void main() {
     expect(codec.restored, ['{}']);
     expect(find.textContaining('daha yeni bir sürümüyle'), findsOneWidget);
   });
+
+  for (final (reason, text) in [
+    (ExportFailureReason.checksumMismatch, 'geçerli bir İzin Planla yedeği'),
+    (ExportFailureReason.notBackup, 'geçerli bir İzin Planla yedeği'),
+    (ExportFailureReason.newerVersion, 'daha yeni bir sürümüyle'),
+    (ExportFailureReason.pickFailed, 'İşlem tamamlanamadı'),
+  ]) {
+    testWidgets('a picked file with ${reason.name} says why at once', (
+      tester,
+    ) async {
+      final codec = _Codec();
+      await pumpScreen(
+        tester,
+        codec: codec,
+        pick: Result.error(ExportFailure(reason)),
+      );
+      await tester.tap(find.text('Yedekten geri yükle'));
+      await tester.pumpAndSettle();
+      expect(find.text('Yedek geri yüklensin mi?'), findsNothing);
+      expect(find.textContaining(text), findsOneWidget);
+      expect(codec.restored, isEmpty);
+    });
+  }
 
   testWidgets('an invalid backup is refused with its own text', (tester) async {
     final codec = _Codec(

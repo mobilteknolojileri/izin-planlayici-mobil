@@ -1,6 +1,8 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:izin_planla/config/dependencies.dart';
 import 'package:izin_planla/data/repositories/backup_exception.dart';
+import 'package:izin_planla/data/services/export/export_failure.dart';
+import 'package:izin_planla/data/services/export/export_failure_reason.dart';
 import 'package:izin_planla/data/services/export/export_file.dart';
 import 'package:izin_planla/data/services/export/export_format.dart';
 import 'package:izin_planla/domain/models/models.dart';
@@ -162,6 +164,21 @@ class SettingsViewModel extends Notifier<SettingsState> {
   /// user cancels, or an error.
   Future<Result<String?>> pickBackup() =>
       ref.read(exportServiceProvider).pickBackupFile();
+
+  /// Why the file behind a [pickBackup] [error] cannot be restored. A damaged
+  /// or foreign file is invalid, because trying again does not help.
+  SettingsRestoreFailure pickFailure(Object error) => switch (error) {
+    ExportFailure(reason: ExportFailureReason.newerVersion) =>
+      SettingsRestoreFailure.newer,
+    ExportFailure(
+      reason: ExportFailureReason.notBackup ||
+          ExportFailureReason.invalidBackup ||
+          ExportFailureReason.checksumMismatch ||
+          ExportFailureReason.tooLarge,
+    ) =>
+      SettingsRestoreFailure.invalid,
+    _ => SettingsRestoreFailure.other,
+  };
 
   /// Replaces all data with the backup [json]. Returns null on success,
   /// otherwise why it failed. The data stays as it was on failure.

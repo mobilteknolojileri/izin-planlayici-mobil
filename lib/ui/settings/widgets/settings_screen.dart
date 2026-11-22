@@ -439,8 +439,11 @@ class _DataCard extends StatelessWidget {
         json = value;
       case Ok():
         return;
-      case Err():
-        _showMessage(context, l10n.settingsFailed);
+      case Err(:final error):
+        _showMessage(
+          context,
+          _restoreMessage(l10n, viewModel.pickFailure(error)),
+        );
         return;
     }
     final confirmed = await _confirm(
@@ -452,13 +455,18 @@ class _DataCard extends StatelessWidget {
     if (!confirmed || !context.mounted) return;
     final failure = await viewModel.restore(json);
     if (!context.mounted) return;
-    _showMessage(context, switch (failure) {
-      null => l10n.settingsRestoreDone,
-      SettingsRestoreFailure.newer => l10n.settingsRestoreNewer,
-      SettingsRestoreFailure.invalid => l10n.settingsRestoreInvalid,
-      SettingsRestoreFailure.other => l10n.settingsFailed,
-    });
+    _showMessage(context, _restoreMessage(l10n, failure));
   }
+
+  static String _restoreMessage(
+    AppLocalizations l10n,
+    SettingsRestoreFailure? failure,
+  ) => switch (failure) {
+    null => l10n.settingsRestoreDone,
+    SettingsRestoreFailure.newer => l10n.settingsRestoreNewer,
+    SettingsRestoreFailure.invalid => l10n.settingsRestoreInvalid,
+    SettingsRestoreFailure.other => l10n.settingsFailed,
+  };
 
   Future<void> _export(BuildContext context) async {
     final l10n = AppLocalizations.of(context);

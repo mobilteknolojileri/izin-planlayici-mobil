@@ -2,7 +2,7 @@ name: izin_planla
 description: "Türkiye'deki çalışanlar için yıllık izin hesaplama, izin takibi ve köprü tatil planlama."
 publish_to: 'none'
 
-version: 1.0.0+3
+version: 1.0.0+4
 
 environment:
   sdk: ^3.14.0

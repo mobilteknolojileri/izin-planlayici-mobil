@@ -2,7 +2,7 @@
 
 Bağımlılık: 16.
 
-Durum: başladı. Debug APK'da kurulum, hak ediş, izin ekleme, kalıcı kayıt, beş sekme, bildirim izni verme ve reddetme, link açma ve widget denendi. Rakip senaryoları, ekran görüntüleri, büyük yazı, ekran döndürme, uçak modu, CSV, PDF, yedek ve geri yükleme kaldı.
+Durum: tamamlandı. Kontrol listesinin hepsi release APK `1.0.0+4` ile geçti, sonuçlar ve düzeltilen iki hata `docs/test-raporu.md` içinde.
 
 ## Yapılacaklar
 

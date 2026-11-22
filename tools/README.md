@@ -24,6 +24,10 @@ Git Bash'te `source tools/mumu.sh` ile yüklenir. Fonksiyonlar: `mumu_start`, `u
 - `aapt2` için `build-tools` altındaki tam kurulu sürüm kullanılır, yarım kalmış klasörde `aapt2.exe` olmaz.
 - WebView tabanlı uygulamaların metinleri de `ui` çıktısında görünür. Ekran görüntüsü okumak yerine önce `ui` kullanmak çok daha ucuzdur.
 - Sistem tarih seçicide yıl başlığına dokununca yıl listesi açılır. Eski yıllar için listeyi yukarıdan aşağıya kaydırmak gerekir.
+- adb, MuMu'ya emülatörün Wi-Fi'si üzerinden bağlanır. Wi-Fi ve uçak modu adb ile kapatılmaz, çünkü adb kopar ve sonraki komut çalışmaz. Bu komutlar `MuMuManager.exe sh -v 1 -c "<komut>"` ile verilir.
+- Bilgisayar ağ değiştirince MuMu eski DNS sunucusunda kalır ve sayfalar boş açılır. Wi-Fi `MuMuManager.exe sh` ile kapatılıp açılır, sonra adb yeniden bağlanır.
+- Bilgisayar uykudan çıkınca MuMu'nun saati geride kalabilir ve Play "Authentication is required" der. `adb shell cmd network_time_update_service force_refresh` saati düzeltir.
+- Windows Defender'ın denetimli klasör erişimi açıkken MuMu, `Documents\MuMuSharedFolder` altına bağlı klasörlere (Download, Pictures) yazamaz. Dosya kaydetme testinde dosya seçicide cihaz hafızası ve Documents klasörü seçilir.
 
 ### Rakip uygulamalarla çalışırken
 

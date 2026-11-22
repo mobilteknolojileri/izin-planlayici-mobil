@@ -2,7 +2,7 @@
 
 Bağımlılık: 02, 06 (renk paleti). Paralel çalışır. Yazma alanı: `assets/branding/`, `store/`, `android/app/src/main/res/mipmap-*`, `flutter_native_splash`'in ürettiği açılış ekranı dosyaları.
 
-Durum: tamamlandı, cihaz kontrolü bekliyor. İkon, themed ikon, açılış ekranı ve feature graphic `assets/branding/tool/build_android.sh` ile üretiliyor, metinler `store/` altında ve `store/tool/check_store.dart` kontrolünden geçiyor. README'deki store adı 32 karakter olduğu için 30 karakterlik ad önerildi, ekran görüntüleri koordinatöre bırakıldı.
+Durum: tamamlandı. İkon, tema ikonu, açılış ekranı ve feature graphic `assets/branding/tool/build_android.sh` ile üretiliyor, metinler `store/` altında ve `store/tool/check_store.dart` kontrolünden geçiyor. Açılış ekranı açık ve koyu modda MuMu'da doğru görünüyor. Tema ikonu APK'da doğru katmanda, MuMu'nun başlatıcısı tema ikonunu desteklemediği için cihazda gösterilemedi. Ekran görüntüleri `store/ekran-goruntuleri/` altında.
 
 ## Yapılacaklar
 

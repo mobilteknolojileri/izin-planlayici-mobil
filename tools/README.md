@@ -27,6 +27,7 @@ Git Bash'te `source tools/mumu.sh` ile yüklenir. Fonksiyonlar: `mumu_start`, `u
 - adb, MuMu'ya emülatörün Wi-Fi'si üzerinden bağlanır. Wi-Fi ve uçak modu adb ile kapatılmaz, çünkü adb kopar ve sonraki komut çalışmaz. Bu komutlar `MuMuManager.exe sh -v 1 -c "<komut>"` ile verilir.
 - Bilgisayar ağ değiştirince MuMu eski DNS sunucusunda kalır ve sayfalar boş açılır. Wi-Fi `MuMuManager.exe sh` ile kapatılıp açılır, sonra adb yeniden bağlanır.
 - Bilgisayar uykudan çıkınca MuMu'nun saati geride kalabilir ve Play "Authentication is required" der. `adb shell cmd network_time_update_service force_refresh` saati düzeltir.
+- MuMu ara sıra kendi grafik modülünde (`libRenderer.dll`) çöküp kapanır, Windows olay günlüğüne `MuMuNxDevice.exe` hatası düşer. `MuMuManager.exe control -v 1 launch` ile tekrar açılır, uygulama verisi durur.
 - Windows Defender'ın denetimli klasör erişimi açıkken MuMu, `Documents\MuMuSharedFolder` altına bağlı klasörlere (Download, Pictures) yazamaz. Dosya kaydetme testinde dosya seçicide cihaz hafızası ve Documents klasörü seçilir.
 
 ### Rakip uygulamalarla çalışırken

@@ -2,7 +2,7 @@
 
 Bağımlılık: 17.
 
-Durum: kapalı test incelemede. Dahili testte 1.0.0 (versionCode 2) yayında, kapalı test 1.0.0 (versionCode 3) 22 Kasım 2026'da incelemeye gönderildi. Test kullanıcıları `testers-community@googlegroups.com` grubu. Mağaza girişi, uygulama içeriği beyanları ve GitHub Pages'taki gizlilik politikası tamam. Üretim başvurusu 12 test kullanıcısı ve 14 gün sonra yapılır.
+Durum: kapalı test incelemede. Dahili testte 1.0.0 (versionCode 2) yayında, kapalı test 1.0.0 (versionCode 3) 22 Kasım 2026'da incelemeye gönderildi. Test kullanıcıları `testers-community@googlegroups.com` ve TheClosedTest uygulamasının `developers-community-official@googlegroups.com` Google gruplarından gelir. İkinci grup Play Console'da kaydedildi, mevcut inceleme bitince versionCode 4 sürümüyle birlikte incelemeye gönderilecek. Mağaza girişi, uygulama içeriği beyanları ve GitHub Pages'taki gizlilik politikası tamam. Üretim başvurusu 12 test kullanıcısı ve 14 gün sonra yapılır.
 
 ## Yapılacaklar
 

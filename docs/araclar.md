@@ -38,6 +38,9 @@ Task 04 çıktısı. Kurulumlar proje kapsamındadır (`.claude/settings.json`, 
 |---|---|---|
 | mobile-mcp | `npx -y @mobilenext/mobile-mcp@1.0.18` | Sürüm sabit. Projede `claude` ilk açıldığında kullanıcı onayı ister |
 | dart-mcp-server | `dart mcp-server` | Dart and Flutter plugin'i ile gelir |
+| play-console | `npx @playwright/mcp@latest --cdp-endpoint http://127.0.0.1:9222` | Kullanıcının yerel ayarında, `.mcp.json`'da değil. Play Console'a giriş yapılmış Chrome'a bağlanır |
+
+`play-console` için Chrome 9222 portuyla açık olmalı. Kapalıysa şu komutla açılır, profil Google oturumunu sakladığı için tekrar giriş gerekmez: `"C:\Program Files\Google\Chrome\Application\chrome.exe" --remote-debugging-port=9222 --user-data-dir="%LOCALAPPDATA%\play-console-chrome"`. Aynı tarayıcıyı başka bir oturum da kullanabilir, bu yüzden her oturum kendi sekmesinde çalışır ve diğer sekmeleri kapatmaz. 50 MB'tan büyük dosyalar (AAB) Playwright ile aktarılamaz, kullanıcı sürükleyip bırakır.
 
 ## Elenenler
 

@@ -23,7 +23,8 @@ S="-s 127.0.0.1:$(mumu_port)"
 adbs() { "$A" $S "$@"; }
 
 # Prints visible texts as "x,y[*] text" (center point, * = clickable).
-ui() { adbs shell 'uiautomator dump /sdcard/ui.xml >/dev/null 2>&1; cat /sdcard/ui.xml' | python -I -c "
+# The old dump is removed first so a failed dump prints nothing instead of a stale screen.
+ui() { adbs shell 'rm -f /sdcard/ui.xml; uiautomator dump /sdcard/ui.xml >/dev/null 2>&1; cat /sdcard/ui.xml' | python -I -c "
 import sys,re
 x=sys.stdin.read()
 for m in re.finditer(r'<node [^>]*>',x):

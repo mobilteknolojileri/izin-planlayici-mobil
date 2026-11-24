@@ -18,6 +18,8 @@ Git Bash'te `source tools/mumu.sh` ile yüklenir. Fonksiyonlar: `mumu_start`, `u
 - Git Bash `/sdcard/...` ve `/data/...` yollarını Windows yoluna çevirip komutu sessizce bozar. `MSYS_NO_PATHCONV=1` şarttır (script ayarlıyor).
 - `adb pull` hedefi Windows yolu olmalı: `"$(cygpath -w "$hedef")"`.
 - `uiautomator dump` her seferinde "Segmentation fault" yazar, dump yine de oluşur, zararsızdır.
+- mobile-mcp kullanılırken `uiautomator dump` dosya üretmeyebilir ve `ui` boş döner. Bu durumda ekran mobile-mcp'nin `mobile_list_elements_on_screen` aracıyla okunur.
+- `input text` Türkçe harf (ı, İ, ş) yazamaz. Türkçe metin mobile-mcp'nin `mobile_type_keys` aracıyla yazılır.
 - `input text` boşluk kabul etmez, boşluk yerine `%s` yazılır.
 - Sistem dilini değiştirmeden bir uygulamayı Türkçe açmak için: `tr_locale <pkg>` (Android 13+ uygulama başına dil).
 - Play'den kurulan uygulamalar split APK'dır. `pm path <pkg>` tüm parçaları listeler, hepsi çekilmelidir.

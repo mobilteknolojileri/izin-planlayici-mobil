@@ -2,13 +2,13 @@
 
 Bağımlılık: 17.
 
-Durum: kapalı test incelemede. Dahili testte 1.0.0 (versionCode 2) yayında, kapalı test 1.0.0 (versionCode 3) 22 Kasım 2026'da incelemeye gönderildi. Test kullanıcıları `testers-community@googlegroups.com` ve TheClosedTest uygulamasının `developers-community-official@googlegroups.com` Google gruplarından gelir. İkinci grup Play Console'da kaydedildi, mevcut inceleme bitince versionCode 4 sürümü ve yenilenen `08-hakkinda.png` ekran görüntüsüyle birlikte incelemeye gönderilecek. Mağaza girişi, uygulama içeriği beyanları ve GitHub Pages'taki gizlilik politikası tamam. Üretim başvurusu 12 test kullanıcısı ve 14 gün sonra yapılır. Kök `README.md` tamam, Play linki uygulama herkese açılınca eklenir.
+Durum: kapalı testte versionCode 4 incelemede. Dahili testte 1.0.0 (versionCode 2) yayında. Kapalı test 1.0.0 (versionCode 3) 23 Kasım 2026'da yayına girdi. 1.0.0 (versionCode 4) ve yenilenen `08-hakkinda.png` ekran görüntüsü 24 Kasım 2026'da incelemeye gönderildi. Test kullanıcıları `testers-community@googlegroups.com` ve TheClosedTest uygulamasının `developers-community-official@googlegroups.com` Google gruplarından gelir, ikinci grup 24 Kasım 2026'da yayına girdi. Mağaza girişi, uygulama içeriği beyanları ve GitHub Pages'taki gizlilik politikası tamam. Play Console'daki satıcı statüsü beyanı henüz yapılmadı. Üretim başvurusu, en az 12 test kullanıcısı 14 gün kesintisiz testte kaldıktan sonra yapılır. Kök `README.md` tamam, Play linki uygulama herkese açılınca eklenir.
 
 ## Yapılacaklar
 
 1. Upload keystore `~/.keystores/izin-planla/` altında, şifreleri aynı klasördeki `key.properties` dosyasında. `android/key.properties` bu dosyanın kopyasıdır ve `.gitignore`'dadır. Klasörü şifre yöneticisine veya şifreli bir yedeğe kopyala, çünkü anahtar kaybolursa Play Console'dan upload key sıfırlama talebi açmak gerekir.
 2. `android/app/build.gradle.kts` release signing'i `key.properties`'ten okusun.
-3. `pubspec.yaml`'daki build numarası her Play yüklemesinde bir artar, çünkü Play aynı versionCode'u ikinci kez kabul etmez. Dahili test 2, kapalı test 3 ile yüklendi, sıradaki yükleme 4.
+3. `pubspec.yaml`'daki build numarası her Play yüklemesinde bir artar, çünkü Play aynı versionCode'u ikinci kez kabul etmez. Dahili test 2, kapalı test 3 ve 4 ile yüklendi. Sıradaki yüklemeden önce build numarası 5'e çıkarılır.
 4. Gizlilik politikasını GitHub Pages ile repo üzerinden yayınla, URL'yi Play Console'a gir.
 5. Kök `README.md`'yi tamamla: ekran görüntüleri, Play linki, CI ve lisans rozetleri.
 6. Play Console adımları için kullanıcıya tek numaralı liste hazırla:

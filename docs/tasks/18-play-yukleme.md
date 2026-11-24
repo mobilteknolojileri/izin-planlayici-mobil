@@ -2,7 +2,7 @@
 
 Bağımlılık: 17.
 
-Durum: kapalı testte versionCode 4 incelemede. Dahili testte 1.0.0 (versionCode 2) yayında. Kapalı test 1.0.0 (versionCode 3) 23 Kasım 2026'da yayına girdi. 1.0.0 (versionCode 4) ve yenilenen `08-hakkinda.png` ekran görüntüsü 24 Kasım 2026'da incelemeye gönderildi. Test kullanıcıları `testers-community@googlegroups.com` ve TheClosedTest uygulamasının `developers-community-official@googlegroups.com` Google gruplarından gelir, ikinci grup 24 Kasım 2026'da yayına girdi. Mağaza girişi, uygulama içeriği beyanları ve GitHub Pages'taki gizlilik politikası tamam. Play Console'daki satıcı statüsü beyanı henüz yapılmadı. Üretim başvurusu, en az 12 test kullanıcısı 14 gün kesintisiz testte kaldıktan sonra yapılır. Kök `README.md` tamam, Play linki uygulama herkese açılınca eklenir.
+Durum: kapalı test yayında, test kullanıcısı bekleniyor. Dahili testte 1.0.0 (versionCode 2), kapalı testte 1.0.0 (versionCode 4) yayında. versionCode 4 ve yenilenen `08-hakkinda.png` ekran görüntüsü 24 Kasım 2026'da yayına girdi. Test kullanıcıları `testers-community@googlegroups.com` ve TheClosedTest uygulamasının `developers-community-official@googlegroups.com` Google gruplarından gelir. Grup üyeleri teste `https://play.google.com/apps/testing/com.izinplanla.app` bağlantısıyla katılır. Kontrol paneli 24 Kasım 2026'da 0 kayıtlı test kullanıcısı gösterdi, dolayısıyla 14 günlük süre henüz başlamadı. Test kullanıcıları TheClosedTest takasıyla toplanıyor, kurallar aşağıdaki bölümde. Mağaza girişi, uygulama içeriği beyanları ve GitHub Pages'taki gizlilik politikası tamam. Play Console'daki satıcı statüsü beyanı yapılmadı, son tarih 1 Şubat 2027. Üretim başvurusu, en az 12 test kullanıcısı 14 gün kesintisiz testte kaldıktan sonra yapılır. Kök `README.md` tamam, Play linki uygulama herkese açılınca eklenir.
 
 ## Yapılacaklar
 
@@ -17,6 +17,17 @@ Durum: kapalı testte versionCode 4 incelemede. Dahili testte 1.0.0 (versionCode
    - Store listesi (task 15 çıktısı, task 17 ekran görüntüleri)
    - Closed testing sürümü oluştur, AAB yükle, test kullanıcılarını ekle, incelemeye gönder
    - Hesap 13 Kasım 2023'ten sonra açılmış kişisel hesapsa production başvurusundan önce en az 12 test kullanıcısı 14 gün kesintisiz kapalı teste katılmış olmalı. Test kullanıcısı listesi bu yüzden erken hazırlanır.
+
+## TheClosedTest takası
+
+İzin Planla, MuMu'daki TheClosedTest uygulamasında listelidir ve 12 farklı geliştiriciye takas isteği gönderildi. Takasları ajan yürütür. Kullanıcı her gün bir oturum açıp "günlük testleri yap" der, çünkü ajan oturumlar arasında kendi başına çalışamaz.
+
+1. Her gün Türkiye saatiyle 21:30'dan (12:00 AM IST) önce TheClosedTest'teki "Tests" sekmesi açılır, çünkü gün o saatte kapanır ve üst üste 3 gün kaçan takas iptal olur.
+2. Her aktif takasta ortağın uygulaması açılır, ekran görüntüsü alınır ve "Your proof" alanına yüklenir.
+3. Ortağın İzin Planla ekran görüntüsü gerçek kullanımı gösteriyorsa "Accept" ile onaylanır.
+4. Yeni kabul edilen takasta ortağın uygulaması kurulmadan önce `https://play.google.com/apps/testing/<paket>` sayfasında "Become a tester" denir, çünkü bu adım olmadan Google o kişiyi ortağın test kullanıcısı saymaz.
+5. Aynı geliştiricinin ikinci uygulamasıyla takas yapılmaz, çünkü aynı kişi tek test kullanıcısı sayılır ama iş iki katına çıkar.
+6. Bir istek reddedilir veya takas düşerse pazar yerinden itibarı yüksek yeni bir geliştirici seçilir.
 
 ## Kabul
 

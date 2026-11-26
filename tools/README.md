@@ -37,3 +37,39 @@ Git Bash'te `source tools/mumu.sh` ile yüklenir. Fonksiyonlar: `mumu_start`, `u
 - Reklama tıklanmaz ve reklam izlenmez. Sekme değişince tam ekran reklam çıkabilir. `ui` çıktısında "Close", "Continue", "Skip" gibi bir buton aranıp ona dokunulur.
 - Uygunsuz içerikli reklam ekran görüntüleri projeye kaydedilmez.
 - Sistem izin pencereleri (konum vb.) "DON'T ALLOW" ile kapatılır. Bazı uygulamalar tekrar sorar, iki ret sonrası Android sormayı bırakır.
+
+## TheClosedTest takası (`tct.sh`)
+
+Git Bash'te repo kökünden `source tools/tct.sh` ile yüklenir, `mumu.sh`'yi kendisi yükler. Takas kuralları `docs/tasks/18-play-yukleme.md` içinde.
+
+Fonksiyonlar:
+
+- `tct_time`: Bilgisayarın saatini yazar. Takas günü Türkiye saatiyle 21:30'da kapanır.
+- `tct_tests`: TheClosedTest'i Tests sekmesinde açar, günün özetini ve takas kartlarını yazar.
+- `open_tct_task "<ad>"`: Takası Tests sekmesindeki tam adıyla açar.
+- `show_partner_proof dosya.png`: Ortağın bekleyen kanıtına kaydırır ve ekran görüntüsünü bilgisayara kaydeder.
+- `accept_proof`: Ekrandaki ortak kanıtını onaylar.
+- `proof <ad>`: Ekranı cihazda `/sdcard/DCIM/TCT/<ad>.png` olarak kaydeder.
+- `upload_here "<not>"`: En yeni görseli bugünün kanıtı olarak notla yükler. Nottaki boşluklar `%s` yazılır.
+- `join_test <pkg>`: Chrome'da ortağın kapalı testine katılır.
+- `install_app <pkg>`: Play Store'u yeniden başlatıp kurulumu başlatır.
+
+Günlük akış:
+
+1. `tct_time` ile saate bakılır.
+2. `tct_tests` ile bekleyen takaslar listelenir.
+3. Her takasta ortağın uygulaması `launch <pkg>` ile açılır, bir özelliği kullanılır ve ekran `proof <ad>` ile kaydedilir.
+4. Takas `open_tct_task "<ad>"` ile açılır. "You need to approve" yazıyorsa kanıta `show_partner_proof` ile bakılır, gerçek kullanım varsa `accept_proof` çalıştırılır. Bu adım bekleyen her gün için tekrarlanır.
+5. Kanıt `upload_here "<not>"` ile yüklenir.
+6. Sonda `tct_tests` çıktısındaki "Completed Today" sayısı aktif takas sayısına eşit olmalıdır.
+
+### Tuzaklar
+
+- Saat düz `date` ile okunur, çünkü Git Bash'te saat dilimi veritabanı yok ve `TZ=Europe/Istanbul date` sessizce UTC yazar.
+- Kanıtlar `/sdcard/DCIM/TCT` altına kaydedilir, çünkü `/sdcard/Pictures` MuMu'nun paylaşılan klasörüdür ve yazmayı reddeder.
+- `proof`, `upload_here`'den hemen önce çalıştırılır, çünkü fotoğraf seçici en yeni görseli başa koyar ve `upload_here` ilk görseli seçer.
+- `ui` çıktısı HTML karakterlerini korur. Adında `&` olan takas `"Fae &amp; Flame: Romantasy Color"` diye aranır.
+- Eski kanıtı onaylanmamış takas, en eski bekleyen günle açılır. Onaylar bitmeden bugünün yükleme butonu görünmez.
+- "Become a tester" adımından hemen sonra Play'in Install butonu bazen tepki vermez. `install_app` bu yüzden önce Play Store'u kapatır.
+- Ortakların uygulamalarına erişilebilirlik gibi geniş izinler verilmez ve hesap açılmaz, çünkü cihazda Google hesabı açık. Giriş isteyen uygulamada giriş ekranının görüntüsü yüklenir.
+- TheClosedTest bir uygulama için en fazla 12 takas kabul eder. Kontenjan dolunca yeni istekte "Capacity Reached" yazar.

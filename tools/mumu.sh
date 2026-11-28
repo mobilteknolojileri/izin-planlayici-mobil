@@ -27,11 +27,13 @@ adbs() { "$A" $S "$@"; }
 ui() { adbs shell 'rm -f /sdcard/ui.xml; uiautomator dump /sdcard/ui.xml >/dev/null 2>&1; cat /sdcard/ui.xml' | python -I -c "
 import sys,re
 x=sys.stdin.read()
+# uiautomator quotes a value with single quotes when it contains a double quote.
+def a(k):
+    m=re.search(r' '+k+r'=([\"\x27])(.*?)\1',n)
+    return m.group(2) if m else ''
 for m in re.finditer(r'<node [^>]*>',x):
     n=m.group(0)
-    t=re.search(r' text=\"([^\"]*)\"',n).group(1)
-    d=re.search(r'content-desc=\"([^\"]*)\"',n).group(1)
-    c=re.search(r'clickable=\"(\w+)\"',n).group(1)
+    t=a('text'); d=a('content-desc'); c=a('clickable')
     b=re.search(r'bounds=\"\[(\d+),(\d+)\]\[(\d+),(\d+)\]\"',n)
     if not (t or d): continue
     x1,y1,x2,y2=map(int,b.groups())

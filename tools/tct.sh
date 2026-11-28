@@ -57,19 +57,31 @@ accept_proof() {
   ui 2>/dev/null | grep -E "approved|Pending your review|Upload Screenshots"
 }
 
+# Prints the "x,y" of $1 once it sits above the floating tab bar, scrolling
+# down up to three times. A banner such as "Partner hasn't approved 1 old
+# screenshot" pushes the upload form below the first screen.
+visible() {
+  local i c
+  for i in 1 2 3 4; do
+    c=$(coord "$(ui 2>/dev/null)" "$1")
+    if [ -n "$c" ] && [ "${c#*,}" -lt 1420 ]; then echo "$c"; return 0; fi
+    [ "$i" -lt 4 ] && swipe_up
+  done
+  return 1
+}
+
 # Uploads the newest picture as today's proof with note $1 (spaces as %s).
 # Run on an open swap after proof().
 upload_here() {
-  local out c y
+  local out c
   out=$(ui 2>/dev/null); c=$(coord "$out" "Upload Screenshots")
   [ -z "$c" ] && { echo "no upload button"; return 1; }
   tap "${c%,*}" "${c#*,}" 4
   tap 110 548 2    # newest picture in the photo picker
   tap 739 1512 4   # "Add (1)"
-  out=$(ui 2>/dev/null); c=$(coord "$out" "Add a note")
+  c=$(visible "Add a note") || { echo "no note field"; return 1; }
   tap "${c%,*}" "${c#*,}" 2; txt "$1"; sleep 1; back
-  out=$(ui 2>/dev/null); c=$(coord "$out" "Submit Day"); y=${c#*,}
-  if [ "$y" -gt 1420 ]; then swipe_up; out=$(ui 2>/dev/null); c=$(coord "$out" "Submit Day"); fi
+  c=$(visible "Submit Day") || { echo "no submit button"; return 1; }
   tap "${c%,*}" "${c#*,}" 5
   ui 2>/dev/null | grep -o -E "Proof submitted successfully|Day [0-9]+ Uploaded" | head -2
 }
